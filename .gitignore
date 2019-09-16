@@ -10,6 +10,14 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+################
+# PROJET MOMAX #
+################
+
+Assets/2DGamekit/
+
+################
+
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
