@@ -7,23 +7,12 @@ A small videogame that is part of a giant treasure hunt meant to express love.
 
 ### Gameplay
 
-The game presents two gameplay phases : 
-
-- 'RPG' phase (isometric top-down view) with mostly dialogs and small interactions. 
-- 'Platformer' phase (2D side view) with basic movement / jump / attack.
+Momax is a top-down pixel-art adventure game. 
 
 ### Inputs
 
 - Movement (RPG) : ZQSD
-- Movement (platformer) : QD
-- Jump/Duck (platformer) : ZS
-- Interaction : E
-- Attack (platformer) : P
-
-
-## Important Notes
-
-This project require the Unity 2D Game Kit in the Assets folder.
+- Use / Attack : P
 
 
 ## Contributors
