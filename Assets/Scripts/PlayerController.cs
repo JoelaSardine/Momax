@@ -6,18 +6,25 @@ public class PlayerController : MonoBehaviour
 {
     private const string INPUT_AXIS_HORIZONTAL = "Horizontal";
     private const string INPUT_AXIS_VERTICAL = "Vertical";
+    private const string PLAYER_COLLIDER_INTERACTION = "InteractionCollider";
 
     private new Rigidbody2D rigidbody;
     private Animator animator;
-
-    public float speed = 1.0f;
-
     private Vector2 animatorParams = new Vector2();
+
+    private PlayerInteractionCollider interactionCollider;
+
+    public float speed = 25.0f;
+    public float interactionRange = 1.0f;
+
 
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+
+        interactionCollider = transform.Find(PLAYER_COLLIDER_INTERACTION).GetComponent<PlayerInteractionCollider>();
+        interactionCollider.Init(OnInteractionEnter, OnInteractionExit, OnInteractionStay);
     }
 
     void Update()
@@ -36,5 +43,30 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat(INPUT_AXIS_HORIZONTAL, animatorParams.x);
         animator.SetFloat(INPUT_AXIS_VERTICAL, animatorParams.y);
         animator.SetFloat("Speed", rigidbody.velocity.magnitude);
+
+        interactionCollider.transform.localPosition = new Vector3(0, 0.5f, 0) + (Vector3)animatorParams.normalized * interactionRange;
+    }
+
+    private void OnInteractionEnter(Collider2D collision)
+    {
+        Interactable interactable = collision.GetComponent<Interactable>();
+        if (interactable)
+        {
+            interactable.EnterInteraction();
+        }
+    }
+
+    private void OnInteractionExit(Collider2D collision)
+    {
+        Interactable interactable = collision.GetComponent<Interactable>();
+        if (interactable)
+        {
+            interactable.ExitInteraction();
+        }
+    }
+
+    private void OnInteractionStay(Collider2D collision)
+    {
+        //Debug.Log("Interaction stay :    " + collision.name);
     }
 }
