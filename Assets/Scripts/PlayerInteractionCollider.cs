@@ -9,7 +9,7 @@ public class PlayerInteractionCollider : MonoBehaviour
     private OnTriggerEvent onTriggerExit;
     private OnTriggerEvent onTriggerStay;
 
-    private Collider2D collider;
+    private new Collider2D collider;
 
     public void Init(OnTriggerEvent onTriggerEnter, OnTriggerEvent onTriggerExit, OnTriggerEvent onTriggerStay)
     {

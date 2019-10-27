@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,8 +13,14 @@ public class Textshadow : MonoBehaviour
     public Text realText;
     private Text myText;
 
-    public void SetText(string text)
+    private void Awake()
     {
+        myText = GetComponent<Text>();
+    }
+
+    private void Set(string newText)
+    {
+        text = newText;
         myText.text = text;
         if (realText)
         {
@@ -31,5 +38,22 @@ public class Textshadow : MonoBehaviour
             realText.text = text;
             realText.fontSize = size;
         }
+    }
+
+    public void SetText(string newText, Action callback = null)
+    {
+        StartCoroutine(SetTextCoroutine(newText, callback));
+    }
+
+    private IEnumerator SetTextCoroutine(string newText, Action callback)
+    {
+        Set("");
+        for (int i = 0; i < newText.Length; i++)
+        {
+            Set(text + newText[i]);
+            yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
+        }
+
+        callback?.Invoke();
     }
 }

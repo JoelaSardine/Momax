@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DebugScene.unity
+    guid: 2677c813884930d49bb9fab85e2564a3
+  - enabled: 1
+    path: Assets/Scenes/PokemonBattle.unity
+    guid: 6919964adc00d0444ac78aea4d3764a3
   m_configObjects: {}
