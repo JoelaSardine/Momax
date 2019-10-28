@@ -21,7 +21,7 @@ namespace pokemonBattle
 
         public void UpdatePv()
         {
-            StartCoroutine(manager.player.SetHpCoroutine(pv));
+            StartCoroutine(manager.player.ModifyHpCoroutine(pv));
         }
     }
 }

@@ -28,5 +28,6 @@ namespace pokemonBattle
         [Header("Dialog")]
         public float dialTextDelay = 0.02f;
 
+        public string FleeText = "Tu ne peux pas t'enfuir du combat !";
     }
 }

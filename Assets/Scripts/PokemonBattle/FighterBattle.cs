@@ -38,12 +38,14 @@ namespace pokemonBattle
             if (textTransform) hpText = statsPanel.Find("HPText").GetComponent<Text>();
         }
 
-        public IEnumerator SetHpCoroutine(int target, Action callback = null)
+       
+        public IEnumerator ModifyHpCoroutine(int offset, Action callback = null)
         {
             float time = BattleConsts.I.hpModifDuration;
             float timer = 0;
             int baseValue = hp;
             float value = hp;
+            float target = hp + offset;
 
             while (timer <= time)
             {

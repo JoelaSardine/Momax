@@ -20,7 +20,7 @@ namespace pokemonBattle
             myText = GetComponent<Text>();
         }
 
-        private void Set(string newText)
+        public void SetTxt(string newText)
         {
             text = newText;
             myText.text = text;
@@ -42,17 +42,22 @@ namespace pokemonBattle
             }
         }
 
-        public void SetText(string newText, Action callback = null)
+        public void Shutup()
+        {
+            SetTxt("");
+        }
+
+        public void Display(string newText, Action callback = null)
         {
             StartCoroutine(SetTextCoroutine(newText, callback));
         }
 
         private IEnumerator SetTextCoroutine(string newText, Action callback)
         {
-            Set("");
+            SetTxt("");
             for (int i = 0; i < newText.Length; i++)
             {
-                Set(text + newText[i]);
+                SetTxt(text + newText[i]);
                 yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
             }
 

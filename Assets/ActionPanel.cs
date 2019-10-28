@@ -10,6 +10,9 @@ namespace pokemonBattle
 
         private List<BattleChoice> choices = new List<BattleChoice>();
 
+        private Textshadow ppTxt;
+        private Textshadow typeTxt;
+
         private void Awake()
         {
             foreach (Transform child in transform)
@@ -20,14 +23,32 @@ namespace pokemonBattle
 
         private void OnEnable()
         {
-            choices[0].Select(true);
-            selected = 0;
+            //choices[0].Select(true);
+            //selected = 0;
+        }
+
+        private void Start()
+        {
+            Reselect();
+        }
+
+        public void Init(Textshadow pp, Textshadow type)
+        {
+            ppTxt = pp;
+            typeTxt = type;
+        }
+
+        private void Unselect()
+        {
+            choices[selected].Select(false);
+        }
+        private void Reselect()
+        {
+            choices[selected].Select(true);
         }
 
         public void Move(string direction)
         {
-            Debug.Log("Move " + direction);
-
             choices[selected].Select(false);
             switch (direction)
             {
@@ -50,6 +71,13 @@ namespace pokemonBattle
                 default: break;
             }
             choices[selected].Select(true);
+            ppTxt.SetTxt("PP " + choices[selected].currentPp + "/" + choices[selected].basePp);
+            typeTxt.SetTxt(choices[selected].type);
+        }
+
+        public BattleChoice GetSelectedItem()
+        {
+            return choices[selected];
         }
     }
 }
