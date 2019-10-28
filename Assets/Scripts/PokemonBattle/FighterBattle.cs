@@ -12,15 +12,17 @@ namespace pokemonBattle
         public RectTransform avatarPanel;
         public RectTransform statsPanel;
 
+        public Animator animator;
+
         private Image hpBar;
         private Text hpText;
 
         private int hp = 100;
-        private int Hp {
+        public int Hp {
             get {
                 return hp;
             }
-            set {
+            private set {
                 hp = Mathf.Clamp(value, 0, 100);
                 if (hpText) hpText.text = hp + " / " + "100";
                 hpBar.fillAmount = hp / 100f;
@@ -36,6 +38,8 @@ namespace pokemonBattle
             hpBar = statsPanel.Find("HpBar").Find("Image").GetComponent<Image>();
             Transform textTransform = statsPanel.Find("HPText");
             if (textTransform) hpText = statsPanel.Find("HPText").GetComponent<Text>();
+
+            animator = avatarPanel.GetComponent<Animator>();
         }
 
        
@@ -56,6 +60,11 @@ namespace pokemonBattle
             }
 
             callback?.Invoke();
+        }
+
+        public void PlayAnim(string name)
+        {
+            animator.SetTrigger(name);
         }
     }
 }

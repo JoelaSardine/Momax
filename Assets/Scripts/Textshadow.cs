@@ -15,9 +15,16 @@ namespace pokemonBattle
         public Text realText;
         private Text myText;
 
+        public Image endTxtImage;
+
         private void Awake()
         {
             myText = GetComponent<Text>();
+
+            if (endTxtImage)
+            {
+                endTxtImage.gameObject.SetActive(false);
+            }
         }
 
         public void SetTxt(string newText)
@@ -45,15 +52,17 @@ namespace pokemonBattle
         public void Shutup()
         {
             SetTxt("");
+            ShowImg(false);
         }
 
-        public void Display(string newText, Action callback = null)
+        public void Display(string newText, bool showImage, Action callback = null)
         {
-            StartCoroutine(SetTextCoroutine(newText, callback));
+            StartCoroutine(SetTextCoroutine(newText, showImage, callback));
         }
 
-        private IEnumerator SetTextCoroutine(string newText, Action callback)
+        private IEnumerator SetTextCoroutine(string newText, bool showImage, Action callback)
         {
+            ShowImg(false);
             SetTxt("");
             for (int i = 0; i < newText.Length; i++)
             {
@@ -61,7 +70,16 @@ namespace pokemonBattle
                 yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
             }
 
+            ShowImg(showImage);
             callback?.Invoke();
+        }
+
+        public void ShowImg(bool state)
+        {
+            if (endTxtImage)
+            {
+                endTxtImage.gameObject.SetActive(state);
+            }
         }
     }
 }

@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 219115713}
   - component: {fileID: 219115715}
   - component: {fileID: 219115714}
+  - component: {fileID: 219115716}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -547,6 +548,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219115712}
   m_CullTransparentMesh: 0
+--- !u!95 &219115716
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219115712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98b9a82b0e09620408bffb00ce7be1d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &250931912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1046,7 @@ MonoBehaviour:
   text: ENSIL-ENSCI ATTAQUE MORGANE !
   size: 45
   realText: {fileID: 709250511}
+  endTxtImage: {fileID: 373436671}
 --- !u!1 &373436669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1058,7 @@ GameObject:
   - component: {fileID: 373436670}
   - component: {fileID: 373436672}
   - component: {fileID: 373436671}
+  - component: {fileID: 373436673}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1100,6 +1122,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373436669}
   m_CullTransparentMesh: 0
+--- !u!95 &373436673
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373436669}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98b9a82b0e09620408bffb00ce7be1d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &383234205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1251,12 +1292,12 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: FUCK YOU
+      value: LOLLIPOP
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante FUCK YOU
+      value: Morgane chante LOLLIPOP
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1701,7 +1742,6 @@ GameObject:
   - component: {fileID: 648227941}
   - component: {fileID: 648227943}
   - component: {fileID: 648227942}
-  - component: {fileID: 648227944}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -1741,7 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95686275, g: 0.3882353, b: 0.3882353, a: 1}
+  m_Color: {r: 0.3882353, g: 0.95686275, b: 0.6039216, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1765,19 +1805,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648227940}
   m_CullTransparentMesh: 0
---- !u!114 &648227944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648227940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12632b9732da61d42a5947652fd77884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 648227942}
 --- !u!1 &648315272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,7 +2498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &764764934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3240,6 +3267,7 @@ MonoBehaviour:
   text: ENSIL-ENSCI ATTAQUE MORGANE !
   size: 45
   realText: {fileID: 626152929}
+  endTxtImage: {fileID: 219115714}
 --- !u!1001 &1089485003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3577,6 +3605,7 @@ GameObject:
   - component: {fileID: 1203222303}
   - component: {fileID: 1203222306}
   - component: {fileID: 1203222307}
+  - component: {fileID: 1203222304}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -3598,6 +3627,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203222304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203222302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79014f4e03652694f8559458810afcbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacks:
+  - label: ENSIL-ENSCI attaque MORSURE.
+    damage: 30
+  - label: ENSIL-ENSCI attaque GROS Z'YEUX.
+    damage: 10
 --- !u!114 &1203222306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3613,11 +3659,13 @@ MonoBehaviour:
   player:
     avatarPanel: {fileID: 1713054825}
     statsPanel: {fileID: 1490178454}
+    animator: {fileID: 0}
   ennemy:
     avatarPanel: {fileID: 1436615873}
     statsPanel: {fileID: 801147905}
+    animator: {fileID: 0}
   actionsPanel: {fileID: 1292646634}
-  battleState: 1
+  battleState: 0
 --- !u!114 &1203222307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3639,7 +3687,11 @@ MonoBehaviour:
   hpCritTreshold: 0.2
   hpCritColor: {r: 0.95686275, g: 0.3882353, b: 0.3882353, a: 1}
   dialTextDelay: 0.02
-  FleeText: Tu ne peux pas t'enfuir du combat !
+  choiceText: Que veux-tu faire ?
+  fleeText: Tu ne peux pas t'enfuir du combat !
+  bagText: Ton sac est vide !
+  winText: "Bravo ! Tu as gagn\xE9 !"
+  loseText: Bouh ! Tu as perdu !
 --- !u!1001 &1232604675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3792,6 +3844,26 @@ PrefabInstance:
         type: 3}
       propertyPath: text
       value: COUP D'BOULE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: message
+      value: Super coup de boule !
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: resultMessage
+      value: "C'est tr\xE8s efficace !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: type
+      value: Bourrin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -4517,6 +4589,7 @@ GameObject:
   - component: {fileID: 1436615876}
   - component: {fileID: 1436615875}
   - component: {fileID: 1436615874}
+  - component: {fileID: 1436615877}
   m_Layer: 5
   m_Name: EnnemyAvatar
   m_TagString: Untagged
@@ -4552,7 +4625,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436615872}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -4565,7 +4638,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436615872}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -4595,6 +4668,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436615872}
   m_CullTransparentMesh: 0
+--- !u!95 &1436615877
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436615872}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9366aa9c829545a47be289616dc9eae5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1462226902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5390,6 +5482,7 @@ GameObject:
   - component: {fileID: 1713054828}
   - component: {fileID: 1713054827}
   - component: {fileID: 1713054826}
+  - component: {fileID: 1713054829}
   m_Layer: 5
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -5468,6 +5561,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713054824}
   m_CullTransparentMesh: 0
+--- !u!95 &1713054829
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713054824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9366aa9c829545a47be289616dc9eae5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1727634811
 GameObject:
   m_ObjectHideFlags: 0

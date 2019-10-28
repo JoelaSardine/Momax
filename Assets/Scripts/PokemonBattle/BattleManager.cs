@@ -29,6 +29,7 @@ namespace pokemonBattle
         }
 
         private bool busy = false;
+        private bool waitForInput = false;
         private Textshadow bigTxt;
         private Textshadow smallTxt;
         private Textshadow descPpTxt;
@@ -37,7 +38,8 @@ namespace pokemonBattle
         private ActionPanel songPanel; // Serve for songs & attacks
         private ActionPanel punchPanel; // Serve for songs & attacks
         private GameObject attackDescriptionPanel;
-        private int currentChoice = 0;
+
+        private EnnemyAttacks ennemyAttacks;
 
         public FighterBattle player;
         public FighterBattle ennemy;
@@ -50,6 +52,8 @@ namespace pokemonBattle
         {
             player.Init();
             ennemy.Init();
+
+            ennemyAttacks = GetComponent<EnnemyAttacks>();
 
             Transform dialPanel = actionsPanel.Find("DialogPanel");
             bigTxt = dialPanel.Find("DialogBig").GetComponentInChildren<Textshadow>();
@@ -69,6 +73,9 @@ namespace pokemonBattle
 
         private void Start()
         {
+            bigTxt.Shutup();
+            smallTxt.Shutup();
+
             GameObject trGo = GameObject.FindGameObjectWithTag("Transition");
             if (trGo)
             {
@@ -79,15 +86,8 @@ namespace pokemonBattle
             }
             else
             {
-                // No transition
-                //InitTransition();
-                //StartCoroutine(IntroTransitionCoroutine());
-            }
-
-            // Temp
-            bigTxt.Display("MORGANE est attaquée par ENSIL-ENSCI !", DefaultCallback);
-            smallTxt.Display("");
-            
+                StartCoroutine(introCoroutine());
+            }            
         }
 
         private void DefaultCallback()
@@ -120,10 +120,12 @@ namespace pokemonBattle
 
                 if (Input.GetButtonDown("Interact"))
                 {
+                    waitForInput = false;
                     Select();
                 }
                 else if (Input.GetButtonDown("Back"))
                 {
+                    waitForInput = false;
                     Back();
                 }
             }
@@ -170,7 +172,9 @@ namespace pokemonBattle
                             punchPanel.gameObject.SetActive(true);
                             attackDescriptionPanel.SetActive(true);
                             break;
-                        case "bag": break;
+                        case "bag":
+                            StartCoroutine(bagCoroutine());
+                            break;
                         case "flee":
                             StartCoroutine(fleeCoroutine());
                             break;
@@ -215,6 +219,24 @@ namespace pokemonBattle
             }
         }
 
+        private IEnumerator introCoroutine()
+        {
+            busy = waitForInput = true;
+            smallTxt.Shutup();
+            bigTxt.Display("MORGANE est attaquée par ENSIL-ENSCI !", true, DefaultCallback);
+            while (busy || waitForInput)
+                yield return null;
+            
+            busy = true;
+            bigTxt.Shutup();
+            smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
+            while (busy)
+                yield return null;
+            choicesPanel.gameObject.SetActive(true);
+            smallTxt.ShowImg(false);
+            battleState = BATTLESTATE.CHOICES;
+        }
+
         private IEnumerator fightCoroutine(BattleChoice choice)
         {
             battleState = BATTLESTATE.ATTACKSPLAY;
@@ -224,52 +246,120 @@ namespace pokemonBattle
             attackDescriptionPanel.gameObject.SetActive(false);
 
             // Display text
-            busy = true;
+            busy = waitForInput = true;
             smallTxt.Shutup();
-            bigTxt.Display(choice.message, DefaultCallback);
-
+            bigTxt.Display(choice.message, true, DefaultCallback);
             while (busy)
                 yield return null;
+            yield return new WaitForSeconds(1f);
 
             // Play animations
-            Debug.Log("Animation");
             busy = true;
+            ennemy.PlayAnim("Hit");
             StartCoroutine(ennemy.ModifyHpCoroutine(-choice.damage, DefaultCallback));
-            while (busy)
+            while (busy || waitForInput)
                 yield return null;
 
             // Display result if any
             if (string.IsNullOrEmpty(choice.resultMessage))
             {
                 busy = true;
-                bigTxt.Display(choice.resultMessage, DefaultCallback);
+                bigTxt.Display(choice.resultMessage, false, DefaultCallback);
             }
 
             while (busy)
                 yield return null;
 
-            // Return to choices
-
-            yield return null;
-
-            battleState = BATTLESTATE.CHOICES;
-            choicesPanel.gameObject.SetActive(true);
+            if (ennemy.Hp <= 0)
+                StartCoroutine(endCoroutine(true));
+            else 
+                StartCoroutine(ennemyCoroutine());
         }
 
-        private IEnumerator fleeCoroutine ()
+        private IEnumerator ennemyCoroutine()
+        {
+            battleState = BATTLESTATE.ENNEMYTURN;
+            EnnemyAttack atk = ennemyAttacks.GetRandomAttack();
+            
+            // Display text
+            busy = waitForInput = true;
+            smallTxt.Shutup();
+            bigTxt.Display(atk.label, true, DefaultCallback);
+            while (busy)
+                yield return null;
+            yield return new WaitForSeconds(1f);
+
+            // Play animations
+            busy = true;
+            player.PlayAnim("Hit");
+            StartCoroutine(player.ModifyHpCoroutine(-atk.damage, DefaultCallback));
+            while (busy || waitForInput)
+                yield return null;
+
+            if (player.Hp <= 0)
+            {
+                StartCoroutine(endCoroutine(false));
+            }
+            else
+            {
+                busy = true;
+                bigTxt.Shutup();
+                smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
+                while (busy)
+                    yield return null;
+                choicesPanel.gameObject.SetActive(true);
+                battleState = BATTLESTATE.CHOICES;
+            }
+        }
+
+        private IEnumerator bagCoroutine()
         {
             battleState = BATTLESTATE.DEFAULT;
-            
+            choicesPanel.gameObject.SetActive(false);
+
+            busy = waitForInput = true;
+            smallTxt.Shutup();
+            bigTxt.Display(BattleConsts.I.bagText, true, DefaultCallback);
+
+            while (busy || waitForInput) yield return null;
+
             busy = true;
             bigTxt.Shutup();
-            smallTxt.Display(BattleConsts.I.FleeText, DefaultCallback);
-
+            smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
             while (busy)
-            {
                 yield return null;
-            }
-
+            choicesPanel.gameObject.SetActive(true);
             battleState = BATTLESTATE.CHOICES;
+        }
+
+        private IEnumerator fleeCoroutine()
+        {
+            battleState = BATTLESTATE.DEFAULT;
+            choicesPanel.gameObject.SetActive(false);
+
+            busy = waitForInput = true;
+            smallTxt.Shutup();
+            bigTxt.Display(BattleConsts.I.fleeText, true, DefaultCallback);
+            while (busy || waitForInput) yield return null;
+
+            busy = true;
+            bigTxt.Shutup();
+            smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
+            while (busy)
+                yield return null;
+            choicesPanel.gameObject.SetActive(true);
+            battleState = BATTLESTATE.CHOICES;
+        }
+
+        private IEnumerator endCoroutine(bool win)
+        {
+            (win ? ennemy : player).animator.SetTrigger("Dead");
+
+            battleState = BATTLESTATE.DEFAULT;
+            busy = waitForInput = true;
+            smallTxt.Shutup();
+            bigTxt.Display(win ? BattleConsts.I.winText : BattleConsts.I.loseText, true, DefaultCallback);
+            while (busy || waitForInput) yield return null;
         }
 
         private void InitTransition()
@@ -339,6 +429,8 @@ namespace pokemonBattle
 
                 yield return null;
             }
+
+            StartCoroutine(introCoroutine());
         }
     }
 }
