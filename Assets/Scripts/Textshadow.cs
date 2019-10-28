@@ -4,56 +4,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Text))]
-public class Textshadow : MonoBehaviour
+namespace pokemonBattle
 {
-    public string text = "text";
-    public int size = 20;
-
-    public Text realText;
-    private Text myText;
-
-    private void Awake()
+    [RequireComponent(typeof(Text))]
+    public class Textshadow : MonoBehaviour
     {
-        myText = GetComponent<Text>();
-    }
+        public string text = "text";
+        public int size = 20;
 
-    private void Set(string newText)
-    {
-        text = newText;
-        myText.text = text;
-        if (realText)
+        public Text realText;
+        private Text myText;
+
+        private void Awake()
         {
-            realText.text = text;
-        }
-    }
-    
-    private void OnValidate()
-    {
-        myText = GetComponent<Text>();
-        myText.text = text;
-        myText.fontSize = size;
-        if (realText)
-        {
-            realText.text = text;
-            realText.fontSize = size;
-        }
-    }
-
-    public void SetText(string newText, Action callback = null)
-    {
-        StartCoroutine(SetTextCoroutine(newText, callback));
-    }
-
-    private IEnumerator SetTextCoroutine(string newText, Action callback)
-    {
-        Set("");
-        for (int i = 0; i < newText.Length; i++)
-        {
-            Set(text + newText[i]);
-            yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
+            myText = GetComponent<Text>();
         }
 
-        callback?.Invoke();
+        private void Set(string newText)
+        {
+            text = newText;
+            myText.text = text;
+            if (realText)
+            {
+                realText.text = text;
+            }
+        }
+
+        private void OnValidate()
+        {
+            myText = GetComponent<Text>();
+            myText.text = text;
+            myText.fontSize = size;
+            if (realText)
+            {
+                realText.text = text;
+                realText.fontSize = size;
+            }
+        }
+
+        public void SetText(string newText, Action callback = null)
+        {
+            StartCoroutine(SetTextCoroutine(newText, callback));
+        }
+
+        private IEnumerator SetTextCoroutine(string newText, Action callback)
+        {
+            Set("");
+            for (int i = 0; i < newText.Length; i++)
+            {
+                Set(text + newText[i]);
+                yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
+            }
+
+            callback?.Invoke();
+        }
     }
 }

@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleDebug : MonoBehaviour
+namespace pokemonBattle
 {
-    public BattleManager manager;
-
-    public Text textPV; 
-
-    private int pv = 0;
-
-    public void SetPv(float value)
+    public class BattleDebug : MonoBehaviour
     {
-        pv = Mathf.RoundToInt(value * 100f);
-        textPV.text = "" + pv;
-    }
+        public BattleManager manager;
 
-    public void UpdatePv()
-    {
-        StartCoroutine(manager.player.SetHpCoroutine(pv));
+        public Text textPV;
+
+        private int pv = 0;
+
+        public void SetPv(float value)
+        {
+            pv = Mathf.RoundToInt(value * 100f);
+            textPV.text = "" + pv;
+        }
+
+        public void UpdatePv()
+        {
+            StartCoroutine(manager.player.SetHpCoroutine(pv));
+        }
     }
 }
