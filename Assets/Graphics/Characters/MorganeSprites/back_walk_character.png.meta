@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: f5f0ff84061ef6f40a6097d965b7bd69
+guid: 2c9be5897a6db63469446ca6b376dbdb
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idle_character_0
-    21300002: idle_character_1
-    21300004: idle_character_2
-    21300006: idle_character_3
+    21300000: back_walk_character_0
+    21300002: back_walk_character_1
+    21300004: back_walk_character_2
+    21300006: back_walk_character_3
+    21300008: back_walk_character_4
+    21300010: back_walk_character_5
+    21300012: back_walk_character_6
+    21300014: back_walk_character_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -67,7 +71,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -78,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_character_0
+      name: back_walk_character_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 889d67b99110530488e3d0c2a4401d31
+      spriteID: 48641f92496c20b41a2defaf7a8cc2e6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_character_1
+      name: back_walk_character_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 20
-        height: 33
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c190ff9d4c27d8f4cbe006a246c48429
+      spriteID: 6068672fa5508db49b32fa231972d222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_character_2
+      name: back_walk_character_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 20
-        height: 33
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,13 +157,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ffc36a8086bc7346ba85920f1408266
+      spriteID: d87aa7e94ccabb646b8a033cfa36104e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_character_3
+      name: back_walk_character_3
       rect:
         serializedVersion: 2
         x: 192
@@ -173,7 +177,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02a7b915502cd5d409abf0d70ebad952
+      spriteID: 5cd90631977263e49a869471326668f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_walk_character_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 20
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37291171095d8b14fb44f2769ab5da08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_walk_character_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 20
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a435a581e45501a4597112cabb14d439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_walk_character_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 20
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cfa24571e826846a6045e9f5330d37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_walk_character_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 20
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951c1c0196233234da2d7e5d53881b9c
       vertices: []
       indices: 
       edges: []
@@ -181,7 +265,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c72e12b28f739084c802bec70b6c49a7
+    spriteID: 940afaf0be7839040845cbdf35ed8263
     vertices: []
     indices: 
     edges: []
