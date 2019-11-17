@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: f5f0ff84061ef6f40a6097d965b7bd69
+guid: 92750b3f046c2594d94cae3250adc9cb
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idle_character_0
-    21300002: idle_character_1
-    21300004: idle_character_2
-    21300006: idle_character_3
+    21300000: side_walk_character_mirror_70
+    21300002: side_walk_character_mirror_61
+    21300004: side_walk_character_mirror_52
+    21300006: side_walk_character_mirror_43
+    21300008: side_walk_character_mirror_34
+    21300010: side_walk_character_mirror_25
+    21300012: side_walk_character_mirror_16
+    21300014: side_walk_character_mirror_07
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -67,7 +71,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -78,18 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,12 +92,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_character_0
+      name: side_walk_character_mirror_70
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
+        width: 18
         height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -113,18 +106,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dbaaef2b80b2c34fb66b3462b3cd50b
+      spriteID: 083e945c772f83e4caffe2cd2d1f5297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_character_1
+      name: side_walk_character_mirror_61
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 20
+        width: 18
         height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -133,18 +126,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98ecb8527f8dfd64086cdfc87afe077b
+      spriteID: ac64100e28b5716418d96ec974cb6e02
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_character_2
+      name: side_walk_character_mirror_52
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 20
+        width: 18
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd807b77e58112945946634d0474302a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: side_walk_character_mirror_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 18
         height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -153,18 +166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39b58c83356496a4fa8d3082e1b4e466
+      spriteID: 619edd5f4434d4d40a9bf867bc4e067c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_character_3
+      name: side_walk_character_mirror_34
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 0
-        width: 20
+        width: 18
         height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -173,7 +186,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4f8e76dae45ca243a100473853ddf97
+      spriteID: ff2a5961c076e5449b475b0ff4607efa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: side_walk_character_mirror_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 18
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca121afcc12861847ac1241030ceff7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: side_walk_character_mirror_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 18
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c965a6be346a19408d828a1c459aa8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: side_walk_character_mirror_07
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 19
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e888366ad920554eb213dfea2794003
       vertices: []
       indices: 
       edges: []
@@ -181,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c72e12b28f739084c802bec70b6c49a7
+    spriteID: 285fbc7ec75b0d449ba9f1ba7090d1eb
     vertices: []
     indices: 
     edges: []

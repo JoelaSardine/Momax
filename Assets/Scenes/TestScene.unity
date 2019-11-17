@@ -4831,7 +4831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1022804582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5425,6 +5425,21 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 258676790917312083, guid: b980bf812bf11dc4c880bfde3830bd12,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 258676790917312083, guid: b980bf812bf11dc4c880bfde3830bd12,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 258676790917312083, guid: b980bf812bf11dc4c880bfde3830bd12,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.0625
+      objectReference: {fileID: 0}
     - target: {fileID: 258676791127415948, guid: b980bf812bf11dc4c880bfde3830bd12,
         type: 3}
       propertyPath: m_Offset.y
@@ -5670,6 +5685,21 @@ PrefabInstance:
     - target: {fileID: 2359204902104029209, guid: f07bd8e786824a140b84da3e4eaf647f,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695366507268472860, guid: f07bd8e786824a140b84da3e4eaf647f,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695366507268472860, guid: f07bd8e786824a140b84da3e4eaf647f,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 5695366507268472860, guid: f07bd8e786824a140b84da3e4eaf647f,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
