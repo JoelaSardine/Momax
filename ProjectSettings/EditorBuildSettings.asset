@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PokemonBattle.unity
     guid: 6919964adc00d0444ac78aea4d3764a3
+  - enabled: 1
+    path: Assets/Scenes/NeuillyPlaisance.unity
+    guid: 22d76a5c33e50e9488ea64b5d5bd4edb
+  - enabled: 1
+    path: Assets/Scenes/FacebookConversation.unity
+    guid: 1f3a8b155da331045be78b844d3a355f
   m_configObjects: {}

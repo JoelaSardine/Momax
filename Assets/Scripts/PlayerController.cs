@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInteractionCollider interactionCollider;
     private Transform fireContainer;
-    private FireCollider fireCollider;
+    private List<FireCollider> fireColliders = new List<FireCollider>();
     private List<FireCollider> fires = new List<FireCollider>();
 
     public float speed = 25.0f;
@@ -31,7 +31,11 @@ public class PlayerController : MonoBehaviour
         interactionCollider.Init(OnInteractionEnter, OnInteractionExit, OnInteractionStay);
 
         fireContainer = GameObject.Find(FIRE_CONTAINER).transform;
-        fireCollider = transform.Find(PLAYER_COLLIDER_FIRE).GetComponent<FireCollider>();
+        for (int i = 1; i <= 3; i++)
+        {
+            fireColliders.Add(transform.Find(PLAYER_COLLIDER_FIRE + i).GetComponent<FireCollider>());
+            fireColliders[i-1].gameObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -61,7 +65,9 @@ public class PlayerController : MonoBehaviour
 
     private void Fire()
     {
-        var newFire = Instantiate(fireCollider.gameObject, fireContainer, true).GetComponent<FireCollider>();
+        int rdm = Random.Range(0, fireColliders.Count);
+        var newFire = Instantiate(fireColliders[rdm].gameObject, fireContainer, true).GetComponent<FireCollider>();
+        newFire.gameObject.SetActive(true);
         fires.Add(newFire);
         newFire.Fire(animatorParams.normalized);
     }
