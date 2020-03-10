@@ -1116,7 +1116,6 @@ MonoBehaviour:
   player: {fileID: 200628240}
   projectiles: {fileID: 385878079}
   interaction: {fileID: 385878078}
-  blackScreen: {fileID: 0}
 --- !u!114 &385878077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4931,7 +4930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 1789279661}
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 1202041886}
   fadeInTime: 0.4
   fadeOutTime: 0.4
 --- !u!114 &2014650684
@@ -4946,7 +4945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d489a593803964e86eb6dfee3270d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rpgManager: {fileID: 0}
+  rpgManager: {fileID: 385878076}
   cameraManager: {fileID: 2014650683}
 --- !u!4 &2014650685
 Transform:
@@ -7419,8 +7418,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3976842891013792730, guid: 8e7d1bb8653d8ee44b97d5ccce46c4f2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8e7d1bb8653d8ee44b97d5ccce46c4f2, type: 3}
+--- !u!1 &3976842891305082080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3976842891013792732, guid: 8e7d1bb8653d8ee44b97d5ccce46c4f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3976842891305082079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3976842891305082081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3976842891305082080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ee2b6f59f4c0446b8b9a744aa4aebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  target: {fileID: 0}
+  targetScene: World
 --- !u!1 &4728090320472294808
 GameObject:
   m_ObjectHideFlags: 0
