@@ -15,11 +15,13 @@
 ################
 
 Assets/2DGamekit/
+Assets/2DGamekit.meta
 
 ################
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
+Assets/2DGamekit.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # Assets/AssetStoreTools*
