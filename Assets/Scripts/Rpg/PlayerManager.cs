@@ -21,19 +21,49 @@ namespace rpg
 
         private ProjectilesManager projectilesManager;
         public PlayerController playerController;
+        private Animator animator;
 
         public float speed = 25.0f;
         public float interactionRange = 1.0f;
 
+        public int pv = 3;
+        public float hitDelay = 1.0f;
+
+        private bool justHit = false;
+
         public void Init(ProjectilesManager pm)
         {
+            animator = GetComponent<Animator>();
             projectilesManager = pm;
+
+            RpgManager.HUD.UpdateHearts(pv, 3);
         }
 
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f), playerController.velocity);
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            var creature = collision.gameObject.GetComponent<CreatureController>();
+
+            if (creature != null && !justHit)
+            {
+                StartCoroutine(GetHit());
+            }
+        }
+
+        private IEnumerator GetHit()
+        {
+            pv -= 1;
+            animator.SetTrigger("Hit");
+            RpgManager.HUD.UpdateHearts(pv, 3);
+
+            justHit = true;
+            yield return new WaitForSeconds(hitDelay);
+            justHit = false;
         }
     }
 }

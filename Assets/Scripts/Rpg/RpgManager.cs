@@ -11,6 +11,7 @@ namespace rpg
         public PlayerManager player;
         public ProjectilesManager projectiles;
         public InteractionManager interaction;
+        public PlayerHUD hud;
 
         public CanvasGroup blackScreen;
 
@@ -19,6 +20,7 @@ namespace rpg
         public static PlayerManager Player;
         public static ProjectilesManager Projectiles;
         public static InteractionManager Interaction;
+        public static PlayerHUD HUD;
 
         private void Awake()
         {
@@ -29,6 +31,7 @@ namespace rpg
                 RpgManager.Player = player;
                 RpgManager.Projectiles = projectiles;
                 RpgManager.Interaction = interaction;
+                RpgManager.HUD = hud;
 
                 DontDestroyOnLoad(gameObject);
             }
@@ -36,6 +39,11 @@ namespace rpg
             {
                 Destroy(gameObject);
             }
+        }
+
+        private void Start()
+        {
+            player.Init(projectiles);
         }
     }
 }

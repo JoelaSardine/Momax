@@ -41,7 +41,7 @@ namespace rpg
             interactionRange = interactionCollider.transform.localPosition.magnitude;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (movementEnabled)
             {

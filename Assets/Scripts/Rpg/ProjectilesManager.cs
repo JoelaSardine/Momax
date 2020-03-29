@@ -9,6 +9,6 @@ namespace rpg
         public List<Projectile> playerProjectiles;
         public List<Projectile> ennemyPojectiles;
 
-        //public Projectile 
+        public Transform ProjectilesContainer;
     }
 }
