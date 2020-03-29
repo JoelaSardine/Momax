@@ -28,7 +28,7 @@ namespace rpg
 
         private IEnumerator Teleport(GameObject go)
         {
-            PlayerController pc = go.GetComponent<PlayerController>();
+            PlayerManager pc = go.GetComponent<PlayerManager>();
             pc.movementEnabled = false;
 
             yield return StartCoroutine(GameManager.CameraManager.FadeInCoroutine());

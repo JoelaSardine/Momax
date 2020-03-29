@@ -15,34 +15,102 @@ namespace rpg
         private const string ANIMATOR_HORIZONTAL = "Vertical";
         private const string ANIMATOR_SPEED = "Speed";
 
-        private const string PLAYER_COLLIDER_INTERACTION = "InteractionCollider";
-        private const string PLAYER_COLLIDER_FIRE = "FireCollider";
-        private const string FIRE_CONTAINER = "FireContainer";
-
+        private const string INTERACTION_COLLIDER = "InteractionCollider";
+        
         private ProjectilesManager projectilesManager;
-        public PlayerController playerController;
-        private Animator animator;
 
-        public float speed = 25.0f;
+        private Animator animator;
+        private new Rigidbody2D rigidbody;
+        private Collider2D interactionCollider;
+
+        [Header("Movement")]
+        public float speed = 5.0f;
+        private Vector2 velocity = Vector2.zero;
+        private Vector2 movingDirection = Vector2.zero;
+        private Vector2 lookingDirection = Vector2.zero;
+        private bool _movementEnabled = true;
+        public bool movementEnabled {
+            get { return _movementEnabled; }
+            set {
+                animator.SetBool("Moving", false);
+                _movementEnabled = value;
+            }
+        }
+
+        [Header("Interaction")]
         public float interactionRange = 1.0f;
 
+        [Header("Life & Hit")]
         public int pv = 3;
         public float hitDelay = 1.0f;
 
+        [Header("Attack")]
+        public float attackDelay = 0.5f;
         private bool justHit = false;
-
+        
+        
         public void Init(ProjectilesManager pm)
         {
+            rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+
+            interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
+            interactionRange = interactionCollider.transform.localPosition.magnitude;
+
             projectilesManager = pm;
 
             RpgManager.HUD.UpdateHearts(pv, 3);
         }
 
+        private void Update()
+        {
+            if (Input.GetButtonDown(INPUT_FIRE))
+            {
+                Fire();
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            if (movementEnabled)
+            {
+                Vector2 input = new Vector2(Input.GetAxisRaw(INPUT_AXIS_HORIZONTAL), Input.GetAxisRaw(INPUT_AXIS_VERTICAL));
+                input.Normalize();
+
+                if (input == Vector2.zero)
+                {
+                    animator.SetBool("Moving", false);
+                }
+                else
+                {
+                    lookingDirection = input;
+                    animator.SetBool("Moving", true);
+
+                    animator.SetFloat("Horizontal", input.x);
+                    animator.SetFloat("Vertical", input.y);
+                }
+
+                movingDirection = input;
+
+                Move();
+            }
+        }
+
+        private void Move()
+        {
+            rigidbody.velocity = movingDirection * speed;
+            interactionCollider.transform.localPosition = lookingDirection * interactionRange;
+        }
+
+        private void Fire()
+        {
+            Debug.Log("Fire");
+        }
+
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f), playerController.velocity);
+            Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f), velocity);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
