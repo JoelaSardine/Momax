@@ -7,8 +7,9 @@ namespace rpg
     [RequireComponent(typeof(Rigidbody2D))]
     public class Snake : MonoBehaviour
     {
+        private CreatureController creatureController;
         private new Rigidbody2D rigidbody;
-
+        
         public float speed = 5.0f;
         public float stoppingDistance = 0.01f;
         public float stoppingDuration = 0.5f;
@@ -20,14 +21,23 @@ namespace rpg
 
         private void Awake()
         {
+            creatureController = GetComponent<CreatureController>();
             rigidbody = GetComponent<Rigidbody2D>();
+
             waypoints.Insert(0, transform.position);
         }
 
         private void FixedUpdate()
         {
+            if (creatureController.isSpeeping || creatureController.isJustHit)
+            {
+                rigidbody.velocity = Vector2.zero;
+                return;
+            }
+
             if (isStopping)
             {
+                rigidbody.velocity = Vector2.zero;
                 return;
             }
 

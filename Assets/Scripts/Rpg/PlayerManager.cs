@@ -24,11 +24,11 @@ namespace rpg
         private Collider2D interactionCollider;
 
         [Header("Movement")]
+        [SerializeField] private bool _movementEnabled = true;
         public float speed = 5.0f;
         private Vector2 velocity = Vector2.zero;
         private Vector2 movingDirection = Vector2.zero;
         private Vector2 lookingDirection = Vector2.zero;
-        private bool _movementEnabled = true;
         public bool movementEnabled {
             get { return _movementEnabled; }
             set {
@@ -43,10 +43,12 @@ namespace rpg
         [Header("Life & Hit")]
         public int pv = 3;
         public float hitDelay = 1.0f;
+        private bool isHitInCooldown = false;
 
         [Header("Attack")]
+        public bool attackEnabled = true;
         public float attackDelay = 0.5f;
-        private bool justHit = false;
+        private bool isAttackInCooldown = false;
         
         
         public void Init(ProjectilesManager pm)
@@ -104,7 +106,19 @@ namespace rpg
 
         private void Fire()
         {
-            Debug.Log("Fire");
+            if (isAttackInCooldown)
+                return;
+
+            projectilesManager.PlayerFire(transform.position, lookingDirection);
+
+            StartCoroutine(FireWaitCoroutine());
+        }
+
+        private IEnumerator FireWaitCoroutine()
+        {
+            isAttackInCooldown = true;
+            yield return new WaitForSeconds(attackDelay);
+            isAttackInCooldown = false;
         }
 
         private void OnDrawGizmos()
@@ -117,7 +131,7 @@ namespace rpg
         {
             var creature = collision.gameObject.GetComponent<CreatureController>();
 
-            if (creature != null && !justHit)
+            if (creature != null && !isHitInCooldown && !creature.isSpeeping)
             {
                 StartCoroutine(GetHit());
             }
@@ -129,9 +143,9 @@ namespace rpg
             animator.SetTrigger("Hit");
             RpgManager.HUD.UpdateHearts(pv, 3);
 
-            justHit = true;
+            isHitInCooldown = true;
             yield return new WaitForSeconds(hitDelay);
-            justHit = false;
+            isHitInCooldown = false;
         }
     }
 }

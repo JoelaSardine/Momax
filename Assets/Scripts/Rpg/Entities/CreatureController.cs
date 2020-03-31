@@ -18,7 +18,13 @@ namespace rpg
         public Vector2 lookingDirection = Vector2.zero;
         public Vector2 movingDirection = Vector2.zero;
 
-        public int damageOnHit = 1;
+        public int life = 1;
+        public int damageOnAttack = 1;
+
+        public float hitDuration = 0.5f;
+
+        public bool isJustHit = false;
+        public bool isSpeeping = false;
 
         private void Awake()
         {
@@ -40,6 +46,42 @@ namespace rpg
             animator.SetBool("Moving", moving);
             animator.SetFloat("Horizontal", lookingDirection.x);
             animator.SetFloat("Vertical", lookingDirection.y);
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Projectile projectile = collision.transform.GetComponent<Projectile>();
+            if (projectile && projectile.isPlayerProjectile)
+            {
+                BeHitByPlayerProjectile(projectile);
+            }
+        }
+
+        private void BeHitByPlayerProjectile(Projectile projectile)
+        {
+            projectile.Destruct();
+            if (isSpeeping)
+            {
+                return;
+            }
+
+            life--;
+            
+            if (life <= 0)
+            {
+                isSpeeping = true;
+                animator.SetBool("Sleeping", true);
+            }
+            animator.SetTrigger("Hit");
+
+            StartCoroutine(OnHitCoroutine());
+        }
+
+        private IEnumerator OnHitCoroutine()
+        {
+            isJustHit = true;
+            yield return new WaitForSeconds(hitDuration);
+            isJustHit = false;
         }
     }
 }
