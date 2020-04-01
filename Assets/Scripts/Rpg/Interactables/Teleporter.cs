@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace rpg
 {
@@ -8,7 +9,8 @@ namespace rpg
     {
         public Transform target;
         public string targetScene;
-
+        public string targetSpawnPoint;
+            
         protected override void Init()
         {
             base.Init();
@@ -18,7 +20,14 @@ namespace rpg
         {
             if (collision.collider.name == "Morgane")
             {
-                StartCoroutine(Teleport(collision.gameObject));
+                if (target != null)
+                {
+                    StartCoroutine(Teleport(collision.gameObject));
+                }
+                else
+                {
+                    RpgManager.LoadScene(targetScene, targetSpawnPoint);
+                }
             }
         }
 
@@ -28,18 +37,11 @@ namespace rpg
 
         private IEnumerator Teleport(GameObject go)
         {
-            PlayerManager pc = go.GetComponent<PlayerManager>();
-            pc.movementEnabled = false;
-
-            yield return StartCoroutine(GameManager.CameraManager.FadeInCoroutine());
-
-            if (target != null)
-            {
-                go.transform.position = target.position;
-            }
-
-            yield return StartCoroutine(GameManager.CameraManager.FadeOutCoroutine());
-            pc.movementEnabled = true;
+            RpgManager.Player.movementEnabled = false;
+            yield return StartCoroutine(RpgManager.CameraManager.FadeInCoroutine());
+            go.transform.position = target.position;
+            yield return StartCoroutine(RpgManager.CameraManager.FadeOutCoroutine());
+            RpgManager.Player.movementEnabled = true;
         }
     }
 }

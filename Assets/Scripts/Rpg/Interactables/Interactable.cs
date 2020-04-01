@@ -18,6 +18,8 @@ namespace rpg
         protected State state = State.Idle;
         protected Animator animator;
 
+        public bool active = true;
+
         private void Awake()
         {
             animator = GetComponent<Animator>();
@@ -27,7 +29,7 @@ namespace rpg
 
         private void Update()
         {
-            if (Input.GetButtonDown("Interact") && state == (state | State.Triggered))
+            if (active && Input.GetButtonDown("Interact") && state == (state | State.Triggered))
             {
                 Interact();
             }
@@ -37,16 +39,22 @@ namespace rpg
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            if (!active) return;
+
             state = state | State.Collided;
             CollisionEnter(collision);
         }
         private void OnCollisionExit2D(Collision2D collision)
         {
+            if (!active) return;
+
             state = (state | State.Collided) ^ State.Collided;
             CollisionExit(collision);
         }
         private void OnTriggerEnter2D(Collider2D collider)
         {
+            if (!active) return;
+
             state = state | State.Triggered;
             if (animator != null)
             {
@@ -58,6 +66,8 @@ namespace rpg
         }
         private void OnTriggerExit2D(Collider2D collider)
         {
+            if (!active) return;
+
             state = (state | State.Triggered) ^ State.Triggered;
             if (animator != null)
             {

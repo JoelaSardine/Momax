@@ -32,7 +32,10 @@ namespace rpg
         public bool movementEnabled {
             get { return _movementEnabled; }
             set {
-                animator.SetBool("Moving", false);
+                if (animator)
+                {
+                    animator.SetBool("Moving", false);
+                }                
                 _movementEnabled = value;
             }
         }
@@ -49,10 +52,20 @@ namespace rpg
         public bool attackEnabled = true;
         public float attackDelay = 0.5f;
         private bool isAttackInCooldown = false;
-        
-        
+
+
+        private void Awake()
+        {
+            if (RpgManager.Player != null && RpgManager.Player != this)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
         public void Init(ProjectilesManager pm)
         {
+            DontDestroyOnLoad(this.gameObject);
+
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
 
@@ -95,6 +108,10 @@ namespace rpg
                 movingDirection = input;
 
                 Move();
+            }
+            else
+            {
+                rigidbody.velocity = Vector2.zero;
             }
         }
 

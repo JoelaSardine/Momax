@@ -9,8 +9,8 @@ namespace rpg
     {
         protected override void Interact()
         {
-            RpgManager.Instance.player.movementEnabled = false;
-            GameManager.CameraManager.ChangeCameraOutputSize(0.5f);
+            RpgManager.Player.movementEnabled = false;
+            RpgManager.CameraManager.ChangeCameraOutputSize(0.5f);
 
             animator.SetTrigger("Exit");
             state = State.Idle;
