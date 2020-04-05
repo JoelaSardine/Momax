@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,9 @@ namespace rpg
         public InteractionManager interaction;
         public PlayerHUD hud;
 
+        [Header("Save keys")]
+        public bool key_fb = false;
+
         public static CameraManager CameraManager;
         public static RpgManager Instance;
         public static EnnemiesManager Ennemies;
@@ -22,9 +26,13 @@ namespace rpg
         public static ProjectilesManager Projectiles;
         public static InteractionManager Interaction;
         public static PlayerHUD HUD;
-
+        
         public static string Spawn;
         public static bool SceneJustLoaded = false;
+
+        private AsyncOperation unloadingFacebook = null;
+
+        public static GameStory currentStory;
 
         private void Awake()
         {
@@ -84,6 +92,23 @@ namespace rpg
             yield return null; StartCoroutine(cameraManager.FadeOutCoroutine());
             player.GetComponent<Collider2D>().enabled = true;
             player.movementEnabled = true;
+        }
+
+        public static void UnloadFacebook()
+        {
+            AsyncOperation ao = Instance.unloadingFacebook = SceneManager.UnloadSceneAsync("FacebookConversation");
+            ao.completed += OnEndUnloadingFacebook;
+        }
+        public static void OnEndUnloadingFacebook(AsyncOperation obj)
+        {
+            CameraManager.ChangeCameraOutputSize(1.0f);
+
+            if (currentStory is NeuillyPlaisanceStory)
+            {
+                NeuillyPlaisanceStory story = (NeuillyPlaisanceStory)currentStory;
+
+                story.OnEndFacebook();
+            }
         }
     }
 }

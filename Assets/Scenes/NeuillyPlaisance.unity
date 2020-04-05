@@ -1002,6 +1002,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 200628240}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_fb
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_Camera
@@ -4412,7 +4417,7 @@ PrefabInstance:
     - target: {fileID: 2223740617521090167, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1262899618634360137, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
@@ -5186,6 +5191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entrance: {fileID: 3976842891305082081}
+  computer: {fileID: 4728090320472294809}
   tb_beginning_1: "Ah, \xE7a fait du bien de rentrer chez soi..."
   tb_beginning_2: "... apr\xE8s une bonne journ\xE9e de travail !"
 --- !u!1 &2041936030

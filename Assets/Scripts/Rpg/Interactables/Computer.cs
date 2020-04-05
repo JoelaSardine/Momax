@@ -16,6 +16,9 @@ namespace rpg
         {
             player = RpgManager.Player;
 
+            animator.SetTrigger("Exit");
+            state = State.Idle;
+
             Interaction_1();
         }
 
@@ -33,12 +36,8 @@ namespace rpg
             player.EndTalk();
 
             player.movementEnabled = false;
-            RpgManager.CameraManager.ChangeCameraOutputSize(0.5f);
-
-            animator.SetTrigger("Exit");
-            state = State.Idle;
-
             SceneManager.LoadScene("FacebookConversation", LoadSceneMode.Additive);
+            RpgManager.CameraManager.ChangeCameraOutputSize(0.5f);
         }
 
         public void ResetInteraction()

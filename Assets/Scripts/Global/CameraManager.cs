@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class CameraManager : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class CameraManager : MonoBehaviour
 
     public void ChangeCameraOutputSize(float width)
     {
+        PixelPerfectCamera ppcam = mainCamera.GetComponent<PixelPerfectCamera>();
+        ppcam.enabled = width == 1.0f;
+
         Rect rect = mainCamera.rect;
         rect.width = width;
         mainCamera.rect = rect; 

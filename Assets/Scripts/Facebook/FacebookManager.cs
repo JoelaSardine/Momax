@@ -49,6 +49,11 @@ namespace facebook
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.F2))
+            {
+                End();
+            }
+
             if (!busy)
             {
                 if (Input.GetButtonDown("Right"))
@@ -68,7 +73,7 @@ namespace facebook
                     Move("down");
                 }
 
-                if (Input.GetButtonDown("Interact") && waitForInput)
+                if (Input.GetButtonDown("Fire") && waitForInput)
                 {
                     waitForInput = false;
                     Select();
@@ -93,6 +98,12 @@ namespace facebook
         {
             if (state == MessengerState.PickAnswer && choicePanel.selected >= 0)
             {
+                if (currentDialog.choices[choicePanel.selected].dialogId == -1)
+                {
+                    End();
+                    return;
+                }
+
                 if (debugMode && currentDialog.choices[choicePanel.selected].dialogId == 0)
                 {
                     currentDialogueId = previousDialogueId;
@@ -122,17 +133,12 @@ namespace facebook
                 return;
             }
 
-
+            rpg.RpgManager.UnloadFacebook();
         }
 
         private void Next()
         {
             CloseAnswerPanel();
-
-            /*if (currentDialogueId > )
-            {
-
-            }*/
 
             if (currentPhraseId < currentDialog.phrases.Count)
             {
