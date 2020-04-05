@@ -114,10 +114,25 @@ namespace facebook
         {
         }
 
+        private void End()
+        {
+            if (rpg.RpgManager.Instance == null)
+            {
+                Debug.Log("The end.");
+                return;
+            }
+
+
+        }
 
         private void Next()
         {
             CloseAnswerPanel();
+
+            /*if (currentDialogueId > )
+            {
+
+            }*/
 
             if (currentPhraseId < currentDialog.phrases.Count)
             {
@@ -170,7 +185,7 @@ namespace facebook
             conversationPanel.DisplayIsWriting(true);
             yield return new WaitForSeconds(text.Length * delayPerLetter);
             conversationPanel.DisplayIsWriting(false);
-            yield return new WaitForSeconds(delayBetweenReplies / 2);
+            //yield return new WaitForSeconds(delayBetweenReplies / 2);
             conversationPanel.WriteMax(text);
 
             Next();

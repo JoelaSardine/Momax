@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 139263082}
   - component: {fileID: 139263084}
   - component: {fileID: 139263083}
+  - component: {fileID: 139263085}
   m_Layer: 0
   m_Name: GameObject (6)
   m_TagString: Untagged
@@ -309,6 +310,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!61 &139263085
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139263081}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.35, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &179891291
 GameObject:
@@ -4385,12 +4412,12 @@ PrefabInstance:
     - target: {fileID: 2223740617521090167, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1262899618634360137, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 157.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 258676791127415948, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
@@ -4419,32 +4446,32 @@ PrefabInstance:
     - target: {fileID: 4293553405948984816, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293553405948984816, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293553405948984816, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293553405948984816, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -88.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293553405948984816, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 430
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293553405948984816, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 97.49999
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9769c697fbb18146bc70543e7686f55, type: 3}
@@ -5159,6 +5186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entrance: {fileID: 3976842891305082081}
+  tb_beginning_1: "Ah, \xE7a fait du bien de rentrer chez soi..."
+  tb_beginning_2: "... apr\xE8s une bonne journ\xE9e de travail !"
 --- !u!1 &2041936030
 GameObject:
   m_ObjectHideFlags: 0
@@ -7655,6 +7684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 1
   active: 1
+  speech1: "Zut, j'ai laiss\xE9 mon pc avec facebook ouvert."
+  speech2: Tiens d'ailleurs, un message !
 --- !u!61 &4728090320472294812
 BoxCollider2D:
   m_ObjectHideFlags: 0

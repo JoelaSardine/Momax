@@ -9,9 +9,14 @@ namespace pokemonBattle
     [RequireComponent(typeof(Text))]
     public class Textshadow : MonoBehaviour
     {
+        private Coroutine currentCoroutine = null;
+        public bool isWriting = false;
+        private string targetText;
+
         public string text = "text";
         public int size = 20;
 
+        public Text placeholderText;
         public Text realText;
         private Text myText;
 
@@ -36,7 +41,8 @@ namespace pokemonBattle
                 realText.text = text;
             }
         }
-
+        
+        // for inspector
         private void OnValidate()
         {
             myText = GetComponent<Text>();
@@ -57,20 +63,35 @@ namespace pokemonBattle
 
         public void Display(string newText, bool showImage, Action callback = null)
         {
-            StartCoroutine(SetTextCoroutine(newText, showImage, callback));
+            targetText = newText;
+            currentCoroutine = StartCoroutine(SetTextCoroutine(showImage, callback));
         }
 
-        private IEnumerator SetTextCoroutine(string newText, bool showImage, Action callback)
+        private IEnumerator SetTextCoroutine(bool showImage, Action callback)
         {
+            isWriting = true;
+            if (placeholderText)
+            {
+                placeholderText.text = targetText;
+            }
             ShowImg(false);
             SetTxt("");
-            for (int i = 0; i < newText.Length; i++)
+            for (int i = 0; i < targetText.Length; i++)
             {
-                SetTxt(text + newText[i]);
-                yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
+                SetTxt(text + targetText[i]);
+                if (BattleConsts.I)
+                {
+                    yield return new WaitForSeconds(BattleConsts.I.dialTextDelay);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.03f);
+                }
             }
 
             ShowImg(showImage);
+            isWriting = false;
+
             callback?.Invoke();
         }
 
@@ -80,6 +101,18 @@ namespace pokemonBattle
             {
                 endTxtImage.gameObject.SetActive(state);
             }
+        }
+
+        public void EndSetTextCoroutine()
+        {
+            if (isWriting)
+            {
+                StopCoroutine(currentCoroutine);
+                isWriting = false;
+
+                SetTxt(targetText);
+            }
+            ShowImg(true);
         }
     }
 }

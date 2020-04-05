@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 639689200380956709}
   - component: {fileID: 7574550109342475658}
   - component: {fileID: 6171022494755938218}
+  - component: {fileID: 6003207901798607815}
   m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
@@ -278,7 +279,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ouf, contente de rentrer !
+  m_Text: 'Oh yeah ! '
 --- !u!114 &6171022494755938218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +300,23 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6003207901798607815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173054770600044382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad99ef4b1f703c34ab1f839d20314c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Oh yeah ! '
+  size: 30
+  placeholderText: {fileID: 5521295159644380847}
+  realText: {fileID: 0}
+  endTxtImage: {fileID: 568265435540465936}
 --- !u!1 &258676790917312081
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,11 +502,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a94eac6b48c77f41a1167d6e3a659c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  _movementEnabled: 1
   speed: 5
   interactionRange: 1
   pv: 3
   hitDelay: 1
+  attackEnabled: 1
   attackDelay: 0.5
 --- !u!1 &2223740617521090167
 GameObject:

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace rpg
 {
@@ -22,6 +24,12 @@ namespace rpg
         private Animator animator;
         private new Rigidbody2D rigidbody;
         private Collider2D interactionCollider;
+
+        private GameObject dialogCanvas;
+        private pokemonBattle.Textshadow dialogText;
+
+        private Action onEndTalk;
+        private bool isCanvasOpen = false;
 
         [Header("Movement")]
         [SerializeField] private bool _movementEnabled = true;
@@ -68,6 +76,8 @@ namespace rpg
 
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            dialogCanvas = transform.Find("Canvas").gameObject;
+            dialogText = dialogCanvas.transform.Find("Panel").Find("PlaceholderText").GetComponentInChildren<pokemonBattle.Textshadow>();
 
             interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
             interactionRange = interactionCollider.transform.localPosition.magnitude;
@@ -81,7 +91,21 @@ namespace rpg
         {
             if (Input.GetButtonDown(INPUT_FIRE))
             {
-                Fire();
+                if (isCanvasOpen)
+                {
+                    if (dialogText.isWriting)
+                    {
+                        dialogText.EndSetTextCoroutine();
+                    }
+                    else if (onEndTalk != null)
+                    {
+                        onEndTalk();
+                    }
+                }
+                else if (attackEnabled)
+                {
+                    Fire();
+                }
             }
         }
 
@@ -163,6 +187,24 @@ namespace rpg
             isHitInCooldown = true;
             yield return new WaitForSeconds(hitDelay);
             isHitInCooldown = false;
+        }
+
+        public void Talk(string message, Action OnEndTalk = null)
+        {
+            isCanvasOpen = true;
+            movementEnabled = false;
+
+            this.onEndTalk = OnEndTalk;
+
+            dialogCanvas.SetActive(true);
+            dialogText.Display(message, true);
+        }
+
+        public void EndTalk()
+        {
+            dialogCanvas.SetActive(false);
+            isCanvasOpen = false;
+            movementEnabled = true;
         }
     }
 }
