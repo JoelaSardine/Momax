@@ -18,6 +18,9 @@ namespace rpg
 
         [Header("Save keys")]
         public bool key_fb = false;
+        public bool key_blockedRoad = false;
+        public bool key_seenSnake = false;
+        public bool key_altea = false;
 
         public static CameraManager CameraManager;
         public static RpgManager Instance;

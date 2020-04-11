@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Debug/TestSceneTP2.unity
     guid: 6289700fb59a0a24eb6a1c3e47ac8e22
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
+    guid: fd9f301a95cd6bb4ba1dd38f8c3409e6
   m_configObjects: {}

@@ -6,24 +6,18 @@ namespace rpg
 {
     public class NeuillyPlaisanceStory : GameStory
     {
-        private PlayerManager player;
-
         public Interactable entrance;
         public Interactable computer;
 
         public string tb_beginning_1 = "Ah, ça fait du bien de rentrer chez soi...";
         public string tb_beginning_2 = "...après une bonne journée de travail !";
 
-        private IEnumerator Start()
+        public string tb_afterFB = "Je dois retrouver Maxime !";
+
+        protected override IEnumerator Start()
         {
-            if (!RpgManager.Instance)
-            {
-                yield return new WaitForEndOfFrame();
-            }
-
-            RpgManager.currentStory = this;
-            player = RpgManager.Player;
-
+            yield return StartCoroutine(base.Start());
+            
             player.attackEnabled = false;
 
             if (RpgManager.Instance.key_fb)
@@ -57,7 +51,7 @@ namespace rpg
             RpgManager.Instance.key_fb = true;
 
             computer.active = false;
-            player.Talk("Je dois retrouver Maxime !", player.EndTalk);
+            player.Talk(tb_afterFB, player.EndTalk);
             entrance.active = true;
         }
     }

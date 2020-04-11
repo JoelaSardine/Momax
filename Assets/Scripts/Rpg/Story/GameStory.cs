@@ -2,5 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameStory : MonoBehaviour
-{ }
+namespace rpg
+{
+    public class GameStory : MonoBehaviour
+    {
+        protected PlayerManager player;
+
+        protected virtual IEnumerator Start()
+        {
+            if (!RpgManager.Instance)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            RpgManager.currentStory = this;
+            player = RpgManager.Player;
+        }
+    }
+}

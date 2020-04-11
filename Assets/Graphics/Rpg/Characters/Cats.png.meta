@@ -5,6 +5,10 @@ TextureImporter:
     21300000: Altea_Idle_0
     21300002: Altea_Idle_1
     21300004: Altea_Idle_2
+    21300006: Orion_Idle_0
+    21300008: Orion_Idle_1
+    21300010: Head_Altea
+    21300012: Head_Orion
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -142,6 +146,86 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e10e338ffbf5c5d4b9b0239f5b8f4e51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 268
+        width: 17
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc606d708326744d8d56f6d0808bc66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 267
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d31b746dbc91f0459b484eac5ece148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head_Altea
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 280
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae29f94fc29821644b401e1a7c931604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head_Orion
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 275
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726749721a3415f41b3c08de5a935095
       vertices: []
       indices: 
       edges: []
