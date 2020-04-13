@@ -21,14 +21,6 @@ public class CameraManager : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            ChangeCameraOutputSize(mainCamera.rect.width == 1 ? 0.5f : 1);
-        }
-    }
-
     public void ChangeCameraOutputSize(float width)
     {
         PixelPerfectCamera ppcam = mainCamera.GetComponent<PixelPerfectCamera>();

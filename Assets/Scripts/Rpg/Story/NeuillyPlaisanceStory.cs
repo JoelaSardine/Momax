@@ -54,5 +54,27 @@ namespace rpg
             player.Talk(tb_afterFB, player.EndTalk);
             entrance.active = true;
         }
+        
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                RpgManager.Instance.key_fb = false;
+
+                computer.active = true;
+                entrance.active = false;
+                player.movementEnabled = false;
+
+                Beginning_1();
+
+                RpgManager.ZoneDisplayName("Cheat - Beginning");
+            }
+            else if (Input.GetKeyDown(KeyCode.F2))
+            {
+                OnEndFacebook();
+
+                RpgManager.ZoneDisplayName("Cheat - FB done");
+            }
+        }
     }
 }
