@@ -29,7 +29,7 @@ namespace rpg
 
         private void Update()
         {
-            if (active && Input.GetButtonDown("Interact") && state == (state | State.Triggered))
+            if (active && Input.GetButtonDown("Fire") && state == (state | State.Triggered))
             {
                 Interact();
             }

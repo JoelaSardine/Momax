@@ -12,7 +12,8 @@ namespace rpg
         public string tb_beginning_1 = "Ah, ça fait du bien de rentrer chez soi...";
         public string tb_beginning_2 = "...après une bonne journée de travail !";
 
-        public string tb_afterFB = "Je dois retrouver Maxime !";
+        public string tb_afterFB_1 = "Je dois retrouver Maxime ! ...";
+        public string tb_afterFB_2 = "Allez, direction Limoges !";
 
         protected override IEnumerator Start()
         {
@@ -51,7 +52,12 @@ namespace rpg
             RpgManager.Instance.key_fb = true;
 
             computer.active = false;
-            player.Talk(tb_afterFB, player.EndTalk);
+            player.Talk(tb_afterFB_1, OnEndFacebook2);
+        }
+
+        private void OnEndFacebook2()
+        {
+            player.Talk(tb_afterFB_2, player.EndTalk);
             entrance.active = true;
         }
         

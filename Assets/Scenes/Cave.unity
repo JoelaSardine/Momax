@@ -1750,14 +1750,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527071451}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 296550148}
   - {fileID: 2097578631}
-  m_Father: {fileID: 1286652270}
-  m_RootOrder: 2
+  - {fileID: 627362440}
+  m_Father: {fileID: 2022772667}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &540756401
 GameObject:
@@ -2060,6 +2061,172 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &627362439
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 527071452}
+    m_Modifications:
+    - target: {fileID: 6991475804042669447, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_Name
+      value: Orion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804174254051, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804174254051, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968181, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_Text
+      value: ' Parler'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11b2480a4ee36c04289bb4344ef20415, type: 3}
+--- !u!4 &627362440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+    type: 3}
+  m_PrefabInstance: {fileID: 627362439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &627362441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6991475804042669447, guid: 11b2480a4ee36c04289bb4344ef20415,
+    type: 3}
+  m_PrefabInstance: {fileID: 627362439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &627362442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627362441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cf5aeab1412cb4786cd84338404ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  active: 1
+  character: {fileID: 4022005907450709058}
+  talks:
+  - "Morgane : Bonjour, je m'appelle Morgane. Il para\xEEt que tu es un aventurier.
+    Je dois me rendre \xE0 Limoges, tu pourrais m''aider ?"
+  - 'Chat : "Un aventurier" ? Je suis THE Aventurier. On m''appelle Orion le Brave,
+    et je serai ravi de t''aider, si ce n''est pas...'
+  - '... trop dangereux.'
+  - "Morgane : Des m\xE9chants animaux bloquent le passage sur l'autoroute, et l'homme
+    que j'aime est peut-\xEAtre en danger. "
+  - 'Orion : Mon pouvoir de Protecteur est d''amplifier les talents. As-tu un talent
+    particulier ?'
+  - 'Morgane : Eh bien je dessine pas trop mal. Regarde. '
+  - 'Morgane : *dessine*
+
+    ....................................................'
+  - "Orion : C'est... sp\xE9cial. C'est un asticot ? "
+  - "Morgane : Euh... Pas vraiment... \nC'est sens\xE9 \xEAtre toi. "
+  - "Orion : Oh l\xE0 merde. Eh bien euh on va dire que ton talent est ... le chant
+    ! Tu as une joli voix. Maintenant, quand tu chanteras ..."
+  - "... ta voix pourra endormir les animaux. Essaie donc d'endormir le serpent l\xE0-bas,
+    en appuyant sur la touche d'interaction. ..."
+  - "Les animaux endormis sont inoffensifs, tu pourras les toucher, m\xEAme les bouger
+    au besoin, tant qu'ils dorment."
+  - 'Morgane : OK ! Merci ! C''est parti mon kiki.'
+  sprite: {fileID: 21300012, guid: 06ea7156826703044bf78d5b8dc101c5, type: 3}
+  isAltea: 0
 --- !u!1 &662807403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,7 +4570,6 @@ Transform:
   m_Children:
   - {fileID: 354033248}
   - {fileID: 1000034455}
-  - {fileID: 527071452}
   m_Father: {fileID: 2022772667}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5314,12 +5480,12 @@ PrefabInstance:
     - target: {fileID: 258676791127415947, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.42
+      value: -9.47
       objectReference: {fileID: 0}
     - target: {fileID: 258676791127415947, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4
+      value: -25.1
       objectReference: {fileID: 0}
     - target: {fileID: 258676791127415947, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
@@ -37592,6 +37758,7 @@ Transform:
   - {fileID: 1286652270}
   - {fileID: 991958686}
   - {fileID: 1764421548}
+  - {fileID: 527071452}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

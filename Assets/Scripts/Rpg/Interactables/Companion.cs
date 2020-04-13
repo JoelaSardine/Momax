@@ -8,6 +8,15 @@ namespace rpg
     {
         PlayerManager player;
 
+        public GameObject character;
+
+        [TextArea]
+        public List<string> talks;
+        private int currentTalk = 0;
+
+        public Sprite sprite;
+        public bool isAltea; // or Orion
+
         protected override void Interact()
         {
             player = RpgManager.Player;
@@ -15,12 +24,42 @@ namespace rpg
             animator.SetTrigger("Exit");
             state = State.Idle;
 
-            Interaction_1();
+            RpgManager.Instance.discussionInterface.SetImage(false, sprite);
+
+            DoTalk();
+        }
+               
+        private void DoTalk()
+        {
+            if (currentTalk < talks.Count)
+            {
+                string t = talks[currentTalk];
+                player.Dialog(t.Split(':')[0] == "Morgane ", t, DoTalk);
+                currentTalk++;
+            }
+            else
+            {
+                player.EndTalk();
+                currentTalk = 0;
+
+                EndInteraction();
+            }
         }
 
-        private void Interaction_1()
+        private void EndInteraction()
         {
-            return;
+            if (isAltea)
+            {
+                RpgManager.Instance.key_altea = true;
+            }
+            else
+            {
+                RpgManager.Instance.key_orion = true;
+                player.attackEnabled = true;
+            }
+
+            character.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

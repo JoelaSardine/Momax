@@ -19,11 +19,14 @@ namespace rpg
         public Animator zoneBubbleAnimator;
         private Text zoneBubbleText;
 
+        public DiscussionInterface discussionInterface;
+
         [Header("Save keys")]
         public bool key_fb = false;
         public bool key_blockedRoad = false;
         public bool key_seenSnake = false;
         public bool key_altea = false;
+        public bool key_orion = false;
 
         public static CameraManager CameraManager;
         public static RpgManager Instance;
@@ -123,6 +126,24 @@ namespace rpg
         {
             Instance.zoneBubbleText.text = text;
             Instance.zoneBubbleAnimator.SetTrigger("Open");
+        }
+
+        public static pokemonBattle.Textshadow DialogueTalk(bool? left, string text = "")
+        {
+            if (left == null)
+            {
+                Instance.discussionInterface.EndTalk();
+                return null;
+            }
+            else if (left == true)
+            {
+                Instance.player.movementEnabled = false;
+                return Instance.discussionInterface.TalkLeft(text);
+            }
+            else 
+            {
+                return Instance.discussionInterface.TalkRight(text);
+            }
         }
     }
 }

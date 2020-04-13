@@ -18,6 +18,8 @@ namespace rpg
         {
             yield return StartCoroutine(base.Start());
 
+            player.attackEnabled = RpgManager.Instance.key_orion;
+
             if (RpgManager.Instance.key_altea)
             {
                 blackVeil.SetActive(false);

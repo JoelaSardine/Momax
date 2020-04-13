@@ -10,9 +10,8 @@ namespace rpg
         {
             yield return StartCoroutine(base.Start());
 
+            player.attackEnabled = RpgManager.Instance.key_orion;
             
-            
-            //player.attackEnabled = false;
             //player.movementEnabled = false;
 
             //if (RpgManager.Instance.key_fb)
@@ -23,8 +22,7 @@ namespace rpg
                 yield return new WaitForSeconds(1.0f);
                 //Beginning_1();
             }
-
-            Debug.Log("WorldStory Start ends");
+            
         }
 
 /*        private void Beginning_1()

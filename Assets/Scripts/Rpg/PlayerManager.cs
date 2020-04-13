@@ -25,11 +25,14 @@ namespace rpg
         private new Rigidbody2D rigidbody;
         private Collider2D interactionCollider;
 
-        private GameObject dialogCanvas;
-        private pokemonBattle.Textshadow dialogText;
+        private GameObject talkCanvas;
+        private pokemonBattle.Textshadow talkText;
 
         private Action onEndTalk;
+        private pokemonBattle.Textshadow dialogText = null;
         private bool isCanvasOpen = false;
+
+        private bool sameframe = false;
 
         [Header("Movement")]
         [SerializeField] private bool _movementEnabled = true;
@@ -76,8 +79,8 @@ namespace rpg
 
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
-            dialogCanvas = transform.Find("Canvas").gameObject;
-            dialogText = dialogCanvas.transform.Find("Panel").Find("PlaceholderText").GetComponentInChildren<pokemonBattle.Textshadow>();
+            talkCanvas = transform.Find("Canvas").gameObject;
+            talkText = talkCanvas.transform.Find("Panel").Find("PlaceholderText").GetComponentInChildren<pokemonBattle.Textshadow>();
 
             interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
             interactionRange = interactionCollider.transform.localPosition.magnitude;
@@ -89,13 +92,24 @@ namespace rpg
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.F12))
+            {
+                Collider2D c = GetComponent<Collider2D>();
+                c.enabled = !c.enabled;
+                RpgManager.ZoneDisplayName("Cheat : Collider " + (c.enabled ? "Activé" : "Désactivé"));
+            }
+
             if (Input.GetButtonDown(INPUT_FIRE))
             {
-                if (isCanvasOpen)
+                if (isCanvasOpen && !sameframe)
                 {
-                    if (dialogText.isWriting)
+                    if (dialogText && dialogText.isWriting)
                     {
                         dialogText.EndSetTextCoroutine();
+                    }
+                    else if (talkText.isWriting)
+                    {
+                        talkText.EndSetTextCoroutine();
                     }
                     else if (onEndTalk != null)
                     {
@@ -107,6 +121,8 @@ namespace rpg
                     Fire();
                 }
             }
+
+            sameframe = false;
         }
 
         private void FixedUpdate()
@@ -189,20 +205,35 @@ namespace rpg
             isHitInCooldown = false;
         }
 
-        public void Talk(string message, Action OnEndTalk = null)
+        public void Dialog(bool? left, string message, Action OnEndTalk = null)
         {
+            sameframe = true;
+
             isCanvasOpen = true;
             movementEnabled = false;
 
             this.onEndTalk = OnEndTalk;
 
-            dialogCanvas.SetActive(true);
-            dialogText.Display(message, true);
+            dialogText = RpgManager.DialogueTalk(left, message);
+        }
+
+        public void Talk(string message, Action OnEndTalk = null)
+        {
+            sameframe = true;
+
+            isCanvasOpen = true;
+            movementEnabled = false;
+
+            this.onEndTalk = OnEndTalk;
+
+            talkCanvas.SetActive(true);
+            talkText.Display(message, true);
         }
 
         public void EndTalk()
         {
-            dialogCanvas.SetActive(false);
+            dialogText = RpgManager.DialogueTalk(null);  
+            talkCanvas.SetActive(false);
             isCanvasOpen = false;
             movementEnabled = true;
         }
