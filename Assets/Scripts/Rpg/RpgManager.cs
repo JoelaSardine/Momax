@@ -16,6 +16,9 @@ namespace rpg
         public InteractionManager interaction;
         public PlayerHUD hud;
 
+        public Animator zoneBubbleAnimator;
+        private Text zoneBubbleText;
+
         [Header("Save keys")]
         public bool key_fb = false;
         public bool key_blockedRoad = false;
@@ -63,6 +66,8 @@ namespace rpg
         private void Start()
         {
             player.Init(projectiles);
+
+            zoneBubbleText = zoneBubbleAnimator.GetComponentInChildren<Text>();
         }
 
         public static void LoadScene(string scene, string spawn)
@@ -112,6 +117,12 @@ namespace rpg
 
                 story.OnEndFacebook();
             }
+        }
+
+        public static void ZoneDisplayName(string text)
+        {
+            Instance.zoneBubbleText.text = text;
+            Instance.zoneBubbleAnimator.SetTrigger("Open");
         }
     }
 }
