@@ -15,6 +15,21 @@ TextureImporter:
     21300020: Stmaur0
     21300022: Stmaur1
     21300024: Stmaur2
+    21300026: Montgeron_0
+    21300028: Montgeron_1
+    21300030: Montgeron_2
+    21300032: Montgeron_3
+    21300034: Montgeron_4
+    21300036: Montgeron_5
+    21300038: Montgeron_6
+    21300040: Montgeron_7
+    21300042: Montgeron_8
+    21300044: Montgeron_9
+    21300046: Montgeron_10
+    21300048: Montgeron_11
+    21300050: Montgeron_12
+    21300052: Montgeron_13
+    21300054: Montgeron_14
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -325,7 +340,7 @@ TextureImporter:
         width: 80
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,13 +360,313 @@ TextureImporter:
         width: 80
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ef044e059dadccf478c38513f46a2a78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1481
+        width: 102
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22b6bddb9a54b748bbb6a24154b4eef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_1
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1512
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fc34cdd0de2b94e8bbb7758d017b88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1506
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00a2ebf1ebe7514bab05b7f7718761c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_3
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1427
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533226037bff0b84586836521526e478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1427
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3835efc3e51735149b2040b2ca4acca1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1336
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33a40708dc2a1b46918100fb5395a81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_6
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1342
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7549882bb2d15429970d713fe0f178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_7
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1257
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75375b8247574c4fbd3965189814bbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_8
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1172
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6b544f7d4738a4eb6264ddcfc3ad37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_9
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1081
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cad4a66f86ad4949b35acbc0d006b1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_10
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1166
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b49c1832c1168d43bfdadde2170144c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_11
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1172
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c619346e657555459456c2bf92258bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_12
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1077
+        width: 68
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c71b034c697a94eb3fefc2a9c9f269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1375
+        width: 102
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6133c9d36c67949a3833c2c4769996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Montgeron_14
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1269
+        width: 102
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c641c187960954fad602511744c399
       vertices: []
       indices: 
       edges: []
