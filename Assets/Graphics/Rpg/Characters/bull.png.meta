@@ -2,44 +2,44 @@ fileFormatVersion: 2
 guid: b3b970091989cbd468bff12d52e9a917
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bull_0
-    21300002: bull_16
-    21300004: bull_17
-    21300006: bull_18
-    21300008: bull_19
-    21300010: bull_20
+    21300000: bull_portrait
+    21300002: bull_idle_d0
+    21300004: bull_idle_d1
+    21300006: bull_move_d0
+    21300008: bull_move_d1
+    21300010: bull_move_d2
     21300012: bull_21
     21300014: bull_22
     21300016: bull_23
     21300018: bull_24
     21300020: bull_25
-    21300022: bull_29
-    21300024: bull_30
-    21300026: bull_31
-    21300028: bull_32
-    21300030: bull_33
+    21300022: bull_idle_u0
+    21300024: bull_idle_u1
+    21300026: bull_move_u0
+    21300028: bull_move_u1
+    21300030: bull_move_u2
     21300032: bull_34
     21300034: bull_35
     21300036: bull_36
     21300038: bull_37
-    21300040: bull_38
-    21300042: bull_39
-    21300044: bull_40
-    21300046: bull_41
-    21300048: bull_42
-    21300050: bull_43
-    21300052: bull_44
+    21300040: bull_asleep_0
+    21300042: bull_asleep_1
+    21300044: bull_idle_l0
+    21300046: bull_idle_l1
+    21300048: bull_move_l0
+    21300050: bull_move_l1
+    21300052: bull_move_l2
     21300054: bull_45
     21300056: bull_46
     21300058: bull_47
     21300060: bull_48
     21300062: bull_51
     21300064: bull_52
-    21300066: bull_53
-    21300068: bull_54
-    21300070: bull_55
-    21300072: bull_56
-    21300074: bull_57
+    21300066: bull_idle_r0
+    21300068: bull_idle_r1
+    21300070: bull_move_r0
+    21300072: bull_move_r1
+    21300074: bull_move_r2
     21300076: bull_58
     21300078: bull_59
     21300080: bull_60
@@ -137,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bull_0
+      name: bull_portrait
       rect:
         serializedVersion: 2
         x: 4
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_16
+      name: bull_idle_d0
       rect:
         serializedVersion: 2
         x: 88
@@ -177,7 +177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_17
+      name: bull_idle_d1
       rect:
         serializedVersion: 2
         x: 109
@@ -197,7 +197,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_18
+      name: bull_move_d0
       rect:
         serializedVersion: 2
         x: 166
@@ -217,7 +217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_19
+      name: bull_move_d1
       rect:
         serializedVersion: 2
         x: 187
@@ -237,7 +237,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_20
+      name: bull_move_d2
       rect:
         serializedVersion: 2
         x: 208
@@ -357,7 +357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_29
+      name: bull_idle_u0
       rect:
         serializedVersion: 2
         x: 90
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_30
+      name: bull_idle_u1
       rect:
         serializedVersion: 2
         x: 109
@@ -397,7 +397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_31
+      name: bull_move_u0
       rect:
         serializedVersion: 2
         x: 167
@@ -417,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_32
+      name: bull_move_u1
       rect:
         serializedVersion: 2
         x: 186
@@ -437,7 +437,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_33
+      name: bull_move_u2
       rect:
         serializedVersion: 2
         x: 209
@@ -537,15 +537,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_38
+      name: bull_asleep_0
       rect:
         serializedVersion: 2
         x: 5
         y: 163
         width: 29
         height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -557,7 +557,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_39
+      name: bull_asleep_1
       rect:
         serializedVersion: 2
         x: 36
@@ -577,7 +577,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_40
+      name: bull_idle_l0
       rect:
         serializedVersion: 2
         x: 81
@@ -597,7 +597,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_41
+      name: bull_idle_l1
       rect:
         serializedVersion: 2
         x: 108
@@ -617,7 +617,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_42
+      name: bull_move_l0
       rect:
         serializedVersion: 2
         x: 153
@@ -637,7 +637,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_43
+      name: bull_move_l1
       rect:
         serializedVersion: 2
         x: 182
@@ -657,7 +657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_44
+      name: bull_move_l2
       rect:
         serializedVersion: 2
         x: 214
@@ -777,27 +777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_52
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 107
-        width: 26
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70cd81e4777f0e04db4ac650d3924374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bull_53
+      name: bull_idle_r0
       rect:
         serializedVersion: 2
         x: 81
@@ -817,7 +797,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_54
+      name: bull_idle_r1
       rect:
         serializedVersion: 2
         x: 110
@@ -837,7 +817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_55
+      name: bull_move_r0
       rect:
         serializedVersion: 2
         x: 155
@@ -857,7 +837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_56
+      name: bull_move_r1
       rect:
         serializedVersion: 2
         x: 182
@@ -877,7 +857,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bull_57
+      name: bull_move_r2
       rect:
         serializedVersion: 2
         x: 214

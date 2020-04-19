@@ -8,4 +8,24 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Bull
   m_Controller: {fileID: 9100000, guid: 837e81c8efe4709479d562068883245a, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b518a06d943b3ca408b999ccbcc18483, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 50befb37be5549c48ba566f4b3b7d9d2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b8a960092df93f34988b7eb7cbe0865f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1604b7b3fe011f64ca1f1a27d45838ca, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 20ea43cc23e0a6d4eba0ed46c544a989, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b6c9b06cc628ae8479cec7082ea13c65, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c06b5a6ec0147934f9eee59efda30acb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b45c0b4801f2cc04e8158706c9035f71, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 50ff64952ee9e5f4082196b4569cd9e2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 776a62d0314c95c4ab4421699fd8ea91, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bb7f2a0dd2eceb345bc904a0e9f0b35f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: db8242897e4910d41b2b1d524c554464, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 322af89aa78a74843aa6da8dcb5202dc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9a99a28c129fbf1498909bf5a22a3b27, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3badf6605770e8548b1b034862e0c5f4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e5e82b62e09470e4bb604b2dd7535d73, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b76259197280fff4f9137a595b84ecb4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f186fe5e6aa5770419c5bd74e452b59c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dab3271f4498fc44996b3cac470c0193, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ef3ec5cc2ccc5e45bd789ecb5ae2b31, type: 2}

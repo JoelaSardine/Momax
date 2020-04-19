@@ -14,8 +14,8 @@ namespace rpg
         public float stoppingDistance = 0.01f;
         public float stoppingDuration = 0.5f;
 
-        public List<Vector3> waypoints = new List<Vector3>();
-        public int currentWP = 0;
+        public Rect roamZone = new Rect(0, 0, 2, 2);
+        private Vector3 target;
 
         private bool isStopping = false;
 
@@ -24,7 +24,7 @@ namespace rpg
             creatureController = GetComponent<CreatureController>();
             rigidbody = GetComponent<Rigidbody2D>();
 
-            waypoints.Insert(0, transform.position);
+            target = transform.position;
         }
 
         private void FixedUpdate()
@@ -41,14 +41,14 @@ namespace rpg
                 return;
             }
 
-            if (Vector3.Distance(transform.position, waypoints[currentWP]) < stoppingDistance)
+            if (Vector3.Distance(transform.position, target) < stoppingDistance)
             {
                 rigidbody.velocity = Vector2.zero;
                 StartCoroutine(waitCoroutine());
             }
             else
             {
-                rigidbody.velocity = (waypoints[currentWP] - transform.position).normalized * speed;
+                rigidbody.velocity = (target - transform.position).normalized * speed;
                 //Debug.Log(rigidbody.velocity);
             }
         }
@@ -56,31 +56,27 @@ namespace rpg
         private IEnumerator waitCoroutine()
         {
             isStopping = true;
-            yield return new WaitForSeconds(stoppingDuration);
-            currentWP++;
-            if (currentWP >= waypoints.Count)
-            {
-                currentWP = 0;
-            }
+            yield return new WaitForSeconds(Random.Range(0, stoppingDuration));
+
+            target = new Vector3(Random.Range(roamZone.xMin, roamZone.xMax), Random.Range(roamZone.yMin, roamZone.yMax));
             isStopping = false;
         }
 
         private void OnDrawGizmos()
         {
-            for (int i = 0; i < waypoints.Count; i++)
-            {
-                Gizmos.DrawSphere(waypoints[i], 0.2f);
+            Vector3 bottomLeft = new Vector3(roamZone.xMin, roamZone.yMin);
+            Vector3 topLeft = new Vector3(roamZone.xMin, roamZone.yMax);
+            Vector3 topRight = new Vector3(roamZone.xMax, roamZone.yMax);
+            Vector3 bottomRight = new Vector3(roamZone.xMax, roamZone.yMin);
 
-                if (i == 0)
-                    Gizmos.DrawLine(transform.position, waypoints[i]);
-                else
-                    Gizmos.DrawLine(waypoints[i - 1], waypoints[i]);
-            }
-
-            if (waypoints.Count > 0)
-            {
-                Gizmos.DrawLine(waypoints[waypoints.Count - 1], transform.position);
-            }
+            Gizmos.DrawSphere(bottomLeft, 0.2f);
+            Gizmos.DrawSphere(topLeft, 0.2f);
+            Gizmos.DrawSphere(topRight, 0.2f);
+            Gizmos.DrawSphere(bottomRight, 0.2f);
+            Gizmos.DrawLine(bottomLeft, topLeft);
+            Gizmos.DrawLine(topLeft, topRight);
+            Gizmos.DrawLine(topRight, bottomRight);
+            Gizmos.DrawLine(bottomRight, bottomLeft);
         }
     }
 }
