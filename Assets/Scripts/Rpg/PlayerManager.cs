@@ -188,7 +188,7 @@ namespace rpg
         {
             var creature = collision.gameObject.GetComponent<CreatureController>();
 
-            if (creature != null && !isHitInCooldown && !creature.isSpeeping)
+            if (creature != null && !isHitInCooldown && !creature.isSpeeping && creature.damageOnAttack > 0)
             {
                 StartCoroutine(GetHit());
             }

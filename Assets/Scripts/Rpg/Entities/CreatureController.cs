@@ -14,7 +14,7 @@ namespace rpg
         private new Rigidbody2D rigidbody;
         private Animator animator;
 
-        private bool moving = false;
+        private bool isMoving = false;
         public Vector2 lookingDirection = Vector2.zero;
         public Vector2 movingDirection = Vector2.zero;
 
@@ -36,14 +36,15 @@ namespace rpg
         void Update()
         {
             movingDirection = rigidbody.velocity;
-            moving = movingDirection.sqrMagnitude > 0.1f;
+            isMoving = movingDirection.sqrMagnitude > 0.1f;
             
-            if (moving)
+            if (isMoving)
+
             {
                 lookingDirection = movingDirection.normalized;
             }
 
-            animator.SetBool("Moving", moving);
+            animator.SetBool("Moving", isMoving);
             animator.SetFloat("Horizontal", lookingDirection.x);
             animator.SetFloat("Vertical", lookingDirection.y);
         }

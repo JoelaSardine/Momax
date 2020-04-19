@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300002, guid: b3b970091989cbd468bff12d52e9a917, type: 3}
+  m_Sprite: {fileID: 21300042, guid: 554e1af7a2fb2f14da4b6c0fefe131e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &5875168559610122338
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 1395276199906179522}
   - component: {fileID: 8581320124474491541}
   - component: {fileID: 2917959765638750758}
-  - component: {fileID: 8641367591037596020}
+  - component: {fileID: 3704464219760650878}
   m_Layer: 9
-  m_Name: Bull
+  m_Name: Horse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ Animator:
   m_GameObject: {fileID: 5875168559610122338}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 2c5306ee556a5644db019b1eee41ea9f, type: 2}
+  m_Controller: {fileID: 22100000, guid: ec3b19ac5ba534648a1cb4040ece37e2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -170,8 +170,8 @@ MonoBehaviour:
   lookingDirection: {x: 0, y: 0}
   movingDirection: {x: 0, y: 0}
   life: 2
-  damageOnAttack: 1
-  hitDuration: 0.5
+  damageOnAttack: 0
+  hitDuration: 1
   isJustHit: 0
   isSpeeping: 0
 --- !u!58 &2917959765638750758
@@ -190,7 +190,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &8641367591037596020
+--- !u!114 &3704464219760650878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,11 +199,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5875168559610122338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81e49a73c9acce34380893f1fe27a30e, type: 3}
+  m_Script: {fileID: 11500000, guid: ac4f9de275003a140ba1c0144a761cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  stoppingDistance: 0.01
-  stoppingDuration: 0.5
-  waypoints: []
-  currentWP: 0
+  speed: 2
+  stoppingDistance: 0.1
+  stoppingDuration: 5
+  roamZone:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 2
+    height: 2

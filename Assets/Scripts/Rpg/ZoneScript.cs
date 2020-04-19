@@ -15,5 +15,13 @@ namespace rpg
                 RpgManager.ZoneDisplayName(zoneName);
             }
         }
+
+        public void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.name == "Morgane")
+            {
+                Debug.Log(name);
+            }
+        }
     }
 }
