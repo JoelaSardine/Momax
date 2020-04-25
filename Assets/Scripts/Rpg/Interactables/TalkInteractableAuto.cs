@@ -4,20 +4,17 @@ using UnityEngine;
 
 namespace rpg
 {
-    public class TalkInteractable : Interactable
+    public class TalkInteractableAuto : Autointeractable
     {
         PlayerManager player;
 
         public List<string> talks;
         private int currentTalk = 0;
 
-        protected override void Interact()
+        protected override void TriggerEnter(Collider2D collider)
         {
             player = RpgManager.Player;
-
-            animator.SetTrigger("Exit");
-            state = State.Idle;
-
+            
             DoTalk();
         }
 

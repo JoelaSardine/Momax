@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace rpg
 {
     public class Interactable : MonoBehaviour
     {
+        public Action onEndInteraction;
+
         [System.Flags]
         public enum State {
             Idle = 1,

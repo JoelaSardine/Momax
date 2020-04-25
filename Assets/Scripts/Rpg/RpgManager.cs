@@ -24,7 +24,7 @@ namespace rpg
         [Header("Save keys")]
         public bool key_fb = false;
         public bool key_blockedRoad = false;
-        public bool key_seenSnake = false;
+        public int key_seenSnake = 0; // -1 before, 0 unseen, 1 after
         public bool key_altea = false;
         public bool key_orion = false;
 

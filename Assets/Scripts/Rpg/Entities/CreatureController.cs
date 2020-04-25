@@ -8,6 +8,9 @@ namespace rpg
     [RequireComponent(typeof(Animator))]
     public class CreatureController : MonoBehaviour
     {
+        public delegate void OnHitDelegate(bool isAsleep);
+        public OnHitDelegate onHit;
+
         private const string INPUT_AXIS_HORIZONTAL = "Horizontal";
         private const string INPUT_AXIS_VERTICAL = "Vertical";
 
@@ -76,6 +79,11 @@ namespace rpg
             animator.SetTrigger("Hit");
 
             StartCoroutine(OnHitCoroutine());
+
+            if (onHit != null)
+            {
+                onHit(isSpeeping);
+            }
         }
 
         private IEnumerator OnHitCoroutine()
