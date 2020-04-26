@@ -28,6 +28,8 @@ namespace rpg
         public bool key_altea = false;
         public bool key_orion = false;
         public bool key_montgeron = false;
+        public bool key_seenHouse = false;
+        public bool key_defeatedCerberus = false;
 
         public static CameraManager CameraManager;
         public static RpgManager Instance;

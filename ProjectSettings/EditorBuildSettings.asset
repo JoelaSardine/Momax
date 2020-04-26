@@ -21,12 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/World.unity
     guid: 011f6b362990bcf438382dbd46f953ac
   - enabled: 1
-    path: Assets/Scenes/Debug/TestSceneTP1.unity
-    guid: 38967fb56b08d9f4bbcd1c7440c38619
-  - enabled: 1
-    path: Assets/Scenes/Debug/TestSceneTP2.unity
-    guid: 6289700fb59a0a24eb6a1c3e47ac8e22
-  - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: fd9f301a95cd6bb4ba1dd38f8c3409e6
+  - enabled: 1
+    path: Assets/Scenes/Montgeron.unity
+    guid: cbde37c356bfec14c8809d35c3694247
   m_configObjects: {}

@@ -12,7 +12,8 @@ namespace rpg
         public TalkInteractableAuto snakeAfter;
         public Companion altea;
         public TalkInteractableAuto entreeMontgeron;
-
+        public TalkInteractable maisonMontgeron;
+        public Teleporter teleporterMontgeron;
 
         private void Awake()
         {
@@ -36,10 +37,15 @@ namespace rpg
                 snakeAfter.gameObject.SetActive(false);
             };
 
-            entreeMontgeron.onEndInteraction += () =>
-            {
+            entreeMontgeron.onEndInteraction += () => {
                 RpgManager.Instance.key_montgeron = true;
                 entreeMontgeron.gameObject.SetActive(false);
+            };
+
+            maisonMontgeron.onEndInteraction += () => {
+                RpgManager.Instance.key_seenHouse = true;
+                maisonMontgeron.gameObject.SetActive(false);
+                teleporterMontgeron.gameObject.SetActive(true);
             };
         }
 
@@ -54,6 +60,9 @@ namespace rpg
             snakeAfter.gameObject.SetActive(RpgManager.Instance.key_seenSnake == 0 && RpgManager.Instance.key_blockedRoad);
 
             entreeMontgeron.gameObject.SetActive(!RpgManager.Instance.key_montgeron);
+
+            maisonMontgeron.gameObject.SetActive(!RpgManager.Instance.key_seenHouse);
+            teleporterMontgeron.gameObject.SetActive(RpgManager.Instance.key_seenHouse);
 
             //player.movementEnabled = false;
 

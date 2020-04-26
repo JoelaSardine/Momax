@@ -50,6 +50,7 @@ namespace rpg
                 _movementEnabled = value;
             }
         }
+        public bool overrideMovement = false;
 
         [Header("Interaction")]
         public float interactionRange = 1.0f;
@@ -116,7 +117,7 @@ namespace rpg
                         onEndTalk();
                     }
                 }
-                else if (attackEnabled)
+                else if (attackEnabled && !overrideMovement)
                 {
                     Fire();
                 }
@@ -127,6 +128,9 @@ namespace rpg
 
         private void FixedUpdate()
         {
+            if (overrideMovement)
+                return ;
+
             if (movementEnabled)
             {
                 Vector2 input = new Vector2(Input.GetAxisRaw(INPUT_AXIS_HORIZONTAL), Input.GetAxisRaw(INPUT_AXIS_VERTICAL));
