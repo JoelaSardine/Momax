@@ -11,6 +11,8 @@ namespace rpg
         public TalkInteractableAuto snakeBefore;
         public TalkInteractableAuto snakeAfter;
         public Companion altea;
+        public TalkInteractableAuto entreeMontgeron;
+
 
         private void Awake()
         {
@@ -33,6 +35,12 @@ namespace rpg
                 snakeBefore.gameObject.SetActive(false);
                 snakeAfter.gameObject.SetActive(false);
             };
+
+            entreeMontgeron.onEndInteraction += () =>
+            {
+                RpgManager.Instance.key_montgeron = true;
+                entreeMontgeron.gameObject.SetActive(false);
+            };
         }
 
         protected override IEnumerator Start()
@@ -44,6 +52,8 @@ namespace rpg
             papaBullEvent.gameObject.SetActive(!RpgManager.Instance.key_orion);
             snakeBefore.gameObject.SetActive(RpgManager.Instance.key_seenSnake == 0 && !RpgManager.Instance.key_blockedRoad);
             snakeAfter.gameObject.SetActive(RpgManager.Instance.key_seenSnake == 0 && RpgManager.Instance.key_blockedRoad);
+
+            entreeMontgeron.gameObject.SetActive(!RpgManager.Instance.key_montgeron);
 
             //player.movementEnabled = false;
 
