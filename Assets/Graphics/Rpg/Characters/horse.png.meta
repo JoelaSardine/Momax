@@ -107,175 +107,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: horse_idle_d_0
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 208
-        width: 17
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3db940682889dd947a6c397e273ba949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_d_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 208
-        width: 20
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c49acc56c1e83b74d8fd650303c06457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_u_0
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 172
-        width: 16
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82e6f9a88a052964982b75d8b202680e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_u_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 172
-        width: 20
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5e7b0e639c213148a2028cecf105b68
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_l_0
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 141
-        width: 32
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c7cbde7663eea94b919d7e813e78945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_l_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 141
-        width: 37
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0817141162898b143973d66c87b4ac0f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_r_0
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 109
-        width: 37
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d07cbb415afd07a4abb19c18eec4c574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: horse_idle_r_1
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 109
-        width: 32
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94b27a315bea7e34c9a03954a990fd05
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: horse_move_d_0
       rect:
         serializedVersion: 2
-        x: 188
+        x: 190
         y: 204
-        width: 17
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 13
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03448276}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,10 +130,10 @@ TextureImporter:
       name: horse_move_d_1
       rect:
         serializedVersion: 2
-        x: 207
+        x: 209
         y: 204
-        width: 17
-        height: 32
+        width: 13
+        height: 27
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,12 +150,12 @@ TextureImporter:
       name: horse_move_d_2
       rect:
         serializedVersion: 2
-        x: 226
+        x: 228
         y: 204
-        width: 17
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 13
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03448276}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,12 +170,12 @@ TextureImporter:
       name: horse_move_u_0
       rect:
         serializedVersion: 2
-        x: 189
+        x: 191
         y: 167
-        width: 16
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 13
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.060606062}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,10 +190,10 @@ TextureImporter:
       name: horse_move_u_1
       rect:
         serializedVersion: 2
-        x: 207
+        x: 209
         y: 167
-        width: 16
-        height: 32
+        width: 13
+        height: 30
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,12 +210,12 @@ TextureImporter:
       name: horse_move_u_2
       rect:
         serializedVersion: 2
-        x: 225
+        x: 226
         y: 167
-        width: 16
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 13
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.060606062}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,9 +231,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 166
-        y: 135
+        y: 134
         width: 32
-        height: 28
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,7 +253,7 @@ TextureImporter:
         x: 200
         y: 135
         width: 32
-        height: 29
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,7 +273,7 @@ TextureImporter:
         x: 234
         y: 135
         width: 30
-        height: 30
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,7 +293,7 @@ TextureImporter:
         x: 166
         y: 103
         width: 30
-        height: 30
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,9 +311,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 232
-        y: 103
+        y: 102
         width: 32
-        height: 28
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,7 +333,7 @@ TextureImporter:
         x: 198
         y: 103
         width: 32
-        height: 29
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -512,10 +352,10 @@ TextureImporter:
         serializedVersion: 2
         x: 6
         y: 163
-        width: 31
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 29
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -532,10 +372,10 @@ TextureImporter:
         serializedVersion: 2
         x: 39
         y: 163
-        width: 31
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 29
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18181819}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -550,10 +390,10 @@ TextureImporter:
       name: horse_hurt_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 23
         y: 42
-        width: 27
-        height: 30
+        width: 25
+        height: 27
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
