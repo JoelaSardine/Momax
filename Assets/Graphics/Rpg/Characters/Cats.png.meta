@@ -2,13 +2,56 @@ fileFormatVersion: 2
 guid: 06ea7156826703044bf78d5b8dc101c5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Altea_Idle_0
-    21300002: Altea_Idle_1
-    21300004: Altea_Idle_2
-    21300006: Orion_Idle_0
-    21300008: Orion_Idle_1
+    21300000: Altea_Idle_d0
+    21300002: Altea_Idle_d1
+    21300004: Altea_Idle_d2
+    21300006: Orion_Idle_d0
+    21300008: Orion_Idle_d1
     21300010: Head_Altea
     21300012: Head_Orion
+    21300014: Altea_Sleep_0
+    21300016: Altea_Sleep_1
+    21300018: Orion_Sleep_0
+    21300020: Orion_Sleep_1
+    21300022: Orion_Idle_u0
+    21300024: Orion_Idle_u1
+    21300026: Orion_Idle_l0
+    21300028: Orion_Idle_l1
+    21300030: Orion_Idle_r0
+    21300032: Orion_Idle_r1
+    21300034: Altea_Idle_u0
+    21300036: Altea_Idle_u1
+    21300038: Altea_Idle_u2
+    21300040: Altea_Idle_l0
+    21300042: Altea_Idle_l1
+    21300044: Altea_Idle_l2
+    21300046: Altea_Idle_r0
+    21300048: Altea_Idle_r1
+    21300050: Altea_Idle_r2
+    21300052: Altea_Move_d0
+    21300054: Altea_Move_d1
+    21300056: Altea_Move_d2
+    21300058: Altea_Move_u0
+    21300060: Altea_Move_u1
+    21300062: Altea_Move_u2
+    21300064: Altea_Move_l0
+    21300066: Altea_Move_l1
+    21300068: Altea_Move_l2
+    21300070: Altea_Move_r0
+    21300072: Altea_Move_r1
+    21300074: Altea_Move_r2
+    21300076: Orion_Move_d0
+    21300078: Orion_Move_d1
+    21300080: Orion_Move_d2
+    21300082: Orion_Move_u0
+    21300084: Orion_Move_u1
+    21300086: Orion_Move_u2
+    21300088: Orion_Move_l2
+    21300090: Orion_Move_l1
+    21300092: Orion_Move_l0
+    21300094: Orion_Move_r0
+    21300096: Orion_Move_r1
+    21300098: Orion_Move_r2
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -91,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Altea_Idle_0
+      name: Altea_Idle_d0
       rect:
         serializedVersion: 2
         x: 83
@@ -111,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Altea_Idle_1
+      name: Altea_Idle_d1
       rect:
         serializedVersion: 2
         x: 117
@@ -131,7 +174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Altea_Idle_2
+      name: Altea_Idle_d2
       rect:
         serializedVersion: 2
         x: 153
@@ -151,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orion_Idle_0
+      name: Orion_Idle_d0
       rect:
         serializedVersion: 2
         x: 486
@@ -171,7 +214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orion_Idle_1
+      name: Orion_Idle_d1
       rect:
         serializedVersion: 2
         x: 509
@@ -199,7 +242,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,13 +262,873 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 726749721a3415f41b3c08de5a935095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Sleep_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 197
+        width: 25
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9127f5be47a1c514884eca9e31fc013c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Sleep_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 198
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4a1d8fc32edec4f970205ef548ecf8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Sleep_0
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 201
+        width: 23
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd19392efea2f8342bd4aa57034bc4d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Sleep_1
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 202
+        width: 26
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fa4d03bca58194d8305d555f4e3d7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_u0
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 236
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a89180adaa127342baff82edab1b650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_u1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 236
+        width: 15
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cf8b4d2cea9e8448d58e0630342847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_l0
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 204
+        width: 24
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d0bcdc956e742428099edd846cfc15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_l1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 203
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6d401b2471a9c4d8aa11d523f122f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_r0
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 174
+        width: 24
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c6b54c60a0a1c47b4adb5b020908e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Idle_r1
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 174
+        width: 19
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f9a731bc1586a44b01c5b8abafadea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_u0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 237
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788ab218747343c4b95f4dfbff14c98c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_u1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 237
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65355371905a9d740b73fff197367f32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_u2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 236
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c3ecee244b185409796edd930d02b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_l0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 204
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c5d4931614a1148ad5e09661b6352f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_l1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 205
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7543fc42b534b524396e6ba2380caabb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_l2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 204
+        width: 28
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c758c997ee0db43b101f4026c2d2f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_r0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 172
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22521eec8ef7b8044be1520544194ae2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_r1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 173
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff38ee8c7d0ef2f4e91f6046a47a9277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Idle_r2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 173
+        width: 28
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b7c5fb2dfffee43bde5909df6d3f8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_d0
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 256
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df71b2372c5430489073aad73fb8e4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_d1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 258
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b3a97a79b4a9e4b8c55ba74fa554e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_d2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 257
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e84f93d2a98ce34496f6dda0f3bdeee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_u0
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 218
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d7c6ab0eb13c345830db524a268a2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_u1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 221
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e3577624a7b544fb2af841a11c8b98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_u2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 221
+        width: 24
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e634999f1b15bc4fa18e6df2c80c715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_l0
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 186
+        width: 28
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17e0795571c2844db1e313171d46a4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_l1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 187
+        width: 26
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89201966968ab4c47992c12144f84c3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_l2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 188
+        width: 25
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa0044d5aefa264da10204da2039c9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_r0
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 152
+        width: 28
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a63cd392f828046abc7031c25547f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_r1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 153
+        width: 25
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579b3558d7511e94b9d7c3068ad01603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altea_Move_r2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 153
+        width: 25
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abad62270306ee46912e58bf42286d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_d0
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 268
+        width: 18
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fe55257231f724b96bf59f152d7963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_d1
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 269
+        width: 17
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac01a4ebf09da14c921de49d64a45b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_d2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 268
+        width: 17
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee84b2431bd3ba4d94c01f2dfcc21ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_u0
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 232
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06f4a3567071df4ba2a148987b32dc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_u1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 237
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16073867fc800ea4fbaec75b02327ede
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_u2
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 232
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5938216a1e3304f91556406751044d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_l2
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 203
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b14fd14c6d19984a844634ed69c615b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_l1
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 205
+        width: 24
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564b54e57d17adf49bb52b069f2b84fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_l0
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 202
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d871c5f0ef25afe4e946b3820e873f7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_r0
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 173
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af365cb2be8862d4ba5ac4657197cf64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_r1
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 175
+        width: 24
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a85ca69f2ff5bb499679f0029ccbd25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orion_Move_r2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 174
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f648253d992d045aa9200c86b88b91
       vertices: []
       indices: 
       edges: []

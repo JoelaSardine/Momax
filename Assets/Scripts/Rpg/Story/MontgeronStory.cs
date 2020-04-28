@@ -20,14 +20,16 @@ namespace rpg
         public MovableEntity dogMovable;
 
         public Vector3 startPos;
-        public float speedPos1 = 1.0f;
+        public float speed_walk = 1.0f;
+        public float speed_run = 5.0f;
         public Vector3 morganePos1;
-        public float speedPos2 = 5.0f;
         public Vector3 morganePos2;
         public List<string> firstDialogue;
         public Vector3 catsPosition;
         public string talk_altea = "Altéa : Euh, Morgane... Je crois qu'il dit la vérité.";
         public string talk_orion = "Orion : La présence maléfique que je ressentais... C'est lui.";
+        public string talk_orion_dog1 = "Orion : ENSIL ENSCI ! Le Démon qui terrorise Limoges depuis la nuit des temps !";
+        public string talk_orion_dog2 = "Orion : Mais que fait-il ici ? Morgane, protège-nous !";
         public string talk_dog = "Mais... Qu'est-ce que...";
 
         private bool wait = false;
@@ -65,17 +67,16 @@ namespace rpg
             playerMovable.LookTowards(Vector3.up);
             alteaMovable.MoveTo(startPos - Vector3.right);
             orionMovable.MoveTo(startPos + Vector3.right);
-            yield return new WaitForSeconds(1.0f);
-
-            wait = true;
-            player.Talk("Max ?", () => wait = false);
             yield return new WaitWhile(() => alteaMovable.isMoving);
+
             alteaMovable.LookTowards(Vector3.up);
             orionMovable.LookTowards(Vector3.up);
+            wait = true;
+            player.Talk("Max ?", () => wait = false);
             yield return new WaitWhile(() => wait);
 
             player.EndTalk();
-            playerMovable.MoveTo(morganePos1, speedPos1);
+            playerMovable.MoveTo(morganePos1, speed_walk);
             yield return new WaitWhile(() => playerMovable.isMoving);
 
             wait = true;
@@ -83,7 +84,7 @@ namespace rpg
             yield return new WaitWhile(() => wait);
 
             player.EndTalk();
-            playerMovable.MoveTo(morganePos2, speedPos2);
+            playerMovable.MoveTo(morganePos2, speed_run);
             yield return new WaitUntil(() => playerMovable.isMoving == false);
 
             RpgManager.Instance.discussionInterface.SetImage(false, maximeSprite);
@@ -119,19 +120,27 @@ namespace rpg
             audioSource.Play();
             dogMovable.gameObject.SetActive(true);
             dogMovable.LookTowards(Vector3.up);
-            playerMovable.MoveTo(morganePos1, speedPos1);
+            alteaMovable.LookTowards(Vector3.down);
+            playerMovable.MoveTo(morganePos1, speed_walk);
             yield return new WaitWhile(() => playerMovable.isMoving);
 
+            wait = true;
+            player.Dialog(false, talk_orion_dog1, () => wait = false);
+            yield return new WaitWhile(() => wait);
+            wait = true;
+            player.Dialog(false, talk_orion_dog2, () => wait = false);
+            yield return new WaitWhile(() => wait);
+            player.EndTalk();
             wait = true;
             player.Talk(talk_dog, () => wait = false);
             yield return new WaitWhile(() => wait);
 
             player.EndTalk();
-            dogMovable.MoveTo(morganePos1 + Vector3.down, speedPos1);
+            dogMovable.MoveTo(morganePos1 + Vector3.down, speed_walk);
             yield return new WaitWhile(() => dogMovable.isMoving);
             
             TransitionBattle trbattle = TransitionBattle.Instance;
-            trbattle.onClosureFinished = delegate () { SceneManager.LoadScene("PokemonBattle", LoadSceneMode.Additive); };
+            trbattle.onClosureFinished = () => { SceneManager.LoadScene("PokemonBattle", LoadSceneMode.Additive); };
             trbattle.StartSpiralCoroutine();
         }
 

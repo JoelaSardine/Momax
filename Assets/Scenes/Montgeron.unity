@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201415735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 4.5, y: -1.5, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 1589644981}
@@ -435,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295416342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 6.5, y: -1.5, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 541496069}
@@ -811,22 +811,37 @@ PrefabInstance:
     - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: key_fb
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: key_seenHouse
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: key_orion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: key_altea
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_montgeron
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_seenSnake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_blockedRoad
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
@@ -3498,7 +3513,7 @@ PrefabInstance:
     - target: {fileID: 988749142137125442, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 988749142137125455, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
         type: 3}
@@ -3603,6 +3618,36 @@ PrefabInstance:
     - target: {fileID: 988749142137125455, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 988749142137125453, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
+        type: 3}
+      propertyPath: m_ScaleFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988749142137125453, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
+        type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 988749141808753094, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 988749143470950108, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 988749143476999438, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 988749143495116164, guid: b6fd33aa18ba7b54eb589ef86869bd2d,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5398,10 +5443,10 @@ MonoBehaviour:
   alteaMovable: {fileID: 1990925920}
   orionMovable: {fileID: 201415740}
   dogMovable: {fileID: 295416344}
-  startPos: {x: 0.5, y: 0.5, z: 0}
-  speedPos1: 3
+  startPos: {x: 0.5, y: 0.601, z: 0}
+  speed_walk: 2
+  speed_run: 5
   morganePos1: {x: 0.5, y: 4.5, z: 0}
-  speedPos2: 5
   morganePos2: {x: 0.5, y: 7.5, z: 0}
   firstDialogue:
   - "Maxime : Morgane ? Mais qu'est-ce que tu fais l\xE0 ?"
@@ -5414,6 +5459,9 @@ MonoBehaviour:
   catsPosition: {x: 0.5, y: 6.5, z: 0}
   talk_altea: "Alt\xE9a : Euh, Morgane... Je crois qu'il dit la v\xE9rit\xE9."
   talk_orion: "Orion : La pr\xE9sence mal\xE9fique que je ressentais... C'est lui."
+  talk_orion_dog1: "Orion : C'est ENSIL-ENSCI ! Le D\xE9mon qui terrorise Limoges
+    depuis la nuit des temps !"
+  talk_orion_dog2: "Orion : Mais que fait-il ici ? Morgane, prot\xE8ge-nous !"
   talk_dog: Mais... Qu'est-ce que...
 --- !u!82 &2022772669
 AudioSource:

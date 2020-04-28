@@ -105,6 +105,11 @@ public class TransitionBattle : MonoBehaviour
             init = true;
         }
 
+        top.gameObject.SetActive(true);
+        left.gameObject.SetActive(true);
+        right.gameObject.SetActive(true);
+        down.gameObject.SetActive(true);
+
         top.anchorMin = new Vector2(0, 1);
         right.anchorMin = new Vector2(1, 0);
         down.anchorMax = new Vector2(1, 0);
