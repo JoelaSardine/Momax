@@ -6,6 +6,8 @@ namespace rpg
 {
     public class NeuillyPlaisanceStory : GameStory
     {
+        public AudioClip musicAfterFb;
+
         public Interactable entrance;
         public Interactable computer;
 

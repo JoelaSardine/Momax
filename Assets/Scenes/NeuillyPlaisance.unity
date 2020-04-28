@@ -4875,6 +4875,7 @@ GameObject:
   - component: {fileID: 2022772668}
   - component: {fileID: 2022772669}
   - component: {fileID: 2022772670}
+  - component: {fileID: 2022772671}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -4911,11 +4912,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9466a9c7b83fe834093e7367239abfa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicAfterFb: {fileID: 8300000, guid: 821abb1e2eba8224bbaa274e97ffb465, type: 3}
   entrance: {fileID: 3976842891305082081}
   computer: {fileID: 1553966251}
   tb_beginning_1: "Ah, \xE7a fait du bien de rentrer chez soi..."
   tb_beginning_2: "... apr\xE8s une bonne journ\xE9e de travail !"
-  tb_afterFB: Je dois retrouver Maxime !
+  tb_afterFB_1: Je dois retrouver Maxime ! ...
+  tb_afterFB_2: Allez, direction Limoges !
 --- !u!82 &2022772669
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4926,7 +4929,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821abb1e2eba8224bbaa274e97ffb465, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 520c532f85e8cef4f8830f6edbdd4276, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5019,12 +5022,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022772666}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d474e1e86d51dbe4da9ec0242bd52b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startAt: 65.5
+  fadeDuration: 5
+--- !u!114 &2022772671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022772666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d474e1e86d51dbe4da9ec0242bd52b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startAt: 0
+  fadeDuration: 5
 --- !u!1 &2041936030
 GameObject:
   m_ObjectHideFlags: 0

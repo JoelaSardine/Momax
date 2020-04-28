@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00002567908}
+  m_AnchoredPosition: {x: 0, y: -0.000019412517}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &343453348
@@ -1878,11 +1878,11 @@ MonoBehaviour:
     - talker: 2
       phrase: Ha ouais ? Je connais pas du tout, faudra que je regarde alors !
     - talker: 1
-      phrase: "Et marion m'a dit que tu vas peut-\xEAtre dans une \xE9cole loin et
-        tout ? "
+      phrase: "Et marion m'a dit que tu est all\xE9 dans une \xE9cole loin et tout
+        ? "
     - talker: 2
-      phrase: "Ouais \xE7a d\xE9pend de mes r\xE9sultats mais surement \xE0 Limoges
-        ! C'est pas trop loin et \xE7a me fera changer d'air :D "
+      phrase: "Ouais \xE0 Limoges ! C'est pas trop loin et \xE7a me fait changer d'air
+        :D "
     - talker: 2
       phrase: "Tu fais quoi toi l'ann\xE9e prochaine ? "
     choices:
@@ -2368,7 +2368,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 200549796}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
