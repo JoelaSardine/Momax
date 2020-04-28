@@ -14,6 +14,9 @@
 # PROJET MOMAX #
 ################
 
+# Windows links
+*.lnk
+
 Assets/2DGamekit/
 Assets/2DGamekit.meta
 
