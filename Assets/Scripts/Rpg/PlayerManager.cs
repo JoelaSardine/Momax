@@ -34,6 +34,9 @@ namespace rpg
 
         private bool sameframe = false;
 
+        public AudioClip sfx_hit;
+        public AudioClip sfx_talk;
+
         [Header("Movement")]
         [SerializeField] private bool _movementEnabled = true;
         public float speed = 5.0f;
@@ -97,6 +100,8 @@ namespace rpg
             {
                 if (isCanvasOpen && !sameframe)
                 {
+                    RpgManager.PlaySFX(sfx_talk);
+
                     if (dialogText && dialogText.isWriting)
                     {
                         dialogText.EndSetTextCoroutine();
@@ -198,6 +203,8 @@ namespace rpg
 
         private IEnumerator GetHit()
         {
+            RpgManager.PlaySFX(sfx_hit);
+
             pv -= 1;
             animator.SetTrigger("Hit");
             RpgManager.HUD.UpdateHearts(pv, 3);

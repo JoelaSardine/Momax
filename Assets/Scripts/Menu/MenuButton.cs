@@ -47,7 +47,7 @@ public class MenuButton : MonoBehaviour
         }
     }
 
-    public void Validate()
+    public virtual void Validate()
     {
         switch (type)
         {
@@ -63,6 +63,7 @@ public class MenuButton : MonoBehaviour
                 RpgManager.LoadScene(RpgManager.Data.scene, RpgManager.Data.place);
                 break;
             case MenuButtonType.Hints:
+                //FindObjectOfType<MainMenuStory>().GetComponent<Animator>().SetBool("Hints", true);
                 break;
             case MenuButtonType.Quit:
                 Application.Quit();

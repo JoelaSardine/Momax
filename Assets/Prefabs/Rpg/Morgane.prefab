@@ -503,7 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a94eac6b48c77f41a1167d6e3a659c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInit: 0
+  sfx_hit: {fileID: 8300000, guid: 0b7fec562201b004b8b1c1e09b7842dc, type: 3}
+  sfx_talk: {fileID: 8300000, guid: acf7f5a6ee306d14daecf7c5afa3cd48, type: 3}
   _movementEnabled: 1
   speed: 5
   overrideMovement: 0
