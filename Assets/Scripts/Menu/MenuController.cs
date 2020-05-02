@@ -1,9 +1,14 @@
-﻿using System.Collections;
+﻿using rpg;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    private AudioSource audioSource;
+    public AudioClip sfx_Move;
+    public AudioClip sfx_Select;
+
     public int defaultButtonId = 0;
     public List<MenuButton> menuButtons;
 
@@ -11,6 +16,7 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         currentButtonId = defaultButtonId;
     }
 
@@ -33,6 +39,7 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetButtonDown("Vertical"))
         {
+            RpgManager.PlaySFX(sfx_Move);
             menuButtons[currentButtonId].SetSelected(false);
 
             int increment = Input.GetAxis("Vertical") > 0 ? -1 : 1;
@@ -45,8 +52,9 @@ public class MenuController : MonoBehaviour
             }
             menuButtons[currentButtonId].SetSelected(true);
         }
-        if (Input.GetButtonDown("Fire"))
+        else if (Input.GetButtonDown("Fire"))
         {
+            RpgManager.PlaySFX(sfx_Select);
             menuButtons[currentButtonId].Validate();
         }    
     }

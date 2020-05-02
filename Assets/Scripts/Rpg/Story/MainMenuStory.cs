@@ -42,6 +42,7 @@ namespace rpg
             {
                 // Player go to menu from game
                 animator.SetTrigger(triggerOnBack);
+                audioSource.Play();
             }
             else
             {

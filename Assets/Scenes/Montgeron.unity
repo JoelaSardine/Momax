@@ -803,56 +803,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 200628240}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_fb
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_seenHouse
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_orion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_altea
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_montgeron
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_seenSnake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: key_blockedRoad
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1202041886}
-    - target: {fileID: 2278423434687201340, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1202041886}
     - target: {fileID: 2278423433370655744, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -903,6 +853,56 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1202041886}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 200628240}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_fb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_seenHouse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_orion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_altea
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_montgeron
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_seenSnake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: key_blockedRoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423434687201340, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1202041886}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4c3a3eceded364dbbacf40c1046e09, type: 3}
 --- !u!1 &384468725
@@ -5435,6 +5435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossMusic: {fileID: 8300000, guid: 57eb7886ac19bce41b1ee2fcabdf7fcc, type: 3}
+  explosionPrefab: {fileID: 5494125955087050080, guid: b0e2c18c573a3104f80d1fb827c9022f,
+    type: 3}
   maximeSprite: {fileID: 21300000, guid: cab8a12a39ea7224d87fa99e9b4328c9, type: 3}
   alteaSprite: {fileID: 21300010, guid: 06ea7156826703044bf78d5b8dc101c5, type: 3}
   orionSprite: {fileID: 21300012, guid: 06ea7156826703044bf78d5b8dc101c5, type: 3}
@@ -5572,6 +5574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startAt: 1.5
+  fadeDuration: 1
 --- !u!1 &2038857926
 GameObject:
   m_ObjectHideFlags: 0

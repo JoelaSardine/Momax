@@ -75,9 +75,7 @@ public class MenuButton : MonoBehaviour
                 RpgManager.LoadScene("MainMenu", null);
                 break;
             case MenuButtonType.BackToGame:
-                RpgManager.Instance.menu.gameObject.SetActive(false);
-                RpgManager.Player.enabled = true;
-                RpgManager.Instance.gameState ^= RpgManager.GameState.Menu;
+                RpgManager.Instance.ToggleMenu();
                 break;
             default:
                 break;

@@ -22,8 +22,8 @@ namespace rpg
         [System.Flags]
         public enum GameState {
             Undefined = 0,
-            MainMenu = 1, 
-            Rpg = 2, 
+            MainMenu = 1,
+            Rpg = 2,
             Facebook = 4,
             Battle = 8,
             Menu = 16
@@ -57,9 +57,13 @@ namespace rpg
         public Animator zoneBubbleAnimator;
         public DiscussionInterface discussionInterface;
 
+        [Header("Sound FX")]
+        public AudioClip sfx_openMenu;
+        public AudioClip sfx_closeMenu;
+
         [Header("Debug")]
         public GameState gameState = GameState.Undefined;
-        
+
         [Header("Obsolete Save keys")]
         public bool key_blockedRoad = false;
         public int key_seenSnake = 0; // -1 before, 0 unseen, 1 after
@@ -72,6 +76,7 @@ namespace rpg
         private Text zoneBubbleText;
         private AsyncOperation unloadingFacebook = null;
 
+        private AudioSource audioSource;
 
         private void Awake()
         {
@@ -98,6 +103,7 @@ namespace rpg
 
         private void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             RpgManager.Data = dataDebug.GetData();
 
             zoneBubbleText = zoneBubbleAnimator.GetComponentInChildren<Text>();
@@ -127,19 +133,7 @@ namespace rpg
 
             if (Input.GetKeyDown(KeyCode.Escape) && gameState != GameState.MainMenu)
             {
-                if (gameState == (gameState | GameState.Menu))
-                {
-                    player.enabled = true;
-                    menu.gameObject.SetActive(false);
-                    gameState ^= GameState.Menu;
-                }
-                else
-                {
-                    player.enabled = false;
-                    player.Stop();
-                    menu.gameObject.SetActive(true);
-                    gameState ^= GameState.Menu;
-                }
+                ToggleMenu();
             }
             else if (Input.GetKeyDown(KeyCode.F1))
             {
@@ -198,6 +192,25 @@ namespace rpg
                 Collider2D c = player.GetComponent<Collider2D>();
                 c.enabled = !c.enabled;
                 RpgManager.ZoneDisplayName("Cheat \n Collisions " + (c.enabled ? "Activées" : "Désactivées"));
+            }
+        }
+
+        public void ToggleMenu()
+        {
+            if (gameState == (gameState | GameState.Menu))
+            {
+                player.enabled = true;
+                menu.gameObject.SetActive(false);
+                gameState ^= GameState.Menu;
+                PlaySFX(sfx_closeMenu);
+            }
+            else
+            {
+                player.enabled = false;
+                player.Stop();
+                menu.gameObject.SetActive(true);
+                gameState ^= GameState.Menu;
+                PlaySFX(sfx_openMenu);
             }
         }
 
@@ -294,6 +307,11 @@ namespace rpg
         public static int GetKey(SaveKey key)
         {
             return Data.GetKey(key);
+        }
+
+        public static void PlaySFX(AudioClip clip)
+        {
+            Instance.audioSource.PlayOneShot(clip);
         }
     }
 }

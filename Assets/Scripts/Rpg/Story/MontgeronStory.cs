@@ -9,6 +9,8 @@ namespace rpg
     {
         public AudioClip bossMusic;
 
+        public GameObject explosionPrefab;
+
         public Sprite maximeSprite;
         public Sprite alteaSprite;
         public Sprite orionSprite;
@@ -46,7 +48,7 @@ namespace rpg
             if (!RpgManager.Instance.key_defeatedCerberus && RpgManager.Instance.key_orion && RpgManager.Instance.key_altea)
             {
                 yield return StartCoroutine(FindMaxime());
-            }
+            } 
         }
 
         private IEnumerator FindMaxime()
@@ -146,7 +148,11 @@ namespace rpg
 
         private void Update()
         {
-
+            if (Input.GetKeyDown(KeyCode.F10))
+            {
+                audioSource.Stop();
+                Instantiate(explosionPrefab);
+            }
         }
 
         private void OnDrawGizmos()
