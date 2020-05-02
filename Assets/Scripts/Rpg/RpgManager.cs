@@ -21,12 +21,12 @@ namespace rpg
 
         [System.Flags]
         public enum GameState {
-            Undefined,
-            MainMenu, 
-            Rpg, 
-            Facebook,
-            Battle,
-            Menu
+            Undefined = 0,
+            MainMenu = 1, 
+            Rpg = 2, 
+            Facebook = 4,
+            Battle = 8,
+            Menu = 16
         }
 
         public static CameraManager CameraManager;
@@ -125,9 +125,21 @@ namespace rpg
             // F11 : Force save
             // F12 : Toggle collisions
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) && gameState != GameState.MainMenu)
             {
-
+                if (gameState == (gameState | GameState.Menu))
+                {
+                    player.enabled = true;
+                    menu.gameObject.SetActive(false);
+                    gameState ^= GameState.Menu;
+                }
+                else
+                {
+                    player.enabled = false;
+                    player.Stop();
+                    menu.gameObject.SetActive(true);
+                    gameState ^= GameState.Menu;
+                }
             }
             else if (Input.GetKeyDown(KeyCode.F1))
             {

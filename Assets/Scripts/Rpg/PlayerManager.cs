@@ -93,13 +93,6 @@ namespace rpg
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F12))
-            {
-                Collider2D c = GetComponent<Collider2D>();
-                c.enabled = !c.enabled;
-                RpgManager.ZoneDisplayName("Cheat : Collider " + (c.enabled ? "Activé" : "Désactivé"));
-            }
-
             if (Input.GetButtonDown(INPUT_FIRE))
             {
                 if (isCanvasOpen && !sameframe)
@@ -157,6 +150,11 @@ namespace rpg
             {
                 rigidbody.velocity = Vector2.zero;
             }
+        }
+
+        public void Stop()
+        {
+            rigidbody.velocity = Vector2.zero;
         }
 
         private void Move()

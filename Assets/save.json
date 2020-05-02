@@ -1,8 +1,37 @@
 {
-    "place": "",
+    "scene": "NeuillyPlaisance",
+    "place": "Bed",
     "savedata": [
         {
             "key": 0,
+            "value": 0
+        },
+        {
+            "key": 1,
+            "value": 0
+        },
+        {
+            "key": 2,
+            "value": 0
+        },
+        {
+            "key": 3,
+            "value": 0
+        },
+        {
+            "key": 4,
+            "value": 0
+        },
+        {
+            "key": 5,
+            "value": 0
+        },
+        {
+            "key": 6,
+            "value": 0
+        },
+        {
+            "key": 7,
             "value": 0
         }
     ]

@@ -2257,7 +2257,7 @@ MonoBehaviour:
   mainmenuController: {fileID: 1943585890}
   triggerOnLaunch: Launch
   triggerOnBack: BackFromGame
-  skipIntro: 1
+  skipIntro: 0
 --- !u!95 &1943585892
 Animator:
   serializedVersion: 3

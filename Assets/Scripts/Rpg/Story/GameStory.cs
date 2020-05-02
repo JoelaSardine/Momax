@@ -16,6 +16,7 @@ namespace rpg
             }
 
             RpgManager.CurrentStory = this;
+            RpgManager.Instance.gameState = RpgManager.GameState.Rpg;
             player = RpgManager.Player;
         }
     }

@@ -18,6 +18,7 @@ public enum SaveKey
 
 public class GameDataDebug : MonoBehaviour
 {
+    public string scene = null;
     public string place = null;
     public bool facebookDone = false;
     public bool seenBull = false;
@@ -32,6 +33,7 @@ public class GameDataDebug : MonoBehaviour
     {
         GameData data = new GameData();
 
+        data.scene = scene;
         data.place = place;
         data.SetBool(SaveKey.facebookDone, facebookDone);
         data.SetBool(SaveKey.seenBull, seenBull);
@@ -47,6 +49,7 @@ public class GameDataDebug : MonoBehaviour
 
     public void SetData(GameData data)
     {
+        scene = data.scene;
         place = data.place;
         facebookDone = data.GetBool(SaveKey.facebookDone);
         seenBull = data.GetBool(SaveKey.seenBull);
@@ -66,6 +69,7 @@ public class GameData
     private static string SAVE_PATH = Application.dataPath + "/save.json";
     //private static string SAVE_PATH = Application.persistentDataPath + "/save.json";
 
+    public string scene = null;
     public string place = null;
     public Dictionary<SaveKey, int> data = new Dictionary<SaveKey, int>();
     [SerializeField]
@@ -115,6 +119,11 @@ public class GameData
         }
 
         return loadedData;
+    }
+
+    public static bool CheckFile()
+    {
+        return File.Exists(SAVE_PATH);
     }
 }
 

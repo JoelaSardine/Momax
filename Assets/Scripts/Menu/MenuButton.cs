@@ -53,8 +53,14 @@ public class MenuButton : MonoBehaviour
         {
             case MenuButtonType.NewGame:
                 RpgManager.LoadScene("NeuillyPlaisance", "Entrance");
+                RpgManager.Instance.gameState = RpgManager.GameState.Rpg;
+                RpgManager.Data = new GameData();
+                RpgManager.Instance.dataDebug.SetData(RpgManager.Data);
                 break;
             case MenuButtonType.Continue:
+                RpgManager.Data = GameData.LoadFromFile();
+                RpgManager.Instance.dataDebug.SetData(RpgManager.Data);
+                RpgManager.LoadScene(RpgManager.Data.scene, RpgManager.Data.place);
                 break;
             case MenuButtonType.Hints:
                 break;
@@ -62,8 +68,16 @@ public class MenuButton : MonoBehaviour
                 Application.Quit();
                 break;
             case MenuButtonType.BackToMenu:
+                RpgManager.Player.EndTalk();
+                RpgManager.Instance.menu.gameObject.SetActive(false);
+                RpgManager.Player.enabled = true;
+                RpgManager.Instance.gameState = RpgManager.GameState.MainMenu;
+                RpgManager.LoadScene("MainMenu", null);
                 break;
             case MenuButtonType.BackToGame:
+                RpgManager.Instance.menu.gameObject.SetActive(false);
+                RpgManager.Player.enabled = true;
+                RpgManager.Instance.gameState ^= RpgManager.GameState.Menu;
                 break;
             default:
                 break;

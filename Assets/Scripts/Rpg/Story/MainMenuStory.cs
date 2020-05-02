@@ -25,7 +25,15 @@ namespace rpg
 
         protected override IEnumerator Start()
         {
+            if (RpgManager.Instance != null && RpgManager.Instance.gameState != RpgManager.GameState.Undefined)
+            {
+                skipIntro = true;
+            }
+
             yield return StartCoroutine(base.Start());
+
+            MenuButton continueBtn = mainmenuController.menuButtons.Find(x => x.type == MenuButton.MenuButtonType.Continue);
+            continueBtn.isEnabled = GameData.CheckFile();
 
             player.movementEnabled = false;
             player.attackEnabled = false;
@@ -37,6 +45,7 @@ namespace rpg
             }
             else
             {
+                RpgManager.Instance.gameState = RpgManager.GameState.MainMenu;
                 mainmenuController.enabled = false;
 
                 // Game just launched
