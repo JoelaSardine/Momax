@@ -21,6 +21,7 @@ namespace facebook
 
         public FacebookConvPanel conversationPanel;
         public FacebookChoicePanel choicePanel;
+        public Camera sceneCamera;
 
         private FacebookConv conv;
         private FacebookDialog currentDialog;
@@ -35,6 +36,11 @@ namespace facebook
 
         private void Awake()
         {
+            if (sceneCamera != Camera.main)
+            {
+                sceneCamera.gameObject.SetActive(false);
+            }
+
             conv = GetComponent<FacebookConv>();
             CloseAnswerPanel();
         }
