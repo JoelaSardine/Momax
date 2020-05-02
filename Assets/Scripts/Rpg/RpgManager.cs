@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +7,31 @@ namespace rpg
 {
     public class RpgManager : MonoBehaviour
     {
+        [System.Flags]
+        public enum GameState {
+            Undefined,
+            MainMenu, 
+            Rpg, 
+            Facebook,
+            Battle,
+            Menu
+        }
+
+        public static CameraManager CameraManager;
+        public static RpgManager Instance;
+        public static EnnemiesManager Ennemies;
+        public static PlayerManager Player;
+        public static ProjectilesManager Projectiles;
+        public static InteractionManager Interaction;
+        public static PlayerHUD HUD;
+
+        public static GameStory currentStory;
+
+        public static string Spawn;
+        public static bool SceneJustLoaded = false;
+
+
+        [Header("Setup")]
         public CameraManager cameraManager;
         public EnnemiesManager ennemies;
         public PlayerManager player;
@@ -16,11 +39,13 @@ namespace rpg
         public InteractionManager interaction;
         public PlayerHUD hud;
 
+        public MenuController menu;
         public Animator zoneBubbleAnimator;
-        private Text zoneBubbleText;
-
         public DiscussionInterface discussionInterface;
 
+        [Header("Debug")]
+        public GameState gameState = GameState.Undefined;
+        
         [Header("Save keys")]
         public bool key_fb = false;
         public bool key_blockedRoad = false;
@@ -31,20 +56,9 @@ namespace rpg
         public bool key_seenHouse = false;
         public bool key_defeatedCerberus = false;
 
-        public static CameraManager CameraManager;
-        public static RpgManager Instance;
-        public static EnnemiesManager Ennemies;
-        public static PlayerManager Player;
-        public static ProjectilesManager Projectiles;
-        public static InteractionManager Interaction;
-        public static PlayerHUD HUD;
-        
-        public static string Spawn;
-        public static bool SceneJustLoaded = false;
-
+        private Text zoneBubbleText;
         private AsyncOperation unloadingFacebook = null;
 
-        public static GameStory currentStory;
 
         private void Awake()
         {
@@ -71,9 +85,16 @@ namespace rpg
 
         private void Start()
         {
-            player.Init(projectiles);
-
             zoneBubbleText = zoneBubbleAnimator.GetComponentInChildren<Text>();
+
+            menu.gameObject.SetActive(false);
+
+            player.Init(projectiles);
+            player.movementEnabled = false;
+            player.GetComponent<Collider2D>().enabled = false;
+
+            cameraManager.blackScreen.alpha = 1;
+            StartCoroutine(FinishLoadSceneCoroutine(null));
         }
 
         public static void LoadScene(string scene, string spawn)
@@ -100,12 +121,18 @@ namespace rpg
         }
         private IEnumerator FinishLoadSceneCoroutine(string spawn)
         {
-            Transform target = GameObject.Find("SpawnPoints").transform.Find(spawn);
-            player.transform.position = target.position;
+            if (spawn != null && player != null)
+            {
+                Transform target = GameObject.Find("SpawnPoints").transform.Find(spawn);
+                player.transform.position = target.position;
+            }
 
             yield return null; StartCoroutine(cameraManager.FadeOutCoroutine());
-            player.GetComponent<Collider2D>().enabled = true;
-            player.movementEnabled = true;
+            if (player)
+            {
+                player.GetComponent<Collider2D>().enabled = true;
+                player.movementEnabled = true;
+            }
         }
 
         public static void UnloadFacebook()
