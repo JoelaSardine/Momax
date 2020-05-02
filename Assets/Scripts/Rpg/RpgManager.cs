@@ -7,6 +7,18 @@ namespace rpg
 {
     public class RpgManager : MonoBehaviour
     {
+        // Shortcuts : 
+        // F1 : Unset all keys
+        // F2 : Toggle facebookDone
+        // F3 : Toggle SeenBull & SeenSnake
+        // F4 : Toggle MetAltea
+        // F5 : Toggle MetOrion
+        // F6 : Toggle SeenMontgeron
+        // F7 : Toggle SeenHouse
+        // F8 : Toggle DefeatedCerberus
+        // F11 : Force save
+        // F12 : Toggle collisions
+
         [System.Flags]
         public enum GameState {
             Undefined,
@@ -98,6 +110,90 @@ namespace rpg
 
             cameraManager.blackScreen.alpha = 1;
             StartCoroutine(FinishLoadSceneCoroutine(null));
+        }
+
+        private void Update()
+        {
+            // F1 : Unset all keys
+            // F2 : Toggle facebookDone
+            // F3 : Toggle SeenBull & SeenSnake
+            // F4 : Toggle MetAltea
+            // F5 : Toggle MetOrion
+            // F6 : Toggle SeenMontgeron
+            // F7 : Toggle SeenHouse
+            // F8 : Toggle DefeatedCerberus
+            // F11 : Force save
+            // F12 : Toggle collisions
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+
+            }
+            else if (Input.GetKeyDown(KeyCode.F1))
+            {
+                RpgManager.Data = new GameData();
+                dataDebug.SetData(RpgManager.Data);
+                RpgManager.ZoneDisplayName("Cheat \n Unset all save keys");
+            }
+            else if (Input.GetKeyDown(KeyCode.F2))
+            {
+                ToggleKey(SaveKey.facebookDone);
+            }
+            else if (Input.GetKeyDown(KeyCode.F3))
+            {
+                int value = (GetKey(SaveKey.seenBull) == 1 && GetKey(SaveKey.seenSnake) == 1) ? 0 : 1;
+                SetKey(SaveKey.seenBull, value);
+                SetKey(SaveKey.seenSnake, value);
+                RpgManager.ZoneDisplayName("Cheat \n " + "seenBull and seenSnake" + " set to " + value);
+                dataDebug.SetData(RpgManager.Data);
+            }
+            else if (Input.GetKeyDown(KeyCode.F4))
+            {
+                ToggleKey(SaveKey.metAltea);
+            }
+            else if (Input.GetKeyDown(KeyCode.F5))
+            {
+                ToggleKey(SaveKey.metOrion);
+            }
+            else if (Input.GetKeyDown(KeyCode.F6))
+            {
+                ToggleKey(SaveKey.seenMontgeron);
+            }
+            else if (Input.GetKeyDown(KeyCode.F7))
+            {
+                ToggleKey(SaveKey.seenHouse);
+            }
+            else if (Input.GetKeyDown(KeyCode.F8))
+            {
+                ToggleKey(SaveKey.defeatedCerberus);
+            }
+            else if (Input.GetKeyDown(KeyCode.F11))
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    RpgManager.Data = GameData.LoadFromFile();
+                    RpgManager.ZoneDisplayName("Cheat \n Force load");
+                    dataDebug.SetData(RpgManager.Data);
+                }
+                else
+                {
+                    GameData.SaveToFile(RpgManager.Data);
+                    RpgManager.ZoneDisplayName("Cheat \n Force save");
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.F12))
+            {
+                Collider2D c = player.GetComponent<Collider2D>();
+                c.enabled = !c.enabled;
+                RpgManager.ZoneDisplayName("Cheat \n Collisions " + (c.enabled ? "Activées" : "Désactivées"));
+            }
+        }
+
+        private void ToggleKey(SaveKey key)
+        {
+            SetKey(key, GetKey(key) == 0 ? 1 : 0);
+            RpgManager.ZoneDisplayName("Cheat \n " + key.ToString() + " set to " + GetKey(key));
+            dataDebug.SetData(RpgManager.Data);
         }
 
         public static void LoadScene(string scene, string spawn)

@@ -16,6 +16,9 @@
 
 # Windows links
 *.lnk
+# Assets/save.json
+Assets/save.json.meta
+
 
 Assets/2DGamekit/
 Assets/2DGamekit.meta

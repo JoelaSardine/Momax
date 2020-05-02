@@ -63,8 +63,13 @@ public class GameDataDebug : MonoBehaviour
 [System.Serializable]
 public class GameData
 {
+    private static string SAVE_PATH = Application.dataPath + "/save.json";
+    //private static string SAVE_PATH = Application.persistentDataPath + "/save.json";
+
     public string place = null;
     public Dictionary<SaveKey, int> data = new Dictionary<SaveKey, int>();
+    [SerializeField]
+    public List<GameDataKey> savedata = new List<GameDataKey>();
 
     public void SetKey(SaveKey key, int value)
     {
@@ -87,12 +92,52 @@ public class GameData
 
     public static void SaveToFile(GameData gameData)
     {
-        string saveText = JsonUtility.ToJson(gameData);
-        File.WriteAllText(Application.persistentDataPath + "/save.json", saveText);
+        gameData.savedata = new List<GameDataKey>(gameData.data.Count);
+        foreach (var keyvalue in gameData.data)
+        {
+            gameData.savedata.Add(new GameDataKey(keyvalue));
+        }
+
+        string saveText = JsonUtility.ToJson(gameData, true);
+        Debug.Log("SAVE to " + SAVE_PATH + "\n" + saveText);
+        File.WriteAllText(SAVE_PATH, saveText);
     }
-    public GameData LoadFromFile()
+    public static GameData LoadFromFile()
     {
-        string saveText = File.ReadAllText(Application.persistentDataPath + "/save.json");
-        return JsonUtility.FromJson<GameData>(saveText);
+        string saveText = File.ReadAllText(SAVE_PATH);
+        Debug.Log("LOAD from " + SAVE_PATH + "\n" + saveText);
+        GameData loadedData = JsonUtility.FromJson<GameData>(saveText);
+
+        loadedData.data = new Dictionary<SaveKey, int>(loadedData.savedata.Count);
+        foreach (var gamedatakey in loadedData.savedata)
+        {
+            loadedData.data[gamedatakey.key] = gamedatakey.value;
+        }
+
+        return loadedData;
+    }
+}
+
+[System.Serializable]
+public class GameDataKey
+{
+    public SaveKey key;
+    public int value;
+
+    public GameDataKey(SaveKey k, int v)
+    {
+        key = k;
+        value = v;
+    }
+
+    public GameDataKey(KeyValuePair<SaveKey, int> pair)
+    {
+        key = pair.Key;
+        value = pair.Value;
+    }
+
+    public KeyValuePair<SaveKey, int> Pair()
+    {
+        return new KeyValuePair<SaveKey, int>(key, value);
     }
 }

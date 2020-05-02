@@ -67,7 +67,7 @@ namespace rpg
         {
             if (Input.GetKeyDown(KeyCode.F1))
             {
-                RpgManager.SetKey(SaveKey.facebookDone, 1);
+                RpgManager.SetKey(SaveKey.facebookDone, 0);
 
                 computer.active = true;
                 entrance.active = false;
