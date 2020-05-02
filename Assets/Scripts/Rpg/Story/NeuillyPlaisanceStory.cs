@@ -23,7 +23,7 @@ namespace rpg
             
             player.attackEnabled = false;
 
-            if (RpgManager.Instance.key_fb)
+            if (RpgManager.GetKey(SaveKey.facebookDone) == 1)
             {
                 computer.active = false;
             }
@@ -51,7 +51,7 @@ namespace rpg
 
         public void OnEndFacebook()
         {
-            RpgManager.Instance.key_fb = true;
+            RpgManager.SetKey(SaveKey.facebookDone, 1);
 
             computer.active = false;
             player.Talk(tb_afterFB_1, OnEndFacebook2);
@@ -67,7 +67,7 @@ namespace rpg
         {
             if (Input.GetKeyDown(KeyCode.F1))
             {
-                RpgManager.Instance.key_fb = false;
+                RpgManager.SetKey(SaveKey.facebookDone, 1);
 
                 computer.active = true;
                 entrance.active = false;
@@ -81,7 +81,7 @@ namespace rpg
             {
                 OnEndFacebook();
 
-                RpgManager.ZoneDisplayName("Cheat - FB done");
+                RpgManager.ZoneDisplayName("Cheat - facebookDone set to 1");
             }
         }
     }

@@ -15,7 +15,7 @@ namespace rpg
                 yield return new WaitForEndOfFrame();
             }
 
-            RpgManager.currentStory = this;
+            RpgManager.CurrentStory = this;
             player = RpgManager.Player;
         }
     }

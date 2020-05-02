@@ -25,7 +25,8 @@ namespace rpg
         public static InteractionManager Interaction;
         public static PlayerHUD HUD;
 
-        public static GameStory currentStory;
+        public static GameStory CurrentStory;
+        public static GameData Data;
 
         public static string Spawn;
         public static bool SceneJustLoaded = false;
@@ -38,6 +39,7 @@ namespace rpg
         public ProjectilesManager projectiles;
         public InteractionManager interaction;
         public PlayerHUD hud;
+        public GameDataDebug dataDebug;
 
         public MenuController menu;
         public Animator zoneBubbleAnimator;
@@ -46,8 +48,7 @@ namespace rpg
         [Header("Debug")]
         public GameState gameState = GameState.Undefined;
         
-        [Header("Save keys")]
-        public bool key_fb = false;
+        [Header("Obsolete Save keys")]
         public bool key_blockedRoad = false;
         public int key_seenSnake = 0; // -1 before, 0 unseen, 1 after
         public bool key_altea = false;
@@ -85,6 +86,8 @@ namespace rpg
 
         private void Start()
         {
+            RpgManager.Data = dataDebug.GetData();
+
             zoneBubbleText = zoneBubbleAnimator.GetComponentInChildren<Text>();
 
             menu.gameObject.SetActive(false);
@@ -144,9 +147,9 @@ namespace rpg
         {
             CameraManager.ChangeCameraOutputSize(1.0f);
 
-            if (currentStory is NeuillyPlaisanceStory)
+            if (CurrentStory is NeuillyPlaisanceStory)
             {
-                NeuillyPlaisanceStory story = (NeuillyPlaisanceStory)currentStory;
+                NeuillyPlaisanceStory story = (NeuillyPlaisanceStory)CurrentStory;
 
                 story.OnEndFacebook();
             }
@@ -174,6 +177,15 @@ namespace rpg
             {
                 return Instance.discussionInterface.TalkRight(text);
             }
+        }
+
+        public static void SetKey(SaveKey key, int value)
+        {
+            Data.SetKey(key, value);
+        }
+        public static int GetKey(SaveKey key)
+        {
+            return Data.GetKey(key);
         }
     }
 }
