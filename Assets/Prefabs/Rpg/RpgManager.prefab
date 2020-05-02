@@ -655,6 +655,7 @@ MonoBehaviour:
   discussionInterface: {fileID: 341074455185155227}
   sfx_openMenu: {fileID: 8300000, guid: dc426e67c42519548add81596af2b512, type: 3}
   sfx_closeMenu: {fileID: 8300000, guid: 6c0f6f2c08d2c4b419c63db2452c5968, type: 3}
+  sfx_refillHP: {fileID: 8300000, guid: e3fc770a4dc059145813375bc11c1095, type: 3}
   gameState: 0
   key_blockedRoad: 0
   key_seenSnake: 0

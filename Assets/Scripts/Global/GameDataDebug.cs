@@ -20,7 +20,7 @@ public class GameDataDebug : MonoBehaviour
 {
     public string scene = null;
     public string place = null;
-    public bool facebookDone = false;
+    public int facebookDone = 0; // -1 before, 0 start, 1 done
     public bool seenBull = false;
     public int seenSnake = 0; // -1 before, 0 unseen, 1 after
     public bool metAltea = false;
@@ -35,7 +35,7 @@ public class GameDataDebug : MonoBehaviour
 
         data.scene = scene;
         data.place = place;
-        data.SetBool(SaveKey.facebookDone, facebookDone);
+        data.SetKey(SaveKey.facebookDone, facebookDone);
         data.SetBool(SaveKey.seenBull, seenBull);
         data.SetKey(SaveKey.seenSnake, seenSnake);
         data.SetBool(SaveKey.metAltea, metAltea);
@@ -51,7 +51,7 @@ public class GameDataDebug : MonoBehaviour
     {
         scene = data.scene;
         place = data.place;
-        facebookDone = data.GetBool(SaveKey.facebookDone);
+        facebookDone = data.GetKey(SaveKey.facebookDone);
         seenBull = data.GetBool(SaveKey.seenBull);
         seenSnake = data.GetKey(SaveKey.seenSnake);
         metAltea = data.GetBool(SaveKey.metAltea);

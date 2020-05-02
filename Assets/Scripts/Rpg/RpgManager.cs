@@ -60,18 +60,10 @@ namespace rpg
         [Header("Sound FX")]
         public AudioClip sfx_openMenu;
         public AudioClip sfx_closeMenu;
+        public AudioClip sfx_refillHP;
 
         [Header("Debug")]
         public GameState gameState = GameState.Undefined;
-
-        [Header("Obsolete Save keys")]
-        public bool key_blockedRoad = false;
-        public int key_seenSnake = 0; // -1 before, 0 unseen, 1 after
-        public bool key_altea = false;
-        public bool key_orion = false;
-        public bool key_montgeron = false;
-        public bool key_seenHouse = false;
-        public bool key_defeatedCerberus = false;
 
         private Text zoneBubbleText;
         private AsyncOperation unloadingFacebook = null;
@@ -180,6 +172,7 @@ namespace rpg
                     RpgManager.Data = GameData.LoadFromFile();
                     RpgManager.ZoneDisplayName("Cheat \n Force load");
                     dataDebug.SetData(RpgManager.Data);
+                    LoadScene(dataDebug.scene, dataDebug.place);
                 }
                 else
                 {
@@ -312,6 +305,13 @@ namespace rpg
         public static void PlaySFX(AudioClip clip)
         {
             Instance.audioSource.PlayOneShot(clip);
+        }
+
+        public static void RefillHP()
+        {
+            Player.pv = 3;
+            RpgManager.HUD.UpdateHearts(Player.pv, 3);
+            RpgManager.PlaySFX(RpgManager.Instance.sfx_refillHP);
         }
     }
 }

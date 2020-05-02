@@ -20,33 +20,44 @@ namespace rpg
         protected override IEnumerator Start()
         {
             yield return StartCoroutine(base.Start());
-            
+
+            yield return StartCoroutine(InitializeScene(false));
+        }
+
+        protected override IEnumerator InitializeScene(bool waitFrame)
+        {
+            if (waitFrame)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
             player.attackEnabled = false;
 
-            if (RpgManager.GetKey(SaveKey.facebookDone) == 1)
+            computer.active = RpgManager.GetKey(SaveKey.facebookDone) != 1;
+            entrance.active = RpgManager.GetKey(SaveKey.facebookDone) == 1;
+
+            if (RpgManager.GetKey(SaveKey.facebookDone) == 0)
             {
-                computer.active = false;
-            }
-            else
-            {
-                entrance.active = false;
                 player.movementEnabled = false;
-                yield return new WaitForSeconds(1.0f);
-                Beginning_1();
+                entrance.active = false;
+                yield return StartCoroutine(Beginning());
             }
         }
 
-        private void Beginning_1()
+        private IEnumerator Beginning()
         {
-            player.Talk(tb_beginning_1, Beginning_2);
-        }
-        private void Beginning_2()
-        {
-            player.Talk(tb_beginning_2, Beginning_3);
-        }
-        private void Beginning_3()
-        {
+            yield return new WaitForSeconds(1);
+
+            bool wait = true;
+            player.Talk(tb_beginning_1, () => wait = false);
+            yield return new WaitWhile(() => wait == true);
+
+            wait = true;
+            player.Talk(tb_beginning_2, () => wait = false);
+            yield return new WaitWhile(() => wait == true);
+
             player.EndTalk();
+            RpgManager.SetKey(SaveKey.facebookDone, -1);
         }
 
         public void OnEndFacebook()
@@ -61,28 +72,6 @@ namespace rpg
         {
             player.Talk(tb_afterFB_2, player.EndTalk);
             entrance.active = true;
-        }
-        
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.F1))
-            {
-                RpgManager.SetKey(SaveKey.facebookDone, 0);
-
-                computer.active = true;
-                entrance.active = false;
-                player.movementEnabled = false;
-
-                Beginning_1();
-
-                RpgManager.ZoneDisplayName("Cheat - Beginning");
-            }
-            else if (Input.GetKeyDown(KeyCode.F2))
-            {
-                OnEndFacebook();
-
-                RpgManager.ZoneDisplayName("Cheat - facebookDone set to 1");
-            }
         }
     }
 }

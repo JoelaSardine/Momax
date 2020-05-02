@@ -29,6 +29,8 @@ namespace rpg
             RpgManager.Instance.dataDebug.SetData(RpgManager.Data);
             GameData.SaveToFile(RpgManager.Data);
 
+            RpgManager.RefillHP();
+
             bubbleLabel.text = endLabel;
             icon.gameObject.SetActive(false);
         }

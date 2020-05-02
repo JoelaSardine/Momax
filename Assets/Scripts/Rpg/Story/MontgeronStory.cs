@@ -45,7 +45,7 @@ namespace rpg
 
             yield return StartCoroutine(base.Start());
 
-            if (!RpgManager.Instance.key_defeatedCerberus && RpgManager.Instance.key_orion && RpgManager.Instance.key_altea)
+            if (RpgManager.GetKey(SaveKey.defeatedCerberus) != 1)
             {
                 yield return StartCoroutine(FindMaxime());
             } 

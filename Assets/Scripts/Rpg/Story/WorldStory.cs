@@ -18,32 +18,33 @@ namespace rpg
         private void Awake()
         {
             papaBullEvent.onEndInteraction += () => {
-                if (!RpgManager.Instance.key_blockedRoad)
+                if (RpgManager.GetKey(SaveKey.seenBull) != 1)
                 {
-                    RpgManager.Instance.key_blockedRoad = true;
+                    RpgManager.SetKey(SaveKey.seenBull, 1);
                     snakeBefore.gameObject.SetActive(false);
-                    snakeAfter.gameObject.SetActive(RpgManager.Instance.key_seenSnake == -1 && !RpgManager.Instance.key_altea);
+                    bool b = RpgManager.GetKey(SaveKey.seenSnake) != 1 && RpgManager.GetKey(SaveKey.metAltea) == 0;
+                    snakeAfter.gameObject.SetActive(b);
                 }
             };
 
             snakeBefore.onEndInteraction += () => {
-                RpgManager.Instance.key_seenSnake = -1;
+                RpgManager.SetKey(SaveKey.seenSnake, -1);
                 snakeBefore.gameObject.SetActive(false);
                 snakeAfter.gameObject.SetActive(false);
             };
             snakeAfter.onEndInteraction += () => {
-                RpgManager.Instance.key_seenSnake = 1;
+                RpgManager.SetKey(SaveKey.seenSnake, 1);
                 snakeBefore.gameObject.SetActive(false);
                 snakeAfter.gameObject.SetActive(false);
             };
 
             entreeMontgeron.onEndInteraction += () => {
-                RpgManager.Instance.key_montgeron = true;
+                RpgManager.SetKey(SaveKey.seenMontgeron, 1);
                 entreeMontgeron.gameObject.SetActive(false);
             };
 
             maisonMontgeron.onEndInteraction += () => {
-                RpgManager.Instance.key_seenHouse = true;
+                RpgManager.SetKey(SaveKey.seenHouse, 1);
                 maisonMontgeron.gameObject.SetActive(false);
                 teleporterMontgeron.gameObject.SetActive(true);
             };
@@ -53,50 +54,31 @@ namespace rpg
         {
             yield return StartCoroutine(base.Start());
 
-            player.attackEnabled = RpgManager.Instance.key_orion;
+            yield return StartCoroutine(InitializeScene(false));
 
-            papaBullEvent.gameObject.SetActive(!RpgManager.Instance.key_orion);
-            snakeBefore.gameObject.SetActive(RpgManager.Instance.key_seenSnake == 0 && !RpgManager.Instance.key_blockedRoad);
-            snakeAfter.gameObject.SetActive(RpgManager.Instance.key_seenSnake == 0 && RpgManager.Instance.key_blockedRoad);
+        }
 
-            entreeMontgeron.gameObject.SetActive(!RpgManager.Instance.key_montgeron);
-
-            maisonMontgeron.gameObject.SetActive(!RpgManager.Instance.key_seenHouse);
-            teleporterMontgeron.gameObject.SetActive(RpgManager.Instance.key_seenHouse);
-
-            //player.movementEnabled = false;
-
-            //if (RpgManager.Instance.key_fb)
+        protected override IEnumerator InitializeScene(bool waitFrame)
+        {
+            if (waitFrame)
             {
+                yield return new WaitForEndOfFrame();
             }
-            //else
-            {
-                yield return new WaitForSeconds(1.0f);
-                //Beginning_1();
-            }
-            
-        }
 
-/*        private void Beginning_1()
-        {
-            player.Talk(tb_beginning_1, Beginning_2);
-        }
-        private void Beginning_2()
-        {
-            player.Talk(tb_beginning_2, Beginning_3);
-        }
-        private void Beginning_3()
-        {
-            player.EndTalk();
-        }
+            player.attackEnabled = RpgManager.GetKey(SaveKey.metOrion) == 1;
 
-        public void OnEndFacebook()
-        {
-            RpgManager.Instance.key_fb = true;
+            papaBullEvent.gameObject.SetActive(RpgManager.GetKey(SaveKey.metOrion) != 1);
+            snakeBefore.gameObject.SetActive(RpgManager.GetKey(SaveKey.metAltea) != 1 
+                && RpgManager.GetKey(SaveKey.seenBull) == 0 && RpgManager.GetKey(SaveKey.seenSnake) == 0);
+            snakeAfter.gameObject.SetActive(RpgManager.GetKey(SaveKey.metAltea) != 1 
+                && RpgManager.GetKey(SaveKey.seenBull) == 1 && RpgManager.GetKey(SaveKey.seenSnake) != 1);
 
-            computer.active = false;
-            player.Talk(tb_afterFB, player.EndTalk);
-            entrance.active = true;
-        }*/
+            altea.gameObject.SetActive(RpgManager.GetKey(SaveKey.metAltea) != 1);
+
+            entreeMontgeron.gameObject.SetActive(RpgManager.GetKey(SaveKey.seenMontgeron) != 1);
+
+            maisonMontgeron.gameObject.SetActive(RpgManager.GetKey(SaveKey.seenMontgeron) != 1);
+            teleporterMontgeron.gameObject.SetActive(RpgManager.GetKey(SaveKey.seenMontgeron) == 1);
+        }
     }
 }

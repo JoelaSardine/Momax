@@ -50,11 +50,11 @@ namespace rpg
         {
             if (isAltea)
             {
-                RpgManager.Instance.key_altea = true;
+                RpgManager.SetKey(SaveKey.metAltea, 1);
             }
             else
             {
-                RpgManager.Instance.key_orion = true;
+                RpgManager.SetKey(SaveKey.metOrion, 1);
                 player.attackEnabled = true;
             }
 

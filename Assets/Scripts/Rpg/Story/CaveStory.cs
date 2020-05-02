@@ -10,6 +10,7 @@ namespace rpg
         public GameObject snakeToHide;
         public Teleporter entrance1;
         public Teleporter entrance2;
+        public Companion orion;
 
         public string tb_toodark_1 = "Ouh, il fait tout noir là-dedans !";
         public string tb_toodark_2 = "J'y vois rien, je ressors.";
@@ -18,9 +19,11 @@ namespace rpg
         {
             yield return StartCoroutine(base.Start());
 
-            player.attackEnabled = RpgManager.Instance.key_orion;
+            orion.gameObject.SetActive(RpgManager.GetKey(SaveKey.metOrion) != 1);
 
-            if (RpgManager.Instance.key_altea)
+            player.attackEnabled = RpgManager.GetKey(SaveKey.metOrion) == 1;
+
+            if (RpgManager.GetKey(SaveKey.metAltea) == 1)
             {
                 blackVeil.SetActive(false);
             }

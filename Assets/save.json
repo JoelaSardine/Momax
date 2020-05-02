@@ -1,6 +1,6 @@
 {
-    "scene": "NeuillyPlaisance",
-    "place": "Bed",
+    "scene": "World",
+    "place": "SPA",
     "savedata": [
         {
             "key": 0,
@@ -16,7 +16,7 @@
         },
         {
             "key": 3,
-            "value": 0
+            "value": 1
         },
         {
             "key": 4,
