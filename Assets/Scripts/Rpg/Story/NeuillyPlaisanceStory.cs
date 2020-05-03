@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace rpg
 {
     public class NeuillyPlaisanceStory : GameStory
     {
         public AudioClip musicAfterFb;
+        public float musicStartAt = 0.0f;
 
         public Interactable entrance;
         public Interactable computer;
@@ -33,19 +35,25 @@ namespace rpg
 
             player.attackEnabled = false;
 
-            computer.active = RpgManager.GetKey(SaveKey.facebookDone) != 1;
-            entrance.active = RpgManager.GetKey(SaveKey.facebookDone) == 1;
+            computer.active = (RpgManager.GetKey(SaveKey.facebookDone) != 1);
+            entrance.active = (RpgManager.GetKey(SaveKey.facebookDone) == 1);
 
             if (RpgManager.GetKey(SaveKey.facebookDone) == 0)
             {
-                player.movementEnabled = false;
-                entrance.active = false;
                 yield return StartCoroutine(Beginning());
+            }
+            else if (RpgManager.GetKey(SaveKey.facebookDone) == 1)
+            {
+                AudioSource audioSource = GetComponent<AudioSource>();
+                audioSource.clip = musicAfterFb;
+                audioSource.Play();
             }
         }
 
         private IEnumerator Beginning()
         {
+            player.movementEnabled = false;
+
             yield return new WaitForSeconds(1);
 
             bool wait = true;
@@ -58,11 +66,20 @@ namespace rpg
 
             player.EndTalk();
             RpgManager.SetKey(SaveKey.facebookDone, -1);
+
+            RpgManager.SaveGame("Entrance");
         }
 
         public void OnEndFacebook()
         {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.clip = musicAfterFb;
+            audioSource.time = musicStartAt;
+            audioSource.Play();
+
             RpgManager.SetKey(SaveKey.facebookDone, 1);
+
+            RpgManager.SaveGame("Bed");
 
             computer.active = false;
             player.Talk(tb_afterFB_1, OnEndFacebook2);

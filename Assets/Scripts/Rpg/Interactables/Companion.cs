@@ -6,6 +6,8 @@ namespace rpg
 {
     public class Companion : Interactable
     {
+        public AudioClip sfx_jingle;
+
         PlayerManager player;
 
         public GameObject character;
@@ -42,12 +44,22 @@ namespace rpg
                 player.EndTalk();
                 currentTalk = 0;
 
-                EndInteraction();
+                StartCoroutine(EndInteraction());
             }
         }
 
-        private void EndInteraction()
+        private IEnumerator EndInteraction()
         {
+            player.movementEnabled = false;
+
+            MovableEntity movable = GetComponentInChildren<MovableEntity>();
+            var rb = movable.GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            movable.MoveTo(RpgManager.Player.transform.position);
+
+            yield return new WaitWhile(() => movable.isMoving);
+            character.SetActive(false);
+
             if (isAltea)
             {
                 RpgManager.SetKey(SaveKey.metAltea, 1);
@@ -58,8 +70,19 @@ namespace rpg
                 player.attackEnabled = true;
             }
 
-            character.SetActive(false);
+            RpgManager.SaveGame(isAltea ? "SPA" : "Orion");
+
+            RpgManager.CurrentStory.SetMusicVolume(0);
+            RpgManager.PlaySFX(sfx_jingle);
+            bool wait = true;
+            player.Talk((isAltea ? "Altea" : "Orion") + " rejoint l'equipe !", () => wait = false);
+            yield return new WaitForSeconds(sfx_jingle.length - 1);
+            yield return new WaitWhile(() => wait);
+
             gameObject.SetActive(false);
+
+            player.EndTalk();
+            RpgManager.CurrentStory.SetMusicVolume(1);
         }
     }
 }

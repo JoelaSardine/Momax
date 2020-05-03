@@ -43,5 +43,10 @@ namespace rpg
         {
             GetComponent<AudioSource>().Stop();
         }
+
+        internal void SetMusicVolume(float v)
+        {
+            GetComponent<AudioSource>().volume = v;
+        }
     }
 }

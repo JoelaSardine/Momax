@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pokemonBattle;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace facebook
 {
     public class FacebookManager : MonoBehaviour
     {
+        private AudioSource audioSource;
         public AudioClip sfx_notification;
         public AudioClip sfx_send;
 
@@ -20,11 +22,14 @@ namespace facebook
 
         private bool busy = false;
         private bool waitForInput = false;
-        public bool debugMode = false;
+        public bool quickRestart = false;
 
         public FacebookConvPanel conversationPanel;
         public FacebookChoicePanel choicePanel;
         public Camera sceneCamera;
+
+        public Text textInputPlaceholder;
+        public Textshadow textInput;
 
         private FacebookConv conv;
         private FacebookDialog currentDialog;
@@ -44,8 +49,10 @@ namespace facebook
                 sceneCamera.gameObject.SetActive(false);
             }
 
+            audioSource = GetComponent<AudioSource>();
             conv = GetComponent<FacebookConv>();
             CloseAnswerPanel();
+            textInput.SetTxt("");
         }
 
         private void Start()
@@ -113,8 +120,20 @@ namespace facebook
                     return;
                 }
 
-                if (debugMode && currentDialog.choices[choicePanel.selected].dialogId == 0)
+                if (quickRestart && currentDialog.choices[choicePanel.selected].dialogId == 0)
                 {
+                    if (rpg.RpgManager.Instance)
+                    {
+                        rpg.RpgManager.Player.GetHitFunc();
+                        if (rpg.RpgManager.Player.pv <= 0)
+                        {
+                            rpg.RpgManager.CameraManager.ChangeCameraOutputSize(1);
+                            //enabled = false;
+                            this.gameObject.SetActive(false);
+                            return;
+                        }
+                    }
+
                     currentDialogueId = previousDialogueId;
                     currentDialog = conv.dialogs[currentDialogueId];
                     currentPhraseId = currentDialog.phrases.Count;
@@ -202,7 +221,7 @@ namespace facebook
             conversationPanel.DisplayIsWriting(false);
             //yield return new WaitForSeconds(delayBetweenReplies / 2);
             conversationPanel.WriteMax(text);
-            rpg.RpgManager.PlaySFX(sfx_notification);
+            audioSource.PlayOneShot(sfx_notification);
 
             Next();
         }
@@ -211,10 +230,20 @@ namespace facebook
         {
             state = MessengerState.MoWriting;
 
-            yield return new WaitForSeconds(delayBetweenReplies + text.Length * delayPerLetter);
-            conversationPanel.WriteMo(text);
-            rpg.RpgManager.PlaySFX(sfx_send);
+            textInputPlaceholder.enabled = false;
+
+            bool wait = true;
+            textInput.Display(text, false, () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            yield return new WaitForSeconds(delayBetweenReplies);
+
             //yield return new WaitForSeconds(delayBetweenReplies + text.Length * delayPerLetter);
+            conversationPanel.WriteMo(text);
+            audioSource.PlayOneShot(sfx_send);
+
+            textInput.SetTxt("");
+            textInputPlaceholder.enabled = true;
 
             Next();
         }

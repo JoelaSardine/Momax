@@ -2081,7 +2081,7 @@ PrefabInstance:
     - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.5
+      value: -23.4
       objectReference: {fileID: 0}
     - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
         type: 3}
@@ -2173,6 +2173,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: ' Parler'
       objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669443, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b2480a4ee36c04289bb4344ef20415, type: 3}
 --- !u!4 &627362440 stripped
@@ -2201,6 +2206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 1
   active: 1
+  sfx_jingle: {fileID: 8300000, guid: 5d1c7523e0f222d4091dddf39b56b36b, type: 3}
   character: {fileID: 4022005907450709058}
   talks:
   - "Morgane : Bonjour, je m'appelle Morgane. Il para\xEEt que tu es un aventurier.
@@ -3424,6 +3430,26 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1202041886}
+    - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: facebookDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: seenBull
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: seenSnake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: metAltea
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2278423433370655749, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_Enabled
@@ -4603,6 +4629,7 @@ Transform:
   m_Children:
   - {fileID: 439390833}
   - {fileID: 2078925733}
+  - {fileID: 1954436700}
   m_Father: {fileID: 2022772667}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37726,6 +37753,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1522916676}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1954436699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954436700}
+  m_Layer: 0
+  m_Name: Orion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954436700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954436699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.5, y: -24.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1294434643}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1976583636
 GameObject:
   m_ObjectHideFlags: 0
@@ -47363,6 +47420,7 @@ GameObject:
   - component: {fileID: 4022005907450709119}
   - component: {fileID: 8432084247962152418}
   - component: {fileID: 5631592244592129542}
+  - component: {fileID: 4022005907450709059}
   m_Layer: 9
   m_Name: Orion
   m_TagString: Untagged
@@ -47370,6 +47428,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4022005907450709059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022005907450709058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b363350eaf4a074380db7d0ae979c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  stoppingDistance: 0.1
+  target: {x: 0, y: 0, z: 0}
+  lookTarget: {x: 0, y: 0, z: 0}
+  isMoving: 0
 --- !u!4 &4022005907450709117
 Transform:
   m_ObjectHideFlags: 0
@@ -47493,7 +47568,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -47507,7 +47582,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4022005907450709058}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

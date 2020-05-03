@@ -201,6 +201,11 @@ namespace rpg
             }
         }
 
+        public void GetHitFunc()
+        {
+            StartCoroutine(GetHit());
+        }
+
         private IEnumerator GetHit()
         {
             RpgManager.PlaySFX(sfx_hit);

@@ -17,6 +17,8 @@ namespace rpg
         private new Rigidbody2D rigidbody;
         private Animator animator;
 
+        public AudioClip sfx_onHit;
+
         private bool isMoving = false;
         public Vector2 lookingDirection = Vector2.zero;
         public Vector2 movingDirection = Vector2.zero;
@@ -70,7 +72,8 @@ namespace rpg
             }
 
             life--;
-            
+            if (sfx_onHit) RpgManager.PlaySFX(sfx_onHit);
+
             if (life <= 0)
             {
                 isSpeeping = true;

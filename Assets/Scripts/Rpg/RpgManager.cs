@@ -341,5 +341,13 @@ namespace rpg
             RpgManager.Spawn = null;
             SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Additive);
         }
+
+        public static void SaveGame(string place)
+        {
+            RpgManager.Data.scene = SceneManager.GetActiveScene().name;
+            RpgManager.Data.place = place;
+            RpgManager.Instance.dataDebug.SetData(RpgManager.Data);
+            GameData.SaveToFile(RpgManager.Data);
+        }
     }
 }

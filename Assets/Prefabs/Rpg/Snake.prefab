@@ -167,10 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049690bb591f67a45a58fb802c562757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfx_onHit: {fileID: 8300000, guid: 8ce8851143bfcab4c82c4b7bd8518238, type: 3}
   lookingDirection: {x: 0, y: 0}
   movingDirection: {x: 0, y: 0}
   life: 2
-  damageOnHit: 1
+  damageOnAttack: 1
+  hitDuration: 0.5
+  isJustHit: 0
   isSpeeping: 0
 --- !u!114 &2114147617
 MonoBehaviour:

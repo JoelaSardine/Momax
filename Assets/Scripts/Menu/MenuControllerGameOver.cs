@@ -40,6 +40,8 @@ public class MenuControllerGameOver : MenuController
         RpgManager.PlaySFX(clip);
         yield return new WaitForSeconds(clip.length);
 
+        RpgManager.Player.Revive();
+
         menuButtons[currentButtonId].Validate();
     }
 }

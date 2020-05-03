@@ -24,10 +24,7 @@ namespace rpg
             //animator.SetTrigger("Exit");
             state = State.Idle;
 
-            RpgManager.Data.scene = SceneManager.GetActiveScene().name;
-            RpgManager.Data.place = placeID;
-            RpgManager.Instance.dataDebug.SetData(RpgManager.Data);
-            GameData.SaveToFile(RpgManager.Data);
+            RpgManager.SaveGame(placeID);
 
             RpgManager.RefillHP();
 
