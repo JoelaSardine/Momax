@@ -8,6 +8,9 @@ namespace facebook
 {
     public class FacebookManager : MonoBehaviour
     {
+        public AudioClip sfx_notification;
+        public AudioClip sfx_send;
+
         public enum MessengerState {
             None,
             PickAnswer,
@@ -199,6 +202,7 @@ namespace facebook
             conversationPanel.DisplayIsWriting(false);
             //yield return new WaitForSeconds(delayBetweenReplies / 2);
             conversationPanel.WriteMax(text);
+            rpg.RpgManager.PlaySFX(sfx_notification);
 
             Next();
         }
@@ -209,6 +213,7 @@ namespace facebook
 
             yield return new WaitForSeconds(delayBetweenReplies + text.Length * delayPerLetter);
             conversationPanel.WriteMo(text);
+            rpg.RpgManager.PlaySFX(sfx_send);
             //yield return new WaitForSeconds(delayBetweenReplies + text.Length * delayPerLetter);
 
             Next();

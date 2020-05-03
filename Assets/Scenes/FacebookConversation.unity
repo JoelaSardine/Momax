@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00002807386}
+  m_AnchoredPosition: {x: 0, y: -0.000033695513}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &343453348
@@ -1727,7 +1727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a796aec0bb1f304c8f6a029f9d0b7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 1
+  sfx_notification: {fileID: 8300000, guid: e2a7dbde50f643248acb66e4c7e0d7fb, type: 3}
+  sfx_send: {fileID: 8300000, guid: 529ae4aab9793704d82f94ed4a358a5d, type: 3}
+  debugMode: 0
   conversationPanel: {fileID: 171739226}
   choicePanel: {fileID: 737978205}
   sceneCamera: {fileID: 1812383839}
@@ -1763,9 +1765,9 @@ MonoBehaviour:
     - talker: 1
       phrase: "Ils repassent bient\xF4t en plus !"
     - talker: 2
-      phrase: Ouais j'aimerai bien !
+      phrase: Ouais j'aimerais bien !
     - talker: 2
-      phrase: "\xC7a me fait penser que \xE7a fait longtemps qu'on a pas r\xE9p\xE9ter
+      phrase: "\xC7a me fait penser que \xE7a fait longtemps qu'on a pas r\xE9p\xE9t\xE9
         avec le grouper d'ailleurs\u2026"
     - talker: 2
       phrase: "si tu veux des cours de violon / batterie n'h\xE9site pas au fait !"
@@ -1826,7 +1828,8 @@ MonoBehaviour:
   - chapter: Les fesses de Tibo
     phrases:
     - talker: 1
-      phrase: "Ouiiii avec ses fesses de bronz\xE9e du Portugal la ! Jalousiiiie !"
+      phrase: "Ouiiii avec ses fesses de bronz\xE9 du Portugal l\xE0 ! Jalousiiiie
+        !"
     - talker: 2
       phrase: "S'il a les fesses bronz\xE9es c'est inqui\xE9tant quand m\xEAme\u2026"
     - talker: 1
@@ -1875,11 +1878,11 @@ MonoBehaviour:
     phrases:
     - talker: 1
       phrase: je te conseille vraiment vraiment Alabama Monroe, pour moi c'est une
-        des meilleurs de 2013, il est vraimenttrop beau !
+        des meilleurs de 2013, il est vraiment trop beau !
     - talker: 2
       phrase: Ha ouais ? Je connais pas du tout, faudra que je regarde alors !
     - talker: 1
-      phrase: "Et marion m'a dit que tu est all\xE9 dans une \xE9cole loin et tout
+      phrase: "Et Marion m'a dit que tu est all\xE9 dans une \xE9cole loin et tout
         ? "
     - talker: 2
       phrase: "Ouais \xE0 Limoges ! C'est pas trop loin et \xE7a me fait changer d'air
@@ -1933,7 +1936,7 @@ MonoBehaviour:
       phrase: "Mon but est d'\xE9conomiser pour mon permis, un nouvel appareil photo
         et pour voyager."
     - talker: 2
-      phrase: "Ha les voyages je suis carr\xE9ment pour ! J'aimerai tellement prendre
+      phrase: "Ha les voyages je suis carr\xE9ment pour ! J'aimerais tellement prendre
         une ann\xE9e sabbatique pour ne faire que \xE7a ! "
     choices:
     - choice: "Fascin\xE9e par l'humain"
@@ -1998,7 +2001,7 @@ MonoBehaviour:
       phrase: "Ohlala \xE7a fait plaisir de parler avec quelqu'un qui partage le m\xEAme
         avis que moi."
     - talker: 1
-      phrase: " Tu connais Humans of New York ? Jettes un coup d'\u0153il sur FB !"
+      phrase: "Tu connais Humans of New York ? Jettes un coup d'\u0153il sur FB !"
     - talker: 2
       phrase: "Ah non pas du tout, je regarderai :o\r"
     - talker: 2
@@ -2045,7 +2048,7 @@ MonoBehaviour:
       phrase: "J'allait le regarder l\xE0 justement mais je ne le trouve qu'en version
         canadienne\u2026 "
     - talker: 2
-      phrase: "C'est dailleurs pour la m\xEAme raison que je n'ai toujours pas vu
+      phrase: "C'est d'ailleurs pour la m\xEAme raison que je n'ai toujours pas vu
         le loup de Wallstreet ><"
     choices:
     - choice: "Film d\xE9jant\xE9"
@@ -2079,7 +2082,7 @@ MonoBehaviour:
   - chapter: "Film d\xE9jant\xE9"
     phrases:
     - talker: 1
-      phrase: "Serieux ? Il est top pourtant ! Il dure quand meme 3h mais il est completement
+      phrase: "Serieux ? Il est top pourtant ! Il dure quand meme 3h mais il est compl\xE8tement
         d\xE9jent\xE9 !"
     - talker: 2
       phrase: "Oh tu sais peut importe la dur\xE9e du film, quand il est bien, il
@@ -2134,8 +2137,8 @@ MonoBehaviour:
   - chapter: Le RER A
     phrases:
     - talker: 1
-      phrase: Flemme d'aller travailler demain, je vais encore devoir prendre le RERA
-        pendant 1h30 la..
+      phrase: Flemme d'aller travailler demain, je vais encore devoir prendre le RER
+        A pendant 1h30 la..
     - talker: 2
       phrase: "Ah bah passe le permis moto plut\xF4t que le permis voiture ce sera
         beaucoup mieux !"

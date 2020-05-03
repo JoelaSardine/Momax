@@ -214,9 +214,8 @@ namespace rpg
             if (pv <= 0)
             {
                 GetComponent<Collider2D>().enabled = false;
-                animator.SetTrigger("GameOver");
+                animator.SetBool("GameOver", true);
                 enabled = false;
-                //rigidbody.mass = 100;
                 Stop();
                 yield return new WaitForSeconds(1.0f);
                 RpgManager.GameOver();
@@ -224,6 +223,15 @@ namespace rpg
             }            
 
             yield return new WaitForSeconds(hitDelay);
+            isHitInCooldown = false;
+        }
+
+        public void Revive()
+        {
+            enabled = true;
+            pv = 3;
+            RpgManager.HUD.UpdateHearts(pv, 3);
+            animator.SetBool("GameOver", false);
             isHitInCooldown = false;
         }
 

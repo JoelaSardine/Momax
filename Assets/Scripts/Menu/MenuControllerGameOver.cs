@@ -8,8 +8,10 @@ public class MenuControllerGameOver : MenuController
     public GameOverStory story;
     public CanvasGroup canvasGroup;
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
         StartCoroutine(fadeIn())
 ;    }
 
@@ -26,6 +28,7 @@ public class MenuControllerGameOver : MenuController
     protected override void SelectButton()
     {
         StartCoroutine(SelectButtonCoroutine());
+        enabled = false;
     }
 
     private IEnumerator SelectButtonCoroutine()

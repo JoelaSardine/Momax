@@ -20,7 +20,7 @@ public class MenuController : MonoBehaviour
         currentButtonId = defaultButtonId;
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         for (int i = 0; i < menuButtons.Count; i++)
         {

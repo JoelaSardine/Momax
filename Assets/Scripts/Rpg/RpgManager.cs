@@ -326,11 +326,11 @@ namespace rpg
             return commentID;
         }
 
-        public static void RefillHP()
+        public static void RefillHP(bool mute = false)
         {
             Player.pv = 3;
             RpgManager.HUD.UpdateHearts(Player.pv, 3);
-            RpgManager.PlaySFX(RpgManager.Instance.sfx_refillHP);
+            if (!mute) RpgManager.PlaySFX(RpgManager.Instance.sfx_refillHP);
         }
         
         public static void GameOver()

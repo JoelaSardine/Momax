@@ -64,6 +64,8 @@ namespace rpg
 
         public void OnIntroanimationEnded()
         {
+            RpgManager.Player.Revive();
+
             StartCoroutine(OnIntroAnimEndCoroutine());
         }
 

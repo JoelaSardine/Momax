@@ -1,6 +1,6 @@
 {
     "scene": "World",
-    "place": "SPA",
+    "place": "StMaur",
     "savedata": [
         {
             "key": 0,
@@ -16,7 +16,7 @@
         },
         {
             "key": 3,
-            "value": 1
+            "value": 0
         },
         {
             "key": 4,
