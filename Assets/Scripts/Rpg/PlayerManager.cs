@@ -206,10 +206,23 @@ namespace rpg
             RpgManager.PlaySFX(sfx_hit);
 
             pv -= 1;
-            animator.SetTrigger("Hit");
             RpgManager.HUD.UpdateHearts(pv, 3);
+            animator.SetTrigger("Hit");
 
             isHitInCooldown = true;
+
+            if (pv <= 0)
+            {
+                GetComponent<Collider2D>().enabled = false;
+                animator.SetTrigger("GameOver");
+                enabled = false;
+                //rigidbody.mass = 100;
+                Stop();
+                yield return new WaitForSeconds(1.0f);
+                RpgManager.GameOver();
+                yield break;
+            }            
+
             yield return new WaitForSeconds(hitDelay);
             isHitInCooldown = false;
         }

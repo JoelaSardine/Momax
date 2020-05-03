@@ -12,7 +12,7 @@ public class MenuController : MonoBehaviour
     public int defaultButtonId = 0;
     public List<MenuButton> menuButtons;
 
-    private int currentButtonId = 0;
+    protected int currentButtonId = 0;
 
     private void Awake()
     {
@@ -54,8 +54,13 @@ public class MenuController : MonoBehaviour
         }
         else if (Input.GetButtonDown("Fire"))
         {
-            RpgManager.PlaySFX(sfx_Select);
-            menuButtons[currentButtonId].Validate();
+            SelectButton();
         }    
+    }
+
+    protected virtual void SelectButton()
+    {
+        RpgManager.PlaySFX(sfx_Select);
+        menuButtons[currentButtonId].Validate();
     }
 }

@@ -8,26 +8,33 @@ namespace rpg
     {
         private Animator animator;
         private AudioSource audioSource;
-        [HideInInspector]
-        public MenuController mainmenuController;
-        
+        public MenuController menuController;
+
+        public List<AudioClip> firstComment;
+        public List<AudioClip> lastComment;
+        private List<int> commentAvailableIds;
+
         public bool skipIntro = false;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
-            mainmenuController = GetComponent<MenuController>();
+
+            menuController.gameObject.SetActive(false);
         }
 
         protected override IEnumerator Start()
         {
+            yield return StartCoroutine(base.Start());
+            //RpgManager.Player.gameObject.SetActive(false);
+
+            /*
             if (RpgManager.Instance != null && RpgManager.Instance.gameState != RpgManager.GameState.Undefined)
             {
                 skipIntro = true;
             }
 
-            yield return StartCoroutine(base.Start());
 
             MenuButton continueBtn = mainmenuController.menuButtons.Find(x => x.type == MenuButton.MenuButtonType.Continue);
             continueBtn.isEnabled = GameData.CheckFile();
@@ -52,11 +59,22 @@ namespace rpg
                 //animator.SetTrigger(triggerOnLaunch);
                 audioSource.Play();
             }
+            */
         }
 
         public void OnIntroanimationEnded()
         {
-            mainmenuController.enabled = true;
+            StartCoroutine(OnIntroAnimEndCoroutine());
+        }
+
+        private IEnumerator OnIntroAnimEndCoroutine()
+        {
+            int index = RpgManager.Instance.GetGameOverCommentId(true, firstComment.Count);
+            AudioClip clip = firstComment[index];
+            RpgManager.PlaySFX(clip);
+            yield return new WaitForSeconds(clip.length);
+
+            menuController.gameObject.SetActive(true);
         }
     }
 }

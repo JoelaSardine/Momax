@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -69,6 +70,8 @@ namespace rpg
         private AsyncOperation unloadingFacebook = null;
 
         private AudioSource audioSource;
+        private List<int> availableGameOverComments1 = new List<int>();
+        private List<int> availableGameOverComments2 = new List<int>();
 
         private void Awake()
         {
@@ -245,7 +248,7 @@ namespace rpg
             }
 
             yield return null; StartCoroutine(cameraManager.FadeOutCoroutine());
-            if (player)
+            if (player && !(CurrentStory is GameOverStory))
             {
                 player.GetComponent<Collider2D>().enabled = true;
                 player.movementEnabled = true;
@@ -306,12 +309,37 @@ namespace rpg
         {
             Instance.audioSource.PlayOneShot(clip);
         }
+        public int GetGameOverCommentId(bool first, int commentsBaseCount)
+        {
+            List<int> list = first ? availableGameOverComments1 : availableGameOverComments2;
+            if (list.Count == 0)
+            {
+                for (int i = 0; i < commentsBaseCount; i++)
+                {
+                    list.Add(i);
+                }
+            }
+
+            int randomIndex = Random.Range(0, list.Count);
+            int commentID = list[randomIndex];
+            list.RemoveAt(randomIndex);
+            return commentID;
+        }
 
         public static void RefillHP()
         {
             Player.pv = 3;
             RpgManager.HUD.UpdateHearts(Player.pv, 3);
             RpgManager.PlaySFX(RpgManager.Instance.sfx_refillHP);
+        }
+        
+        public static void GameOver()
+        {
+
+            CurrentStory.StopMusic();
+
+            RpgManager.Spawn = null;
+            SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Additive);
         }
     }
 }
