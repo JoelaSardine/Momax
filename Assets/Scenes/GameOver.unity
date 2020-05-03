@@ -1071,6 +1071,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 756574002}
     - target: {fileID: 3256392551077261598, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_IsActive
@@ -1156,16 +1166,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 756574002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4c3a3eceded364dbbacf40c1046e09, type: 3}
 --- !u!224 &1179579386 stripped
@@ -2336,7 +2336,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d0bcb38c891d85459b44c759dc53961, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 50310d93bb12bf14c8c3e10be42187b4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2435,8 +2435,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainmenuController: {fileID: 0}
-  triggerOnLaunch: Launch
-  triggerOnBack: BackFromGame
   skipIntro: 0
 --- !u!4 &1943585889
 Transform:
@@ -2466,6 +2464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae4a5ac3368bca42850aaf79b59c5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfx_Move: {fileID: 0}
+  sfx_Select: {fileID: 0}
   defaultButtonId: 0
   menuButtons:
   - {fileID: 1179579389}
