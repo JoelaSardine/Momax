@@ -63,4 +63,16 @@ public class MenuController : MonoBehaviour
         RpgManager.PlaySFX(sfx_Select);
         menuButtons[currentButtonId].Validate();
     }
+
+    public void Close()
+    {
+        GetComponent<Animator>().SetTrigger("Close");
+        enabled = false;
+    }
+
+    public void OnEndCloseAnimation()
+    {
+        enabled = true;
+        gameObject.SetActive(false);
+    }
 }

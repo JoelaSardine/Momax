@@ -2715,6 +2715,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 756574002}
     - target: {fileID: 3256392551077261598, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_IsActive
@@ -2800,16 +2810,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2278423435468340882, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278423435126156287, guid: ed4c3a3eceded364dbbacf40c1046e09,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 756574002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4c3a3eceded364dbbacf40c1046e09, type: 3}
 --- !u!224 &1105159875 stripped
@@ -4332,11 +4332,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943585886}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7d0bcb38c891d85459b44c759dc53961, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -4472,7 +4472,7 @@ MonoBehaviour:
   mainmenuController: {fileID: 1943585890}
   triggerOnLaunch: Launch
   triggerOnBack: BackFromGame
-  skipIntro: 1
+  skipIntro: 0
 --- !u!95 &1943585892
 Animator:
   serializedVersion: 3
