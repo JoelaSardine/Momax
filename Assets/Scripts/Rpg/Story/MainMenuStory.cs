@@ -54,7 +54,7 @@ namespace rpg
                 Cursor.visible = false;
 
                 animator.SetTrigger(triggerOnLaunch);
-                audioSource.Play();
+                //audioSource.Play();
             }
         }
 

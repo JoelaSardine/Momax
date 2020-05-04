@@ -46,6 +46,7 @@ namespace rpg
             {
                 AudioSource audioSource = GetComponent<AudioSource>();
                 audioSource.clip = musicAfterFb;
+                audioSource.volume = 1.0f;
                 audioSource.Play();
             }
         }
@@ -74,6 +75,7 @@ namespace rpg
         {
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.clip = musicAfterFb;
+            audioSource.volume = 1.0f;
             audioSource.time = musicStartAt;
             audioSource.Play();
 

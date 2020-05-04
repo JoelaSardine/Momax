@@ -863,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: facebookDone
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7669210009321638003, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
@@ -5092,12 +5092,12 @@ PrefabInstance:
     - target: {fileID: 258676791127415947, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 258676791127415947, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: 258676791127415947, guid: c9769c697fbb18146bc70543e7686f55,
         type: 3}
@@ -6079,7 +6079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicAfterFb: {fileID: 8300000, guid: 821abb1e2eba8224bbaa274e97ffb465, type: 3}
-  musicStartAt: 0
+  musicStartAt: 65.5
   entrance: {fileID: 3976842891305082081}
   computer: {fileID: 1553966251}
   tb_beginning_1: "Ah, \xE7a fait du bien de rentrer chez soi..."
@@ -6098,7 +6098,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 520c532f85e8cef4f8830f6edbdd4276, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
