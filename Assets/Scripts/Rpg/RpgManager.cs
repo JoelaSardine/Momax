@@ -138,7 +138,7 @@ namespace rpg
             }
             else if (Input.GetKeyDown(KeyCode.F2))
             {
-                ToggleKey(SaveKey.facebookDone);
+                ToggleKey(SaveKey.facebookDone, true);
             }
             else if (Input.GetKeyDown(KeyCode.F3))
             {
@@ -196,7 +196,7 @@ namespace rpg
             if (gameState == (gameState | GameState.Menu))
             {
                 player.enabled = true;
-                menu.gameObject.SetActive(false);
+                menu.Close();
                 gameState ^= GameState.Menu;
                 PlaySFX(sfx_closeMenu);
             }
@@ -210,9 +210,12 @@ namespace rpg
             }
         }
 
-        private void ToggleKey(SaveKey key)
+        private void ToggleKey(SaveKey key, bool defaultIsZero = false)
         {
-            SetKey(key, GetKey(key) == 0 ? 1 : 0);
+            if (defaultIsZero)
+                SetKey(key, GetKey(key) == 1 ? 0 : 1);
+            else
+                SetKey(key, GetKey(key) == 0 ? 1 : 0);
             RpgManager.ZoneDisplayName("Cheat \n " + key.ToString() + " set to " + GetKey(key));
             dataDebug.SetData(RpgManager.Data);
         }

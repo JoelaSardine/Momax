@@ -122,18 +122,6 @@ namespace facebook
 
                 if (quickRestart && currentDialog.choices[choicePanel.selected].dialogId == 0)
                 {
-                    if (rpg.RpgManager.Instance)
-                    {
-                        rpg.RpgManager.Player.GetHitFunc();
-                        if (rpg.RpgManager.Player.pv <= 0)
-                        {
-                            rpg.RpgManager.CameraManager.ChangeCameraOutputSize(1);
-                            //enabled = false;
-                            this.gameObject.SetActive(false);
-                            return;
-                        }
-                    }
-
                     currentDialogueId = previousDialogueId;
                     currentDialog = conv.dialogs[currentDialogueId];
                     currentPhraseId = currentDialog.phrases.Count;
@@ -189,6 +177,19 @@ namespace facebook
             }
             else
             {
+                // Lose a life
+                if (rpg.RpgManager.Instance && currentDialog.choices[0].dialogId == 0)
+                {
+                    rpg.RpgManager.Player.GetHitFunc();
+                    if (rpg.RpgManager.Player.pv <= 0)
+                    {
+                        rpg.RpgManager.CameraManager.ChangeCameraOutputSize(1);
+                        //enabled = false;
+                        this.gameObject.SetActive(false);
+                        return;
+                    }
+                }
+
                 OpenAnswerPanel();
 
                 currentPhraseId = 0;

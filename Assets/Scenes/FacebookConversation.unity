@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000072811777}
+  m_AnchoredPosition: {x: 0, y: -0.000022916014}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &343453348
@@ -2101,7 +2101,7 @@ MonoBehaviour:
       phrase: "Ohlala \xE7a fait plaisir de parler avec quelqu'un qui partage le m\xEAme
         avis que moi."
     - talker: 1
-      phrase: "Tu connais Humans of New York ? Jettes un coup d'\u0153il sur FB !"
+      phrase: "Tu connais Humans of New York ? Jette un coup d'\u0153il sur FB !"
     - talker: 2
       phrase: "Ah non pas du tout, je regarderai :o\r"
     - talker: 2
@@ -2182,8 +2182,8 @@ MonoBehaviour:
   - chapter: "Film d\xE9jant\xE9"
     phrases:
     - talker: 1
-      phrase: "Serieux ? Il est top pourtant ! Il dure quand meme 3h mais il est compl\xE8tement
-        d\xE9jent\xE9 !"
+      phrase: "S\xE9rieux ? Il est top pourtant ! Il dure quand m\xEAme 3h mais il
+        est compl\xE8tement d\xE9jant\xE9 !"
     - talker: 2
       phrase: "Oh tu sais peut importe la dur\xE9e du film, quand il est bien, il
         est bien et c'est tout ! "
@@ -2237,8 +2237,8 @@ MonoBehaviour:
   - chapter: Le RER A
     phrases:
     - talker: 1
-      phrase: Flemme d'aller travailler demain, je vais encore devoir prendre le RER
-        A pendant 1h30 la..
+      phrase: "Flemme d'aller travailler demain, je vais encore devoir prendre le
+        RER A pendant 1h30 l\xE0..."
     - talker: 2
       phrase: "Ah bah passe le permis moto plut\xF4t que le permis voiture ce sera
         beaucoup mieux !"
@@ -2298,9 +2298,10 @@ MonoBehaviour:
     - talker: 2
       phrase: 'Je vais aller voir ce qu''igththhdfgzz                                          '
     - talker: 1
-      phrase: 'Max?                                                       '
+      phrase: "                                                       \nMax?"
     - talker: 1
-      phrase: 'Max ???!!!                                                                                                                                   '
+      phrase: "                                                       \nMax ???!!!
+        \                                                                                                                                  "
     choices:
     - choice: Fermer Facebook
       dialogId: -1
