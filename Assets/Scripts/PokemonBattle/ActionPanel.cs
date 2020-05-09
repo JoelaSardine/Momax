@@ -46,6 +46,8 @@ namespace pokemonBattle
         private void Reselect()
         {
             choices[selected].Select(true);
+            ppTxt.SetTxt("PP " + choices[selected].currentPp + "/" + choices[selected].basePp);
+            typeTxt.SetTxt(choices[selected].type);
         }
 
         public bool Move(string direction)
@@ -79,9 +81,7 @@ namespace pokemonBattle
                     haveMoved = false;
                     break;
             }
-            choices[selected].Select(true);
-            ppTxt.SetTxt("PP " + choices[selected].currentPp + "/" + choices[selected].basePp);
-            typeTxt.SetTxt(choices[selected].type);
+            Reselect();
             return haveMoved;
         }
 

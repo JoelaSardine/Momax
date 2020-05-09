@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,7 +38,7 @@ namespace rpg
 
         private bool wait = false;
         private int counter = 0;
-        
+
         [Header("Debug")]
         public bool debug_quickBattle = false;
 
@@ -58,7 +59,7 @@ namespace rpg
             else if (RpgManager.GetKey(SaveKey.defeatedCerberus) != 1)
             {
                 yield return StartCoroutine(FindMaxime());
-            } 
+            }
         }
 
         private IEnumerator FindMaxime()
@@ -75,6 +76,8 @@ namespace rpg
             orionMovable.transform.position = startPos;
             cerberusMovable.transform.position = startPos;
             cerberusMovable.gameObject.SetActive(false);
+            luckyMovable.transform.position = morganePos1 + Vector3.down * 2;
+            luckyMovable.gameObject.SetActive(false);
 
             playerMovable.LookTowards(Vector3.up);
             alteaMovable.MoveTo(startPos - Vector3.right);
@@ -150,7 +153,9 @@ namespace rpg
             player.EndTalk();
             cerberusMovable.MoveTo(morganePos1 + Vector3.down, speed_walk);
             yield return new WaitWhile(() => cerberusMovable.isMoving);
-            
+
+            cerberusMovable.Hit();
+
             TransitionBattle trbattle = TransitionBattle.Instance;
             trbattle.onClosureFinished = () => { SceneManager.LoadScene("PokemonBattle", LoadSceneMode.Additive); };
             trbattle.StartSpiralCoroutine();
@@ -174,6 +179,26 @@ namespace rpg
             Gizmos.DrawSphere(morganePos2, 0.2f);
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(catsPosition, 0.2f);
+        }
+
+        public void OnEndPokemonBattle()
+        {
+            StartCoroutine(EndPokemonCoroutine());
+        }
+
+        private IEnumerator EndPokemonCoroutine()
+        {
+            bool wait = true; 
+            BossExplosion explosion = Instantiate(explosionPrefab).GetComponent<BossExplosion>();
+            explosion.OnWhiteScreenEvent += () => wait = false;
+
+            cerberusMovable.Hit();
+
+            yield return new WaitWhile(() => wait);
+
+            cerberusMovable.gameObject.SetActive(false);
+            luckyMovable.gameObject.SetActive(true);
+            luckyMovable.LookAt(playerMovable.transform.position);
         }
     }
 }

@@ -47,5 +47,9 @@ namespace pokemonBattle
             }
         }
 
+        public void Use()
+        {
+            currentPp--;
+        }
     }
 }

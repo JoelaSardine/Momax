@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -274,6 +275,21 @@ namespace rpg
                 story.OnEndFacebook();
             }
         }
+        
+        public static void UnloadPokemon()
+        {
+            AsyncOperation ao = Instance.unloadingFacebook = SceneManager.UnloadSceneAsync("PokemonBattle");
+            ao.completed += OnEndUnloadingPokemon;
+        }
+        public static void OnEndUnloadingPokemon(AsyncOperation obj)
+        {
+            if (CurrentStory is MontgeronStory)
+            {
+                MontgeronStory story = (MontgeronStory)CurrentStory;
+
+                story.OnEndPokemonBattle();
+            }
+        }
 
         public static void ZoneDisplayName(string text)
         {
@@ -323,7 +339,7 @@ namespace rpg
                 }
             }
 
-            int randomIndex = Random.Range(0, list.Count);
+            int randomIndex = UnityEngine.Random.Range(0, list.Count);
             int commentID = list[randomIndex];
             list.RemoveAt(randomIndex);
             return commentID;

@@ -936,7 +936,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante MISTY MOUNTAINS du SEIGNEUR DES ANNEAUX
+      value: Morgane chante MISTY MOUNTAINS du SEIGNEUR DES ANNEAUX.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -946,7 +946,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: resultMessage
-      value: "Ce n'est pas tr\xE8s efficace."
+      value: "C'est jolie, mais ce n'est pas tr\xE8s efficace."
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1319,7 +1319,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante MONSIEUR JEAN de LA BELLE BLEUE
+      value: Morgane chante MONSIEUR JEAN de LA BELLE BLEUE.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1330,6 +1330,16 @@ PrefabInstance:
         type: 3}
       propertyPath: damage
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -2176,17 +2186,17 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane donne un COUP DE PIED BIEN PLACE.
+      value: Morgane donne un COUP DE PIED QUELQUE PART.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: basePp
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: currentPp
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2438,7 +2448,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante KISS ME de ED LE ROUX
+      value: Morgane chante KISS ME de ED LE ROUX.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2449,6 +2459,21 @@ PrefabInstance:
         type: 3}
       propertyPath: damage
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: resultMessage
+      value: "C'est tr\xE8s efficace !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -3078,7 +3103,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk4RegardMechant
+      value: Atk4RegardNoir
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3219,7 +3244,7 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: REGARD MECHANT
+      value: REGARD NOIR
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3229,22 +3254,27 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane envoie un REGARD MECHANT.
+      value: Morgane envoie un REGARD NOIR.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: basePp
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: currentPp
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: resultMessage
+      value: ENSIL-ENSCI s'en fout royalement.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -3728,12 +3758,15 @@ MonoBehaviour:
   - label: ENSIL-ENSCI attaque TRIPLE-MORSURE.
     damage: 29
     heal: 0
+    sfx: {fileID: 8300000, guid: 1f465c9581c0e1c4bbcc3707eead908f, type: 3}
   - label: ENSIL-ENSCI attaque RUGISSEMENT.
     damage: 8
     heal: 0
+    sfx: {fileID: 8300000, guid: 8641ccf3e5cd90d43ae60794e7399c48, type: 3}
   - label: "ENSIL-ENSCI d\xE9vore un meuble."
     damage: 0
     heal: 40
+    sfx: {fileID: 8300000, guid: 698f5b978bcc53f44a7a356422de4696, type: 3}
 --- !u!82 &1203222305
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3877,10 +3910,10 @@ MonoBehaviour:
   hpCritColor: {r: 0.95686275, g: 0.3882353, b: 0.3882353, a: 1}
   dialTextDelay: 0.02
   choiceText: Que veux-tu faire ?
-  fleeText: "Le d\xE9mon bloque la porte !"
+  fleeText: ENSIL-ENSCI bloque la porte !
   bagText: Morgane prend un petit gouter.
-  winText: "Bravo ! Tu as gagn\xE9 !"
-  loseText: Bouh ! Tu as perdu !
+  winText: ENSIL-ENSCI est K.O.!
+  loseText: Morgane est K.O.!
 --- !u!1001 &1232604675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4047,7 +4080,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: resultMessage
-      value: "C'est tr\xE8s efficace !"
+      value: Ca n'a pas l'air d'impressionner ENSIL-ENSCI.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -4057,12 +4090,12 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: basePp
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: currentPp
-      value: 15
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -5451,12 +5484,12 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante LA SEINE de M et VANESSA PARADIS
+      value: Morgane chante LA SEINE de M et VANESSA PARADIS.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: resultMessage
-      value: "C'est tr\xE8s efficace"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5466,7 +5499,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: basePp
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5476,7 +5509,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: currentPp
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -6093,7 +6126,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane fout un COUP DE BOULE.
+      value: Morgane donne carrement un COUP DE BOULE.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}

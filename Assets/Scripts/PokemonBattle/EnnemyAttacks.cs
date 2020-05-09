@@ -21,5 +21,6 @@ namespace pokemonBattle
         public string label;
         public int damage;
         public int heal;
+        public AudioClip sfx;
     }
 }

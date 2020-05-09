@@ -64,5 +64,10 @@ namespace rpg
             speed = newSpeed;
             MoveTo(targ);
         }
+
+        public void Hit()
+        {
+            animator.SetTrigger("Hit");
+        }
     }
 }

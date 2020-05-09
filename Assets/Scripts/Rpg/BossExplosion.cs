@@ -1,18 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossExplosion : MonoBehaviour
 {
     private Animator animator;
-    //private AudioSource audioSource;
 
+    public Action OnWhiteScreenEvent; 
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
 
         animator.SetTrigger("Grow");
-        //audioSource = GetComponent<AudioSource>();
+    }
+
+    public void OnWhiteScreen()
+    {
+        if (OnWhiteScreenEvent != null)
+        {
+            OnWhiteScreenEvent();
+        }
     }
 }

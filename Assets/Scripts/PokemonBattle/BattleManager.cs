@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace pokemonBattle
 {
@@ -126,6 +127,12 @@ namespace pokemonBattle
 
         private void Update()
         {
+            if (!busy && Input.GetKeyDown(KeyCode.F9) && RpgManager.Instance)
+            {
+                RpgManager.CurrentStory.StopMusic();
+                RpgManager.UnloadPokemon();
+            }
+
             if (!busy)
             {
                 float h = Input.GetAxisRaw("Horizontal");
@@ -283,35 +290,62 @@ namespace pokemonBattle
 
         private IEnumerator fightCoroutine(BattleChoice choice)
         {
+            if (choice.currentPp <= 0)
+            {
+                battleState = BATTLESTATE.DEFAULT;
+                songPanel.gameObject.SetActive(false);
+                punchPanel.gameObject.SetActive(false);
+                attackDescriptionPanel.SetActive(false);
+
+                busy = waitForInput = true;
+                smallTxt.Shutup();
+                bigTxt.Display("Plus de points de pouvoir !", true, DefaultCallback);
+                while (busy || waitForInput) yield return null;
+
+                busy = true;
+                bigTxt.Shutup();
+                smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
+                while (busy)
+                    yield return null;
+                choicesPanel.gameObject.SetActive(true);
+                battleState = BATTLESTATE.CHOICES;
+                yield break;
+            }
+            else
+            {
+                choice.currentPp--;
+            }
+
             battleState = BATTLESTATE.ATTACKSPLAY;
             choicesPanel.gameObject.SetActive(false);
             songPanel.gameObject.SetActive(false);
             punchPanel.gameObject.SetActive(false);
             attackDescriptionPanel.gameObject.SetActive(false);
 
+            bool hasResult = !string.IsNullOrEmpty(choice.resultMessage);
+
             // Display text
             busy = waitForInput = true;
             smallTxt.Shutup();
-            bigTxt.Display(choice.message, true, DefaultCallback);
-            while (busy)
-                yield return null;
+            bigTxt.Display(choice.message, !hasResult, DefaultCallback);
+            while (busy) yield return null;
+
+            busy = true;
             yield return new WaitForSeconds(1f);
 
             // Play animations
-            busy = true;
             ennemy.PlayAnim("Hit");
             StartCoroutine(ennemy.ModifyHpCoroutine(-choice.damage, DefaultCallback));
-            while (busy || waitForInput)
-                yield return null;
+            while (busy) yield return null;
 
             // Display result if any
-            if (string.IsNullOrEmpty(choice.resultMessage))
+            if (hasResult)
             {
-                busy = true;
-                bigTxt.Display(choice.resultMessage, false, DefaultCallback);
+                busy = waitForInput = true;
+                bigTxt.Display(choice.resultMessage, true, DefaultCallback);
             }
 
-            while (busy)
+            while (busy || waitForInput)
                 yield return null;
 
             if (ennemy.Hp <= 0)
@@ -331,10 +365,13 @@ namespace pokemonBattle
             bigTxt.Display(atk.label, true, DefaultCallback);
             while (busy)
                 yield return null;
+
+            busy = true;
+            if (RpgManager.Instance) RpgManager.PlaySFX(atk.sfx);
+
             yield return new WaitForSeconds(1f);
 
             // Play animations
-            busy = true;
             if (atk.damage > 0)
             {
                 player.PlayAnim("Hit");
@@ -370,17 +407,25 @@ namespace pokemonBattle
 
             busy = waitForInput = true;
             smallTxt.Shutup();
-            bigTxt.Display(BattleConsts.I.bagText, true, DefaultCallback);
+            bigTxt.Display(BattleConsts.I.bagText, false, DefaultCallback);
 
-            while (busy || waitForInput) yield return null;
+            while (busy)
+                yield return null;
+            yield return new WaitForSeconds(1f);
+
+            busy = true;
+            player.PlayAnim("Hit");
+            StartCoroutine(player.ModifyHpCoroutine(+50, DefaultCallback));
+
+            while (busy) yield return null;
 
             busy = true;
             bigTxt.Shutup();
-            smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
-            while (busy)
+            bigTxt.Display("Miam miam !", true, DefaultCallback);
+            while (busy || waitForInput)
                 yield return null;
-            choicesPanel.gameObject.SetActive(true);
-            battleState = BATTLESTATE.CHOICES;
+
+            StartCoroutine(ennemyCoroutine());
         }
 
         private IEnumerator fleeCoroutine()
@@ -426,6 +471,23 @@ namespace pokemonBattle
             smallTxt.Shutup();
             bigTxt.Display(win ? BattleConsts.I.winText : BattleConsts.I.loseText, true, DefaultCallback);
             while (busy || waitForInput) yield return null;
+
+            if (!win)
+            {
+                yield break;
+            }
+
+            busy = waitForInput = true;
+            bigTxt.Display("Morgane gagne 791 993 points d'EXP !", true, DefaultCallback);
+            while (busy || waitForInput) yield return null;
+
+            busy = waitForInput = true;
+            bigTxt.Display("Morgane monte au niveau 27 !", true, DefaultCallback);
+
+            player.statsPanel.Find("Level").GetComponent<Text>().text = "Lv27";
+            while (busy || waitForInput) yield return null;
+
+            rpg.RpgManager.UnloadPokemon();
         }
 
         private void InitTransition()
