@@ -19,7 +19,8 @@ namespace rpg
         public MovableEntity playerMovable;
         public MovableEntity alteaMovable;
         public MovableEntity orionMovable;
-        public MovableEntity dogMovable;
+        public MovableEntity cerberusMovable;
+        public MovableEntity luckyMovable;
 
         public Vector3 startPos;
         public float speed_walk = 1.0f;
@@ -63,8 +64,8 @@ namespace rpg
 
             alteaMovable.transform.position = startPos;
             orionMovable.transform.position = startPos;
-            dogMovable.transform.position = startPos;
-            dogMovable.gameObject.SetActive(false);
+            cerberusMovable.transform.position = startPos;
+            cerberusMovable.gameObject.SetActive(false);
 
             playerMovable.LookTowards(Vector3.up);
             alteaMovable.MoveTo(startPos - Vector3.right);
@@ -120,8 +121,8 @@ namespace rpg
             player.EndTalk();
             audioSource.clip = bossMusic;
             audioSource.Play();
-            dogMovable.gameObject.SetActive(true);
-            dogMovable.LookTowards(Vector3.up);
+            cerberusMovable.gameObject.SetActive(true);
+            cerberusMovable.LookTowards(Vector3.up);
             alteaMovable.LookTowards(Vector3.down);
             playerMovable.MoveTo(morganePos1, speed_walk);
             yield return new WaitWhile(() => playerMovable.isMoving);
@@ -138,8 +139,8 @@ namespace rpg
             yield return new WaitWhile(() => wait);
 
             player.EndTalk();
-            dogMovable.MoveTo(morganePos1 + Vector3.down, speed_walk);
-            yield return new WaitWhile(() => dogMovable.isMoving);
+            cerberusMovable.MoveTo(morganePos1 + Vector3.down, speed_walk);
+            yield return new WaitWhile(() => cerberusMovable.isMoving);
             
             TransitionBattle trbattle = TransitionBattle.Instance;
             trbattle.onClosureFinished = () => { SceneManager.LoadScene("PokemonBattle", LoadSceneMode.Additive); };
