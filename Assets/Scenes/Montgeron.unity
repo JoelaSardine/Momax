@@ -5073,6 +5073,7 @@ MonoBehaviour:
     depuis la nuit des temps !"
   talk_orion_dog2: "Orion : Mais que fait-il ici ? Morgane, prot\xE8ge-nous !"
   talk_dog: Mais... Qu'est-ce que...
+  debug_quickBattle: 1
 --- !u!82 &2022772669
 AudioSource:
   m_ObjectHideFlags: 0

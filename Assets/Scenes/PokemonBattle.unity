@@ -870,7 +870,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -931,17 +931,37 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: ZOMBIE
+      value: MISTY MOUNTAINS
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante ZOMBIE
+      value: Morgane chante MISTY MOUNTAINS du SEIGNEUR DES ANNEAUX
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: type
-      value: ROCK
+      value: A CAPELLA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: resultMessage
+      value: "Ce n'est pas tr\xE8s efficace."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -1043,8 +1063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad99ef4b1f703c34ab1f839d20314c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWriting: 0
   text: ENSIL-ENSCI ATTAQUE MORGANE !
   size: 45
+  placeholderText: {fileID: 0}
   realText: {fileID: 709250511}
   endTxtImage: {fileID: 373436671}
 --- !u!1 &373436669
@@ -1231,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1292,17 +1314,17 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: LOLLIPOP
+      value: MONSIEUR JEAN
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante LOLLIPOP
+      value: Morgane chante MONSIEUR JEAN de LA BELLE BLEUE
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: type
-      value: POP
+      value: FOLK
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -2078,7 +2100,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2139,7 +2161,27 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: '-'
+      value: BOTTAGE DE CUL
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: type
+      value: PIED
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: message
+      value: Morgane donne un COUP DE PIED BIEN PLACE.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -2330,7 +2372,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2381,17 +2423,22 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: UMBRELLA
+      value: KISS ME
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante UMBRELLA
+      value: Morgane chante KISS ME de ED LE ROUX
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: type
-      value: POP
+      value: LOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -2510,9 +2557,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4752481688505769795}
-  - {fileID: 1345485147}
   - {fileID: 2001168605}
+  - {fileID: 1345485147}
+  - {fileID: 4752481688505769795}
   - {fileID: 836955611}
   m_Father: {fileID: 1292646634}
   m_RootOrder: 1
@@ -3101,7 +3148,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3162,7 +3209,32 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: '-'
+      value: REGARD MECHANT
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: type
+      value: WESH
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: message
+      value: Morgane envoie un REGARD MECHANT.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -3264,8 +3336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad99ef4b1f703c34ab1f839d20314c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWriting: 0
   text: ENSIL-ENSCI ATTAQUE MORGANE !
   size: 45
+  placeholderText: {fileID: 0}
   realText: {fileID: 626152929}
   endTxtImage: {fileID: 219115714}
 --- !u!1001 &1089485003
@@ -3606,6 +3680,7 @@ GameObject:
   - component: {fileID: 1203222306}
   - component: {fileID: 1203222307}
   - component: {fileID: 1203222304}
+  - component: {fileID: 1203222305}
   m_Layer: 0
   m_Name: BattleManager
   m_TagString: Untagged
@@ -3644,6 +3719,102 @@ MonoBehaviour:
     damage: 30
   - label: ENSIL-ENSCI attaque GROS Z'YEUX.
     damage: 10
+--- !u!82 &1203222305
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203222302}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2b4b1155387362f45b1e42b1c999172c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1203222306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3656,6 +3827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e5bfa7dfbfde0428e0547b68da17c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ennemyCry: {fileID: 8300000, guid: 8f8d08c799533654e97da455c0712983, type: 3}
   player:
     avatarPanel: {fileID: 1713054825}
     statsPanel: {fileID: 1490178454}
@@ -3792,7 +3964,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3843,17 +4015,17 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: COUP D'BOULE
+      value: GRONDAGE
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Super coup de boule !
+      value: Morgane essaie de GRONDER avec une grosse voix.
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 100
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3863,7 +4035,17 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: type
-      value: Bourrin
+      value: VOIX AIGUE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -4562,7 +4744,7 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: SAC
+      value: SOIN
       objectReference: {fileID: 0}
     - target: {fileID: 8634604640337400247, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5196,7 +5378,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5237,22 +5419,22 @@ PrefabInstance:
     - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Text
-      value: BELLA CIAO
+      value: LA SEINE
       objectReference: {fileID: 0}
     - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Text
-      value: BELLA CIAO
+      value: LA SEINE
       objectReference: {fileID: 0}
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: BELLA CIAO
+      value: LA SEINE
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: message
-      value: Morgane chante BELLA CIAO
+      value: Morgane chante LA SEINE de M et VANESSA PARADIS
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5262,17 +5444,22 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: basePp
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: type
-      value: LATINO
+      value: POP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -5828,7 +6015,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5879,7 +6066,32 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: '-'
+      value: COUP D'BOULE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: type
+      value: IMPRUDENT
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: message
+      value: Morgane fout un COUP DE BOULE.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -6166,7 +6378,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6191,7 +6403,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.5
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6201,7 +6413,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -27
+      value: -32
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6211,7 +6423,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6221,7 +6433,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6606,7 +6818,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6631,7 +6843,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -14
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6641,7 +6853,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -32
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6651,7 +6863,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6661,7 +6873,7 @@ PrefabInstance:
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}

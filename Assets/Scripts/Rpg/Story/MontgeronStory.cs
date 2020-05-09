@@ -40,13 +40,25 @@ namespace rpg
 
         private AudioSource audioSource;
 
+        [Header("Debug")]
+        public bool debug_quickBattle = false;
+
         protected override IEnumerator Start()
         {
             audioSource = GetComponent<AudioSource>();
 
             yield return StartCoroutine(base.Start());
 
-            if (RpgManager.GetKey(SaveKey.defeatedCerberus) != 1)
+            if (debug_quickBattle)
+            {
+                audioSource.clip = bossMusic;
+                audioSource.Play();
+                yield return new WaitForSeconds(1.0f);
+                TransitionBattle trbattle = TransitionBattle.Instance;
+                trbattle.onClosureFinished = () => { SceneManager.LoadScene("PokemonBattle", LoadSceneMode.Additive); };
+                trbattle.StartSpiralCoroutine();
+            }
+            else if (RpgManager.GetKey(SaveKey.defeatedCerberus) != 1)
             {
                 yield return StartCoroutine(FindMaxime());
             } 

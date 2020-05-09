@@ -41,6 +41,9 @@ namespace pokemonBattle
 
         private EnnemyAttacks ennemyAttacks;
 
+        private AudioSource audioSource;
+        public AudioClip ennemyCry;
+
         public FighterBattle player;
         public FighterBattle ennemy;
         public Transform actionsPanel;
@@ -65,6 +68,8 @@ namespace pokemonBattle
             attackDescriptionPanel = descPanel.gameObject;
             descPpTxt = descPanel.Find("PP").GetComponentInChildren<Textshadow>();
             descTypeTxt = descPanel.Find("Type").GetComponentInChildren<Textshadow>();
+
+            audioSource = GetComponent<AudioSource>();
 
             choicesPanel.Init(descPpTxt, descTypeTxt);
             songPanel.Init(descPpTxt, descTypeTxt);
@@ -118,7 +123,7 @@ namespace pokemonBattle
                     Move("down");
                 }
 
-                if (Input.GetButtonDown("Interact"))
+                if (Input.GetButtonDown("Fire"))
                 {
                     waitForInput = false;
                     Select();
@@ -353,6 +358,12 @@ namespace pokemonBattle
 
         private IEnumerator endCoroutine(bool win)
         {
+            if (rpg.RpgManager.Instance)
+            {
+                rpg.RpgManager.CurrentStory.StopMusic();
+            }
+            audioSource.Play();
+
             (win ? ennemy : player).animator.SetTrigger("Dead");
 
             battleState = BATTLESTATE.DEFAULT;
@@ -402,6 +413,8 @@ namespace pokemonBattle
 
                 yield return null;
             }
+
+            audioSource.PlayOneShot(ennemyCry);
 
             time = BattleConsts.I.introStatsDuration;
             timer = 0;
