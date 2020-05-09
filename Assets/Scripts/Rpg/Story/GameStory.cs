@@ -7,10 +7,17 @@ namespace rpg
 {
     public class GameStory : MonoBehaviour
     {
+        protected AudioSource audioSource;
+
         protected PlayerManager player;
 
         protected virtual IEnumerator Start()
         {
+            if (!audioSource)
+            {
+                audioSource = GetComponent<AudioSource>();
+            }
+
             if (!RpgManager.Instance)
             {
                 yield return new WaitForEndOfFrame();
@@ -41,12 +48,17 @@ namespace rpg
 
         public void StopMusic()
         {
-            GetComponent<AudioSource>().Stop();
+            audioSource.Stop();
         }
 
         public void SetMusicVolume(float v)
         {
-            GetComponent<AudioSource>().volume = v;
+            audioSource.volume = v;
+        }
+
+        public void SetMusicPitch(float v)
+        {
+            audioSource.pitch = v;
         }
     }
 }

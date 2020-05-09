@@ -37,20 +37,17 @@ namespace rpg
 
         private bool wait = false;
         private int counter = 0;
-
-        private AudioSource audioSource;
-
+        
         [Header("Debug")]
         public bool debug_quickBattle = false;
 
         protected override IEnumerator Start()
         {
-            audioSource = GetComponent<AudioSource>();
-
             yield return StartCoroutine(base.Start());
 
             if (debug_quickBattle)
             {
+                player.enabled = false;
                 audioSource.clip = bossMusic;
                 audioSource.Play();
                 yield return new WaitForSeconds(1.0f);

@@ -7,7 +7,6 @@ namespace rpg
     public class MainMenuStory : GameStory
     {
         private Animator animator;
-        private AudioSource audioSource;
         [HideInInspector]
         public MenuController mainmenuController;
 
@@ -19,7 +18,6 @@ namespace rpg
         private void Awake()
         {
             animator = GetComponent<Animator>();
-            audioSource = GetComponent<AudioSource>();
             mainmenuController = GetComponent<MenuController>();
         }
 

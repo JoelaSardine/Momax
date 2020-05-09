@@ -7,7 +7,6 @@ namespace rpg
     public class GameOverStory : GameStory
     {
         private Animator animator;
-        private AudioSource audioSource;
         public MenuController menuController;
 
         public List<AudioClip> firstComment;
@@ -19,7 +18,6 @@ namespace rpg
         private void Awake()
         {
             animator = GetComponent<Animator>();
-            audioSource = GetComponent<AudioSource>();
 
             menuController.gameObject.SetActive(false);
         }
