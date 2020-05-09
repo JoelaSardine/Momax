@@ -17,15 +17,22 @@ namespace pokemonBattle
         public int currentPp = 10;
         public string type = "";
 
+        public bool isSetActive = false;
+
         private void Awake()
         {
             selectBox = transform.Find("Select").gameObject;
             currentPp = basePp;
+            selectBox.SetActive(false);
         }
 
-        private void Start()
+        private void Update()
         {
-            selectBox.SetActive(false);
+            if (isSetActive)
+            {
+                Select(true);
+                isSetActive = false;
+            }
         }
 
         public void Select(bool state)
@@ -33,6 +40,10 @@ namespace pokemonBattle
             if (selectBox)
             {
                 selectBox.SetActive(state);
+            }
+            else
+            {
+                isSetActive = true;
             }
         }
 

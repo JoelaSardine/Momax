@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using rpg;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,6 +44,8 @@ namespace pokemonBattle
 
         private AudioSource audioSource;
         public AudioClip ennemyCry;
+        public AudioClip sfx_move;
+        public AudioClip sfx_validate;
 
         public FighterBattle player;
         public FighterBattle ennemy;
@@ -97,7 +100,28 @@ namespace pokemonBattle
 
         private void DefaultCallback()
         {
+            UpdateMusicPitch();
+
             busy = false;
+        }
+
+        private void UpdateMusicPitch()
+        {
+            if (!RpgManager.Instance)
+                return;
+
+            switch (player.GetHpStatus())
+            {
+                case "low":
+                    RpgManager.CurrentStory.SetMusicPitch(1.05f);
+                    break;
+                case "critical":
+                    RpgManager.CurrentStory.SetMusicPitch(1.10f);
+                    break;
+                default:
+                    RpgManager.CurrentStory.SetMusicPitch(1.00f);
+                    break;
+            }
         }
 
         private void Update()
@@ -125,11 +149,15 @@ namespace pokemonBattle
 
                 if (Input.GetButtonDown("Fire"))
                 {
+                    if (waitForInput)
+                        if (RpgManager.Instance) RpgManager.PlaySFX(sfx_move);
                     waitForInput = false;
                     Select();
                 }
                 else if (Input.GetButtonDown("Back"))
                 {
+                    if (waitForInput)
+                        if (RpgManager.Instance) RpgManager.PlaySFX(sfx_move);
                     waitForInput = false;
                     Back();
                 }
@@ -138,20 +166,25 @@ namespace pokemonBattle
 
         private void Move(string direction)
         {
+            bool haveMoved = false;
             switch (battleState)
             {
                 case BATTLESTATE.DEFAULT:
                     break;
                 case BATTLESTATE.CHOICES:
-                    choicesPanel.Move(direction);
+                    haveMoved = choicesPanel.Move(direction);
                     break;
                 case BATTLESTATE.SONG:
-                    songPanel.Move(direction);
+                    haveMoved = songPanel.Move(direction);
                     break;
                 case BATTLESTATE.PUNCH:
-                    punchPanel.Move(direction);
+                    haveMoved = punchPanel.Move(direction);
                     break;
                 default: break;
+            }
+            if (haveMoved)
+            {
+                if (RpgManager.Instance) RpgManager.PlaySFX(sfx_move);
             }
         }
 
@@ -170,18 +203,22 @@ namespace pokemonBattle
                             choicesPanel.gameObject.SetActive(false);
                             songPanel.gameObject.SetActive(true);
                             attackDescriptionPanel.SetActive(true);
+                            if (RpgManager.Instance) RpgManager.PlaySFX(sfx_validate);
                             break;
                         case "punch": 
                             battleState = BATTLESTATE.PUNCH;
                             choicesPanel.gameObject.SetActive(false);
                             punchPanel.gameObject.SetActive(true);
                             attackDescriptionPanel.SetActive(true);
+                            if (RpgManager.Instance) RpgManager.PlaySFX(sfx_validate);
                             break;
                         case "bag":
                             StartCoroutine(bagCoroutine());
+                            if (RpgManager.Instance) RpgManager.PlaySFX(sfx_validate);
                             break;
                         case "flee":
                             StartCoroutine(fleeCoroutine());
+                            if (RpgManager.Instance) RpgManager.PlaySFX(sfx_validate);
                             break;
                         default:
                             break;
@@ -189,9 +226,11 @@ namespace pokemonBattle
                     break;
                 case BATTLESTATE.SONG:
                     StartCoroutine(fightCoroutine(songPanel.GetSelectedItem()));
+                    if (RpgManager.Instance) RpgManager.PlaySFX(sfx_validate);
                     break;
                 case BATTLESTATE.PUNCH:
                     StartCoroutine(fightCoroutine(punchPanel.GetSelectedItem()));
+                    if (RpgManager.Instance) RpgManager.PlaySFX(sfx_validate);
                     break;
                 default:
                     break;
@@ -231,7 +270,7 @@ namespace pokemonBattle
             bigTxt.Display("MORGANE est attaquée par ENSIL-ENSCI !", true, DefaultCallback);
             while (busy || waitForInput)
                 yield return null;
-            
+
             busy = true;
             bigTxt.Shutup();
             smallTxt.Display(BattleConsts.I.choiceText, false, DefaultCallback);
@@ -362,7 +401,6 @@ namespace pokemonBattle
             {
                 rpg.RpgManager.CurrentStory.StopMusic();
             }
-            audioSource.Play();
 
             (win ? ennemy : player).animator.SetTrigger("Dead");
 
@@ -371,6 +409,16 @@ namespace pokemonBattle
             smallTxt.Shutup();
             bigTxt.Display(win ? BattleConsts.I.winText : BattleConsts.I.loseText, true, DefaultCallback);
             while (busy || waitForInput) yield return null;
+                        
+            if (win) audioSource.Play();
+            else
+            {// Lose a life
+                if (RpgManager.Instance)
+                {
+                    rpg.RpgManager.Player.GetHitFunc(3);
+                    this.gameObject.SetActive(false);
+                }
+            }
         }
 
         private void InitTransition()

@@ -33,6 +33,13 @@ namespace pokemonBattle
             }
         }
 
+        public string GetHpStatus()
+        {
+            return hpBar.fillAmount < BattleConsts.I.hpCritTreshold ?
+                    "critical" : hpBar.fillAmount < BattleConsts.I.hpLowTreshold ?
+                    "low" : "base";
+        }
+
         public void Init()
         {
             hpBar = statsPanel.Find("HpBar").Find("Image").GetComponent<Image>();

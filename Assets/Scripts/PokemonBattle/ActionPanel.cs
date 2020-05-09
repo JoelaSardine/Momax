@@ -25,12 +25,13 @@ namespace pokemonBattle
         {
             //choices[0].Select(true);
             //selected = 0;
-        }
-
-        private void Start()
-        {
             Reselect();
         }
+
+        /*private void Start()
+        {
+            Reselect();
+        }*/
 
         public void Init(Textshadow pp, Textshadow type)
         {
@@ -47,32 +48,41 @@ namespace pokemonBattle
             choices[selected].Select(true);
         }
 
-        public void Move(string direction)
+        public bool Move(string direction)
         {
+            bool haveMoved = true;
+
             choices[selected].Select(false);
             switch (direction)
             {
                 case "up":
                     if (selected == 2) selected = 0;
                     else if (selected == 3) selected = 1;
+                    else haveMoved = false;
                     break;
                 case "left":
                     if (selected == 1) selected = 0;
                     else if (selected == 3) selected = 2;
+                    else haveMoved = false;
                     break;
                 case "right":
                     if (selected == 0) selected = 1;
                     else if (selected == 2) selected = 3;
+                    else haveMoved = false;
                     break;
                 case "down":
                     if (selected == 0) selected = 2;
                     else if (selected == 1) selected = 3;
+                    else haveMoved = false;
                     break;
-                default: break;
+                default: 
+                    haveMoved = false;
+                    break;
             }
             choices[selected].Select(true);
             ppTxt.SetTxt("PP " + choices[selected].currentPp + "/" + choices[selected].basePp);
             typeTxt.SetTxt(choices[selected].type);
+            return haveMoved;
         }
 
         public BattleChoice GetSelectedItem()

@@ -28,8 +28,8 @@ namespace pokemonBattle
         [Header("Dialog")]
         public float dialTextDelay = 0.02f;
         public string choiceText = "Que veux-tu faire ?";
-        public string fleeText = "Tu ne peux pas t'enfuir du combat !";
-        public string bagText = "Ton sac est vide !";
+        public string fleeText = "Le démon bloque la porte !";
+        public string bagText = "Morgane prend un petit gouter.";
         public string winText = "Bravo ! Tu as gagné !";
         public string loseText = "Bouh ! Tu as perdu !";
     }

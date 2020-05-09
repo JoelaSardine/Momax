@@ -790,7 +790,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk4
+      value: Atk4MistyMountains
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -1006,8 +1006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.27539062, y: -11}
-  m_SizeDelta: {x: 0.5499954, y: -70}
+  m_AnchoredPosition: {x: 11.799988, y: -11}
+  m_SizeDelta: {x: 30.7, y: -70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314702267
 MonoBehaviour:
@@ -1173,7 +1173,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk2
+      value: Atk2MonsieurJean
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1325,6 +1325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: FOLK
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -2020,7 +2025,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk2
+      value: Atk2CoupPied
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2183,6 +2188,11 @@ PrefabInstance:
       propertyPath: currentPp
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &664726749 stripped
@@ -2282,7 +2292,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk3
+      value: Atk3KissMe
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2438,7 +2448,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -2524,8 +2534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.5253906, y: -12.5}
-  m_SizeDelta: {x: -3.0499954, y: -73}
+  m_AnchoredPosition: {x: 13.700012, y: -12.5}
+  m_SizeDelta: {x: 26.8, y: -73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &764764933
 GameObject:
@@ -3068,7 +3078,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk4
+      value: Atk4RegardMechant
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3234,7 +3244,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -3715,10 +3725,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks:
-  - label: ENSIL-ENSCI attaque MORSURE.
-    damage: 30
-  - label: ENSIL-ENSCI attaque GROS Z'YEUX.
-    damage: 10
+  - label: ENSIL-ENSCI attaque TRIPLE-MORSURE.
+    damage: 129
+    heal: 0
+  - label: ENSIL-ENSCI attaque RUGISSEMENT.
+    damage: 8
+    heal: 0
+  - label: "ENSIL-ENSCI d\xE9vore un meuble."
+    damage: 0
+    heal: 40
 --- !u!82 &1203222305
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3827,7 +3842,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e5bfa7dfbfde0428e0547b68da17c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemyCry: {fileID: 8300000, guid: 8f8d08c799533654e97da455c0712983, type: 3}
+  ennemyCry: {fileID: 8300000, guid: 31429f79d3b07594a9ff9bc818a49336, type: 3}
+  sfx_move: {fileID: 8300000, guid: acf7f5a6ee306d14daecf7c5afa3cd48, type: 3}
+  sfx_validate: {fileID: 8300000, guid: a6bb3e1b4adeaad4390025baffc4a221, type: 3}
   player:
     avatarPanel: {fileID: 1713054825}
     statsPanel: {fileID: 1490178454}
@@ -3860,8 +3877,8 @@ MonoBehaviour:
   hpCritColor: {r: 0.95686275, g: 0.3882353, b: 0.3882353, a: 1}
   dialTextDelay: 0.02
   choiceText: Que veux-tu faire ?
-  fleeText: Tu ne peux pas t'enfuir du combat !
-  bagText: Ton sac est vide !
+  fleeText: "Le d\xE9mon bloque la porte !"
+  bagText: Morgane prend un petit gouter.
   winText: "Bravo ! Tu as gagn\xE9 !"
   loseText: Bouh ! Tu as perdu !
 --- !u!1001 &1232604675
@@ -3874,7 +3891,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk1
+      value: Atk1Gronder
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -4744,7 +4761,7 @@ PrefabInstance:
     - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: text
-      value: SOIN
+      value: TARTINE
       objectReference: {fileID: 0}
     - target: {fileID: 8634604640337400247, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5288,7 +5305,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk1
+      value: Atk1LaSeine
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5444,7 +5461,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5925,7 +5942,7 @@ PrefabInstance:
     - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Name
-      value: Atk3
+      value: Atk3CoupBoule
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6081,7 +6098,7 @@ PrefabInstance:
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
