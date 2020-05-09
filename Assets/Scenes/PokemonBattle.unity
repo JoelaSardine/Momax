@@ -3726,7 +3726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacks:
   - label: ENSIL-ENSCI attaque TRIPLE-MORSURE.
-    damage: 129
+    damage: 29
     heal: 0
   - label: ENSIL-ENSCI attaque RUGISSEMENT.
     damage: 8

@@ -201,16 +201,16 @@ namespace rpg
             }
         }
 
-        public void GetHitFunc()
+        public void GetHitFunc(int dmg = 1)
         {
-            StartCoroutine(GetHit());
+            StartCoroutine(GetHit(dmg));
         }
 
-        private IEnumerator GetHit()
+        private IEnumerator GetHit(int dmg = 1)
         {
             RpgManager.PlaySFX(sfx_hit);
 
-            pv -= 1;
+            pv -= dmg;
             RpgManager.HUD.UpdateHearts(pv, 3);
             animator.SetTrigger("Hit");
 

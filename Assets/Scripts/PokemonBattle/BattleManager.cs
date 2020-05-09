@@ -335,8 +335,15 @@ namespace pokemonBattle
 
             // Play animations
             busy = true;
-            player.PlayAnim("Hit");
-            StartCoroutine(player.ModifyHpCoroutine(-atk.damage, DefaultCallback));
+            if (atk.damage > 0)
+            {
+                player.PlayAnim("Hit");
+                StartCoroutine(player.ModifyHpCoroutine(-atk.damage, DefaultCallback));
+            } else if (atk.heal > 0)
+            {
+                ennemy.PlayAnim("Hit");
+                StartCoroutine(ennemy.ModifyHpCoroutine(atk.heal, DefaultCallback));
+            }
             while (busy || waitForInput)
                 yield return null;
 
@@ -402,14 +409,6 @@ namespace pokemonBattle
                 rpg.RpgManager.CurrentStory.StopMusic();
             }
 
-            (win ? ennemy : player).animator.SetTrigger("Dead");
-
-            battleState = BATTLESTATE.DEFAULT;
-            busy = waitForInput = true;
-            smallTxt.Shutup();
-            bigTxt.Display(win ? BattleConsts.I.winText : BattleConsts.I.loseText, true, DefaultCallback);
-            while (busy || waitForInput) yield return null;
-                        
             if (win) audioSource.Play();
             else
             {// Lose a life
@@ -419,6 +418,14 @@ namespace pokemonBattle
                     this.gameObject.SetActive(false);
                 }
             }
+
+            (win ? ennemy : player).animator.SetTrigger("Dead");
+
+            battleState = BATTLESTATE.DEFAULT;
+            busy = waitForInput = true;
+            smallTxt.Shutup();
+            bigTxt.Display(win ? BattleConsts.I.winText : BattleConsts.I.loseText, true, DefaultCallback);
+            while (busy || waitForInput) yield return null;
         }
 
         private void InitTransition()
