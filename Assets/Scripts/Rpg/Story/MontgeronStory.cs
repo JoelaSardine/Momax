@@ -8,6 +8,7 @@ namespace rpg
 {
     public class MontgeronStory : GameStory
     {
+        public AudioClip baseMusic;
         public AudioClip bossMusic;
 
         public GameObject explosionPrefab;
@@ -15,6 +16,7 @@ namespace rpg
         public Sprite maximeSprite;
         public Sprite alteaSprite;
         public Sprite orionSprite;
+        public Sprite luckySprite;
 
         public Teleporter entrance;
         public MovableEntity playerMovable;
@@ -183,22 +185,79 @@ namespace rpg
 
         public void OnEndPokemonBattle()
         {
+            cerberusMovable.transform.position = luckyMovable.transform.position;
             StartCoroutine(EndPokemonCoroutine());
         }
 
         private IEnumerator EndPokemonCoroutine()
         {
-            bool wait = true; 
+            bool wait = true;
+            
+            RpgManager.Instance.discussionInterface.SetImage(false, alteaSprite);
+            player.Dialog(false, "Altea : Tu l'as vaincu ! Tu as vaincu le démon ! Nous sommes sauvés !", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, orionSprite);
+            player.Dialog(false, "Orion : Attendez, il se passe quelque chose ! Mais quelle est cette lumière ?", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            player.EndTalk();
+
+            wait = true;
             BossExplosion explosion = Instantiate(explosionPrefab).GetComponent<BossExplosion>();
             explosion.OnWhiteScreenEvent += () => wait = false;
+            explosion.OnFinishedEvent += () => wait = false;
 
             cerberusMovable.Hit();
 
             yield return new WaitWhile(() => wait);
 
+            wait = true;
             cerberusMovable.gameObject.SetActive(false);
             luckyMovable.gameObject.SetActive(true);
             luckyMovable.LookAt(playerMovable.transform.position);
+
+            yield return new WaitWhile(() => wait);
+            yield return new WaitForSeconds(1.0f);
+
+            audioSource.clip = baseMusic;
+            audioSource.time = 12f;
+            audioSource.Play();
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, orionSprite);
+            player.Dialog(false, "Orion : Ca alors, il s'est transformé ! Et je ne sens plus aucune aura maléfique.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, alteaSprite);
+            player.Dialog(false, "Altea : Morgane a reussi à l'exorciser. Il semblerait que cette chienne était sous son emprise, c'est terrible.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+            
+            wait = true;
+            player.Dialog(true, "Morgane : C'est pas faux.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+            
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, luckySprite);
+            player.Dialog(false, "????? : Merci de m'avoir libérée, Humaine. Tes amis ont raison. J'étais possédée par ce démon depuis bien longtemps.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            player.Dialog(true, "Morgane : Si tu n'est plus le démon, qui est-tu ? Je m'appelle Morgane.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+            
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, luckySprite);
+            player.Dialog(false, "Lucky : Tu peux m'appeler Lucky. Cela symbolisera la chance que j'ai de vous avoir rencontrés, toi et Maxime.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            player.EndTalk();
+            luckyMovable.MoveTo(luckyMovable.transform.position + Vector3.down);
+            yield return new WaitWhile(() => luckyMovable.isMoving);
+
+
         }
     }
 }

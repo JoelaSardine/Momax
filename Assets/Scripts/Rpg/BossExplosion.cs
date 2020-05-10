@@ -7,8 +7,9 @@ public class BossExplosion : MonoBehaviour
 {
     private Animator animator;
 
-    public Action OnWhiteScreenEvent; 
-    
+    public Action OnWhiteScreenEvent;
+    public Action OnFinishedEvent;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -21,6 +22,14 @@ public class BossExplosion : MonoBehaviour
         if (OnWhiteScreenEvent != null)
         {
             OnWhiteScreenEvent();
+        }
+    }
+
+    public void OnFinished()
+    {
+        if (OnFinishedEvent != null)
+        {
+            OnFinishedEvent();
         }
     }
 }
