@@ -51,6 +51,11 @@ namespace rpg
             audioSource.Stop();
         }
 
+        public float GetMusicVolume()
+        {
+            return audioSource.volume;
+        }
+
         public void SetMusicVolume(float v)
         {
             audioSource.volume = v;

@@ -198,6 +198,12 @@ namespace rpg
             if (creature != null && !isHitInCooldown && !creature.isSpeeping && creature.damageOnAttack > 0)
             {
                 StartCoroutine(GetHit());
+
+                var bull = creature.GetComponent<Bull>();
+                if (bull != null)
+                {
+                    bull.PlayerIsHit();
+                }
             }
         }
 

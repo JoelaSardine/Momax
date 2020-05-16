@@ -9,15 +9,22 @@ namespace rpg
     {
         private CreatureController creatureController;
         private new Rigidbody2D rigidbody;
-        
-        public float speed = 5.0f;
+
+        public AudioClip sfx_seePlayer;
+
+        public float speedRoam = 2.0f;
+        public float maxSpeedChase = 5.0f;
+        public float speedChaseIncrement = 0.1f;
         public float stoppingDistance = 0.01f;
         public float stoppingDuration = 0.5f;
 
         public Rect roamZone = new Rect(0, 0, 2, 2);
         private Vector3 target;
 
+        private float speed = 1.0f;
+        private bool isChasing = false;
         private bool isStopping = false;
+        private bool justHitPlayer = false;
 
         private void Awake()
         {
@@ -25,6 +32,8 @@ namespace rpg
             rigidbody = GetComponent<Rigidbody2D>();
 
             target = transform.position;
+
+            rigidbody.mass = Random.Range(2.0f, 3.0f);
         }
 
         private void FixedUpdate()
@@ -35,8 +44,17 @@ namespace rpg
                 return;
             }
 
-            if (isStopping)
+            Vector3 playerPos = RpgManager.Player.transform.position;
+            isChasing = isPlayerInRoamZone(playerPos);
+            if (isChasing && !justHitPlayer)
             {
+                speed = Mathf.Clamp(speed + speedChaseIncrement, speedRoam, maxSpeedChase);
+                target = playerPos;
+                isStopping = false;
+            } 
+            else if (isStopping)
+            {
+                speed = speedRoam;
                 rigidbody.velocity = Vector2.zero;
                 return;
             }
@@ -53,13 +71,28 @@ namespace rpg
             }
         }
 
+        public void PlayerIsHit() {
+            justHitPlayer = true;
+
+            speed = speedRoam;
+            target = new Vector3(Random.Range(roamZone.xMin, roamZone.xMax), Random.Range(roamZone.yMin, roamZone.yMax));
+            isStopping = false;
+        }
+
         private IEnumerator waitCoroutine()
         {
+            justHitPlayer = false;
             isStopping = true;
             yield return new WaitForSeconds(Random.Range(0, stoppingDuration));
 
             target = new Vector3(Random.Range(roamZone.xMin, roamZone.xMax), Random.Range(roamZone.yMin, roamZone.yMax));
             isStopping = false;
+        }
+
+        private bool isPlayerInRoamZone(Vector3 playerPos)
+        {
+            return (playerPos.x > roamZone.xMin && playerPos.x < roamZone.xMax
+                && playerPos.y > roamZone.yMin && playerPos.y < roamZone.yMax);
         }
 
         private void OnDrawGizmos()
@@ -77,6 +110,13 @@ namespace rpg
             Gizmos.DrawLine(topLeft, topRight);
             Gizmos.DrawLine(topRight, bottomRight);
             Gizmos.DrawLine(bottomRight, bottomLeft);
+
+            if (target != Vector3.zero)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(transform.position, target);
+                Gizmos.DrawSphere(target, 0.2f);
+            }
         }
     }
 }

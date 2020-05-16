@@ -1011,6 +1011,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1202041886}
+    - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: defeatedCerberus
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3256392551077261598, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_IsActive
@@ -5051,6 +5056,7 @@ MonoBehaviour:
   luckySprite: {fileID: 21300000, guid: a4cddec41abf83c48b66651db6588d0f, type: 3}
   entrance: {fileID: 3976842891305082081}
   playerMovable: {fileID: 0}
+  maximeMovable: {fileID: 0}
   alteaMovable: {fileID: 1990925920}
   orionMovable: {fileID: 201415740}
   cerberusMovable: {fileID: 295416344}
@@ -5075,7 +5081,7 @@ MonoBehaviour:
     depuis la nuit des temps !"
   talk_orion_dog2: "Orion : Mais que fait-il ici ? Morgane, prot\xE8ge-nous !"
   talk_dog: Mais... Qu'est-ce que...
-  debug_quickBattle: 0
+  debug_quickBattle: 1
 --- !u!82 &2022772669
 AudioSource:
   m_ObjectHideFlags: 0

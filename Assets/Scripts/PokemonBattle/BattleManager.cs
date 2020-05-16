@@ -316,6 +316,8 @@ namespace pokemonBattle
                 choice.currentPp--;
             }
 
+            bool isSong = battleState == BATTLESTATE.SONG;
+
             battleState = BATTLESTATE.ATTACKSPLAY;
             choicesPanel.gameObject.SetActive(false);
             songPanel.gameObject.SetActive(false);
@@ -331,7 +333,24 @@ namespace pokemonBattle
             while (busy) yield return null;
 
             busy = true;
-            yield return new WaitForSeconds(1f);
+            float waitime = 1.0f;
+            if (RpgManager.Instance && choice.sfx)
+            {
+                float oldvolume = RpgManager.CurrentStory.GetMusicVolume();
+                if (isSong)
+                    RpgManager.CurrentStory.SetMusicVolume(0.3f);
+                waitime = Mathf.Max(choice.sfx.length, waitime);
+                RpgManager.PlaySFX(choice.sfx);
+
+                yield return new WaitForSeconds(waitime);
+
+                if (RpgManager.Instance && choice.sfx)
+                    RpgManager.CurrentStory.SetMusicVolume(oldvolume);
+            }
+            else
+            {
+                yield return new WaitForSeconds(waitime);
+            }
 
             // Play animations
             ennemy.PlayAnim("Hit");

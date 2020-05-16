@@ -16,6 +16,7 @@ namespace pokemonBattle
         public int basePp = 10;
         public int currentPp = 10;
         public string type = "";
+        public AudioClip sfx;
 
         public bool isSetActive = false;
 

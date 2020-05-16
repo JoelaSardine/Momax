@@ -167,11 +167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049690bb591f67a45a58fb802c562757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfx_onHit: {fileID: 0}
   lookingDirection: {x: 0, y: 0}
   movingDirection: {x: 0, y: 0}
-  life: 2
+  life: 3
   damageOnAttack: 1
-  hitDuration: 0.5
+  hitDuration: 0.3
   isJustHit: 0
   isSpeeping: 0
 --- !u!58 &2917959765638750758
@@ -202,9 +203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e49a73c9acce34380893f1fe27a30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  sfx_seePlayer: {fileID: 0}
+  speedRoam: 2
+  maxSpeedChase: 6
+  speedChaseIncrement: 0.05
   stoppingDistance: 0.1
-  stoppingDuration: 0.5
+  stoppingDuration: 3
   roamZone:
     serializedVersion: 2
     x: 0

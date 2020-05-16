@@ -20,6 +20,7 @@ namespace rpg
 
         public Teleporter entrance;
         public MovableEntity playerMovable;
+        public MovableEntity maximeMovable;
         public MovableEntity alteaMovable;
         public MovableEntity orionMovable;
         public MovableEntity cerberusMovable;
@@ -58,9 +59,13 @@ namespace rpg
                 trbattle.onClosureFinished = () => { SceneManager.LoadScene("PokemonBattle", LoadSceneMode.Additive); };
                 trbattle.StartSpiralCoroutine();
             }
-            else if (RpgManager.GetKey(SaveKey.defeatedCerberus) != 1)
+            else if (RpgManager.GetKey(SaveKey.defeatedCerberus) == 0)
             {
                 yield return StartCoroutine(FindMaxime());
+            }
+            else if (RpgManager.GetKey(SaveKey.defeatedCerberus) == -1)
+            {
+                yield return EndPokemonCoroutine();
             }
         }
 
@@ -217,22 +222,35 @@ namespace rpg
             cerberusMovable.gameObject.SetActive(false);
             luckyMovable.gameObject.SetActive(true);
             luckyMovable.LookAt(playerMovable.transform.position);
-
+            
             yield return new WaitWhile(() => wait);
-            yield return new WaitForSeconds(1.0f);
+
+            orionMovable.MoveTo(player.transform.position + Vector3.up + Vector3.right);
+            maximeMovable.MoveTo(player.transform.position + Vector3.up + Vector3.right);
+            yield return new WaitWhile(() => maximeMovable.isMoving);
+            maximeMovable.MoveTo(player.transform.position + Vector3.right);
+            yield return new WaitWhile(() => maximeMovable.isMoving);
+
+            maximeMovable.LookTowards(Vector3.down);
 
             audioSource.clip = baseMusic;
             audioSource.time = 12f;
             audioSource.Play();
 
             wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, maximeSprite);
+            player.Dialog(false, "Maxime : Ca alors, il s'est transformé !", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
             RpgManager.Instance.discussionInterface.SetImage(false, orionSprite);
-            player.Dialog(false, "Orion : Ca alors, il s'est transformé ! Et je ne sens plus aucune aura maléfique.", () => wait = false);
+            player.Dialog(false, "Orion : Et je ne sens plus aucune aura maléfique. Il semblerait que le démon ait disparu.", () => wait = false);
+            alteaMovable.MoveTo(player.transform.position + Vector3.up + Vector3.left);
             yield return new WaitWhile(() => wait);
 
             wait = true;
             RpgManager.Instance.discussionInterface.SetImage(false, alteaSprite);
-            player.Dialog(false, "Altea : Morgane a reussi à l'exorciser. Il semblerait que cette chienne était sous son emprise, c'est terrible.", () => wait = false);
+            player.Dialog(false, "Altea : Morgane a reussi à l'exorciser. Cette chienne était sous son emprise, c'est terrible.", () => wait = false);
             yield return new WaitWhile(() => wait);
             
             wait = true;

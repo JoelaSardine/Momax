@@ -27,7 +27,7 @@ public class GameDataDebug : MonoBehaviour
     public bool metOrion = false;
     public bool seenMontgeron = false;
     public bool seenHouse = false;
-    public bool defeatedCerberus = false;
+    public int defeatedCerberus = 0;
 
     public GameData GetData()
     {
@@ -42,7 +42,7 @@ public class GameDataDebug : MonoBehaviour
         data.SetBool(SaveKey.metOrion, metOrion);
         data.SetBool(SaveKey.seenMontgeron, seenMontgeron);
         data.SetBool(SaveKey.seenHouse, seenHouse);
-        data.SetBool(SaveKey.defeatedCerberus, defeatedCerberus);
+        data.SetKey(SaveKey.defeatedCerberus, defeatedCerberus);
 
         return data;
     }
@@ -58,7 +58,7 @@ public class GameDataDebug : MonoBehaviour
         metOrion = data.GetBool(SaveKey.metOrion);
         seenMontgeron = data.GetBool(SaveKey.seenMontgeron);
         seenHouse = data.GetBool(SaveKey.seenHouse);
-        defeatedCerberus = data.GetBool(SaveKey.defeatedCerberus);
+        defeatedCerberus = data.GetKey(SaveKey.defeatedCerberus);
     }
 
 }
