@@ -11,9 +11,12 @@ namespace rpg
         private GameObject heartTemplate;
         private Transform heartsContainer;
         private List<Image> heartsList;
+        private Animator saveSymbol;
 
         private void Awake()
         {
+            saveSymbol = transform.Find("SaveIcon").GetComponent<Animator>();
+
             heartsContainer = transform.Find("Hearts").transform;
             heartTemplate = heartsContainer.Find("Full").gameObject;
 
@@ -49,6 +52,11 @@ namespace rpg
                 heart.sprite = i < currentLife ? heartFull : heartEmpty;
                 i++;
             }
+        }
+
+        public void TriggerSaveIcon()
+        {
+            saveSymbol.SetTrigger("Trigger");
         }
     }
 }

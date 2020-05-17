@@ -363,6 +363,8 @@ namespace rpg
 
         public static void SaveGame(string place)
         {
+            HUD.TriggerSaveIcon();
+
             RpgManager.Data.scene = SceneManager.GetActiveScene().name;
             RpgManager.Data.place = place;
             RpgManager.Instance.dataDebug.SetData(RpgManager.Data);
