@@ -10,6 +10,8 @@ namespace rpg
         private CreatureController creatureController;
         private new Rigidbody2D rigidbody;
 
+        public AudioClip sfx_chase;
+
         public float startSpeed = 1f;
         public float speedIncrement = 0.01f;
         private float normalSpeed;
@@ -52,6 +54,13 @@ namespace rpg
 
         private void onPlayerSightViewed()
         {
+            if (creatureController.isSpeeping)
+            {
+                return;
+            }
+
+            creatureController.PlaySFX(sfx_chase);
+
             isStopping = false;
             isChasingPlayer = true;
             speed = startSpeed;

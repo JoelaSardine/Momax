@@ -7,17 +7,31 @@ namespace rpg
     public class PapaBullInteractable : TalkInteractableAuto
     {
         public bool isPlayerIn = false;
+        public bool isDialogue = true;
 
         protected override void TriggerEnter(Collider2D collider)
         {
             isPlayerIn = true;
 
-            base.TriggerEnter(collider);
+            if (isDialogue)
+            {
+                base.TriggerEnter(collider);
+            }
+            else
+            {
+                if (onEndInteraction != null)
+                {
+                    onEndInteraction();
+                }
+            }
         }
 
         protected override void TriggerExit(Collider2D collider)
         {
-            base.TriggerExit(collider);
+            if (isDialogue)
+            {
+                base.TriggerExit(collider);
+            }
 
             isPlayerIn = false;
         }

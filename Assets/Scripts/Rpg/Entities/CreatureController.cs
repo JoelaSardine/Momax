@@ -17,7 +17,9 @@ namespace rpg
         private new Rigidbody2D rigidbody;
         private Animator animator;
 
+        private AudioSource audioSource;
         public AudioClip sfx_onHit;
+        public AudioClip sfx_onSleep;
 
         private bool isMoving = false;
         public Vector2 lookingDirection = Vector2.zero;
@@ -35,6 +37,7 @@ namespace rpg
         {
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -63,6 +66,18 @@ namespace rpg
             }
         }
 
+        public void PlaySFX(AudioClip clip)
+        {
+            if (audioSource)
+            {
+                audioSource.PlayOneShot(clip);
+            }
+            else
+            {
+                RpgManager.PlaySFX(clip);
+            }
+        }
+
         private void BeHitByPlayerProjectile(Projectile projectile)
         {
             projectile.Destruct();
@@ -72,13 +87,19 @@ namespace rpg
             }
 
             life--;
-            if (sfx_onHit) RpgManager.PlaySFX(sfx_onHit);
-
+            
             if (life <= 0)
             {
                 isSpeeping = true;
                 animator.SetBool("Sleeping", true);
+                if (sfx_onSleep) PlaySFX(sfx_onSleep);
+                else if (sfx_onHit) PlaySFX(sfx_onHit);
             }
+            else
+            {
+                if (sfx_onHit) PlaySFX(sfx_onHit);
+            }
+
             animator.SetTrigger("Hit");
 
             StartCoroutine(OnHitCoroutine());

@@ -9,6 +9,7 @@ namespace rpg
     {
         private CreatureController creatureController;
         private new Rigidbody2D rigidbody;
+        private AudioSource audioSource;
 
         public AudioClip sfx_seePlayer;
 
@@ -17,7 +18,7 @@ namespace rpg
         public float speedChaseIncrement = 0.1f;
         public float stoppingDistance = 0.01f;
         public float stoppingDuration = 0.5f;
-
+        
         public Rect roamZone = new Rect(0, 0, 2, 2);
         private Vector3 target;
 
@@ -30,6 +31,7 @@ namespace rpg
         {
             creatureController = GetComponent<CreatureController>();
             rigidbody = GetComponent<Rigidbody2D>();
+            audioSource = GetComponent<AudioSource>();
 
             target = transform.position;
 
@@ -45,9 +47,16 @@ namespace rpg
             }
 
             Vector3 playerPos = RpgManager.Player.transform.position;
+            bool wasChasing = isChasing;
             isChasing = isPlayerInRoamZone(playerPos);
+
             if (isChasing && !justHitPlayer)
             {
+                if (!wasChasing)
+                {
+                    RpgManager.PlaySFX(sfx_seePlayer);
+                }
+
                 speed = Mathf.Clamp(speed + speedChaseIncrement, speedRoam, maxSpeedChase);
                 target = playerPos;
                 isStopping = false;

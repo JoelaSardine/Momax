@@ -6,7 +6,6 @@ namespace rpg
 {
     public class WorldStory : GameStory
     {
-        public Papabull papaBullCreature;
         public PapaBullInteractable papaBullEvent;
         public TalkInteractableAuto snakeBefore;
         public TalkInteractableAuto snakeAfter;
@@ -41,6 +40,7 @@ namespace rpg
             entreeMontgeron.onEndInteraction += () => {
                 RpgManager.SetKey(SaveKey.seenMontgeron, 1);
                 entreeMontgeron.gameObject.SetActive(false);
+                RpgManager.SaveGame("Montgeron");
             };
 
             maisonMontgeron.onEndInteraction += () => {
@@ -67,7 +67,7 @@ namespace rpg
 
             player.attackEnabled = RpgManager.GetKey(SaveKey.metOrion) == 1;
 
-            papaBullEvent.gameObject.SetActive(RpgManager.GetKey(SaveKey.metOrion) != 1);
+            papaBullEvent.isDialogue =  (RpgManager.GetKey(SaveKey.metOrion) != 1);
             snakeBefore.gameObject.SetActive(RpgManager.GetKey(SaveKey.metAltea) != 1 
                 && RpgManager.GetKey(SaveKey.seenBull) == 0 && RpgManager.GetKey(SaveKey.seenSnake) == 0);
             snakeAfter.gameObject.SetActive(RpgManager.GetKey(SaveKey.metAltea) != 1 
