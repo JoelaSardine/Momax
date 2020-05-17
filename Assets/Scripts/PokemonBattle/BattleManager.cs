@@ -338,7 +338,7 @@ namespace pokemonBattle
             {
                 float oldvolume = RpgManager.CurrentStory.GetMusicVolume();
                 if (isSong)
-                    RpgManager.CurrentStory.SetMusicVolume(0.3f);
+                    RpgManager.CurrentStory.SetMusicVolume(0.3f * oldvolume);
                 waitime = Mathf.Max(choice.sfx.length, waitime);
                 RpgManager.PlaySFX(choice.sfx);
 

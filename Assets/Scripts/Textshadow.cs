@@ -34,6 +34,11 @@ namespace pokemonBattle
 
         public void SetTxt(string newText)
         {
+            if (myText == null)
+            {
+                myText = GetComponent<Text>();
+            }
+
             text = newText;
             myText.text = text;
             if (realText)

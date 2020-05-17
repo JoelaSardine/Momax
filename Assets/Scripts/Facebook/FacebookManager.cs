@@ -52,11 +52,12 @@ namespace facebook
             audioSource = GetComponent<AudioSource>();
             conv = GetComponent<FacebookConv>();
             CloseAnswerPanel();
-            textInput.SetTxt("");
         }
 
         private void Start()
         {
+            textInput.SetTxt("");
+
             currentDialog = conv.dialogs[0];
             currentPhraseId = 0;
 

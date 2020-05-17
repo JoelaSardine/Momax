@@ -967,7 +967,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfx
       value: 
-      objectReference: {fileID: 8300000, guid: 743e8359ec3065c44bd6360253496750, type: 3}
+      objectReference: {fileID: 8300000, guid: 97046266bb1d01c49bcdfc47666b81f0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &266755602 stripped
@@ -1350,7 +1350,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfx
       value: 
-      objectReference: {fileID: 8300000, guid: 3098a963f27503f468131836b47eb1a3, type: 3}
+      objectReference: {fileID: 8300000, guid: f1d15c9be974db748a192476be21d6e3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &383234206 stripped
@@ -1929,7 +1929,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 150
   m_TargetDisplay: 0
 --- !u!224 &648315276
 RectTransform:
@@ -2494,7 +2494,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfx
       value: 
-      objectReference: {fileID: 8300000, guid: 4ee1054295e626e499834b8dfa9fdb02, type: 3}
+      objectReference: {fileID: 8300000, guid: 02159d3d18cbebb4b8be406a71879a39, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &691693427 stripped
@@ -5545,7 +5545,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfx
       value: 
-      objectReference: {fileID: 8300000, guid: d9e5372ac40cf2b4ba3eb36cdffa1dbe, type: 3}
+      objectReference: {fileID: 8300000, guid: 121e9ce6f0395d444a61a7928d301e06, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &1563739260 stripped

@@ -72,6 +72,7 @@ namespace rpg
 
             RpgManager.SaveGame(isAltea ? "SPA" : "Orion");
 
+            float oldvolume = RpgManager.CurrentStory.GetMusicVolume();
             RpgManager.CurrentStory.SetMusicVolume(0);
             RpgManager.PlaySFX(sfx_jingle);
             bool wait = true;
@@ -82,7 +83,7 @@ namespace rpg
             gameObject.SetActive(false);
 
             player.EndTalk();
-            RpgManager.CurrentStory.SetMusicVolume(1);
+            RpgManager.CurrentStory.SetMusicVolume(oldvolume);
         }
     }
 }
