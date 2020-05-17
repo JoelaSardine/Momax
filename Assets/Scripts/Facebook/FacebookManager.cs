@@ -66,14 +66,17 @@ namespace facebook
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F2))
-            {
-                End();
-            }
-
             if (!busy)
             {
-                if (Input.GetButtonDown("Right"))
+                if (waitForInput && Input.GetKeyDown(KeyCode.F2))
+                {
+                    waitForInput = false;
+                    currentDialog = conv.dialogs[30];
+                    currentPhraseId = 2;
+                    Next();
+                    //End();
+                }
+                else if (Input.GetButtonDown("Right"))
                 {
                     Move("right");
                 }
@@ -95,11 +98,11 @@ namespace facebook
                     waitForInput = false;
                     Select();
                 }
-                else if (Input.GetButtonDown("Back"))
+                /*else if (Input.GetButtonDown("Back"))
                 {
                     waitForInput = false;
                     Back();
-                }
+                }*/
             }
         }
 

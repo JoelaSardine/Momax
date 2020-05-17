@@ -129,8 +129,9 @@ namespace pokemonBattle
         {
             if (!busy && Input.GetKeyDown(KeyCode.F9) && RpgManager.Instance)
             {
-                RpgManager.CurrentStory.StopMusic();
-                RpgManager.UnloadPokemon();
+                StartCoroutine(endCoroutine(true));
+                //RpgManager.CurrentStory.StopMusic();
+                //RpgManager.UnloadPokemon();
             }
 
             if (!busy)

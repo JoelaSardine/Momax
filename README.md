@@ -7,23 +7,41 @@ A small videogame that is part of a giant treasure hunt meant to express love.
 
 ### Gameplay
 
-Momax is a top-down pixel-art adventure game. 
+Momax is a top-down pixel-art adventure game inspired from Pokemon & Zelda. 
 
 ### Inputs
 
-- Movement (RPG) : ZQSD
-- Use / Attack : P
+- Movement : ZQSD, arrows
+- Interaction / Attack : E, spacebar
+- Menu / back : Escape
 
+### Cheats
+
+- Skip Facebook part : F2
+- Skip Pokemon battle : F9
+- Collisions ON/OFF : F12
 
 ## Contributors
 
 - Idea / Request : Max
 - Scenario : Marion & Thibaut
 - Development : Thibaut (Joe la Sardine)
-- Art : Andrei
+- Thanks :
+	- Andruka
+	- Dukes
+	- Sam N.
+	- JR
 
 
 ## References
+
+- Pokemon
+- Secret of Mana
+- Silent Hill
+- Mass Effect
+- Diablo
+- Street Fighter
+- Minecraft
 
 ### Tutoriels Unity
 
