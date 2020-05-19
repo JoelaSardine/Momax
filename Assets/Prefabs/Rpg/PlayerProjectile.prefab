@@ -101,6 +101,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e49df635e05bce448878b40e43449e0b, type: 3}
   - {fileID: 8300000, guid: 77247ec5e33c1a2498e32004570ff3c6, type: 3}
   - {fileID: 8300000, guid: 69449b08c4461a6419f7cfd0400f31d5, type: 3}
+  - {fileID: 8300000, guid: d7c275183fc5bf249927071e0e9cb2ce, type: 3}
+  colors:
+  - {r: 0.2901961, g: 0.7294118, b: 0.19607845, a: 1}
+  - {r: 0.3254902, g: 0.427451, b: 0.7058824, a: 1}
+  - {r: 0.7647059, g: 0.25882354, b: 0.45098042, a: 1}
   isPlayerProjectile: 1
   damage: 1
   lifeTime: 2

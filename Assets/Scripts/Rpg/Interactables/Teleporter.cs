@@ -10,6 +10,7 @@ namespace rpg
         public Transform target;
         public string targetScene;
         public string targetSpawnPoint;
+        public AudioClip sfx;
             
         protected override void Init()
         {
@@ -37,6 +38,11 @@ namespace rpg
 
         private IEnumerator Teleport(GameObject go)
         {
+            if (sfx)
+            {
+                RpgManager.PlaySFX(sfx);
+            }
+
             RpgManager.Player.movementEnabled = false;
             yield return StartCoroutine(RpgManager.CameraManager.FadeInCoroutine());
             go.transform.position = target.position;

@@ -3450,6 +3450,11 @@ PrefabInstance:
       propertyPath: metAltea
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7773929859628474450, guid: ed4c3a3eceded364dbbacf40c1046e09,
+        type: 3}
+      propertyPath: metOrion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2278423433370655749, guid: ed4c3a3eceded364dbbacf40c1046e09,
         type: 3}
       propertyPath: m_Enabled

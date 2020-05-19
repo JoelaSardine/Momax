@@ -82,6 +82,7 @@ namespace rpg
                 {
                     isChasingPlayer = false;
                     isReturning = true;
+                    StartCoroutine(waitCoroutine());
                     return;
                 }
 
@@ -105,7 +106,10 @@ namespace rpg
 
             if (isChasingPlayer)
             {
-                speed += speed * speedIncrement;
+                if (speed < 7)
+                {
+                    speed += speed * speedIncrement;
+                }
 
                 rigidbody.velocity = (currentTarget - transform.position).normalized * speed;
             }

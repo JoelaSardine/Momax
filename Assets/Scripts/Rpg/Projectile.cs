@@ -8,6 +8,7 @@ namespace rpg
     {
         public List<Sprite> sprites;
         public List<AudioClip> clips;
+        public List<Color> colors;
 
         private new SpriteRenderer renderer;
 
@@ -33,6 +34,12 @@ namespace rpg
 
             int rdm = Random.Range(0, sprites.Count);
             renderer.sprite = sprites[rdm];
+            renderer.color = colors[rdm];
+
+            if (rdm == 2 && RpgManager.CurrentStory is CaveStory)
+            {
+                rdm++;
+            }
             RpgManager.PlaySFX(clips[rdm], 0.5f);
 
             baseScale = transform.localScale.x;
