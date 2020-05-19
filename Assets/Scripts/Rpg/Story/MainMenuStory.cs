@@ -39,8 +39,8 @@ namespace rpg
             if (skipIntro)
             {
                 // Player go to menu from game
-                animator.SetTrigger(triggerOnBack);
                 audioSource.Play();
+                animator.SetTrigger(triggerOnBack);
             }
             else
             {
@@ -51,8 +51,8 @@ namespace rpg
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
 
+                audioSource.Play();
                 animator.SetTrigger(triggerOnLaunch);
-                //audioSource.Play();
             }
         }
 
