@@ -133,9 +133,11 @@ namespace rpg
             }
             else if (Input.GetKeyDown(KeyCode.F1))
             {
-                RpgManager.Data = new GameData();
+                /*RpgManager.Data = new GameData();
                 dataDebug.SetData(RpgManager.Data);
-                RpgManager.ZoneDisplayName("Cheat \n Unset all save keys");
+                RpgManager.ZoneDisplayName("Cheat \n Unset all save keys");*/
+                RefillHP();
+                RpgManager.ZoneDisplayName("Cheat\nHeal");
             }
             else if (Input.GetKeyDown(KeyCode.F2))
             {
@@ -146,7 +148,7 @@ namespace rpg
                 int value = (GetKey(SaveKey.seenBull) == 1 && GetKey(SaveKey.seenSnake) == 1) ? 0 : 1;
                 SetKey(SaveKey.seenBull, value);
                 SetKey(SaveKey.seenSnake, value);
-                RpgManager.ZoneDisplayName("Cheat \n " + "seenBull and seenSnake" + " set to " + value);
+                RpgManager.ZoneDisplayName("Cheat\n" + "seenBull and seenSnake" + " set to " + value);
                 dataDebug.SetData(RpgManager.Data);
             }
             else if (Input.GetKeyDown(KeyCode.F4))
@@ -167,28 +169,28 @@ namespace rpg
             }
             else if (Input.GetKeyDown(KeyCode.F8))
             {
-                ToggleKey(SaveKey.defeatedCerberus);
+                ToggleKey(SaveKey.defeatedCerberus, true);
             }
             else if (Input.GetKeyDown(KeyCode.F11))
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     RpgManager.Data = GameData.LoadFromFile();
-                    RpgManager.ZoneDisplayName("Cheat \n Force load");
+                    RpgManager.ZoneDisplayName("Cheat\nForce load");
                     dataDebug.SetData(RpgManager.Data);
                     LoadScene(dataDebug.scene, dataDebug.place);
                 }
                 else
                 {
                     GameData.SaveToFile(RpgManager.Data);
-                    RpgManager.ZoneDisplayName("Cheat \n Force save");
+                    RpgManager.ZoneDisplayName("Cheat\nForce save");
                 }
             }
             else if (Input.GetKeyDown(KeyCode.F12))
             {
                 Collider2D c = player.GetComponent<Collider2D>();
                 c.enabled = !c.enabled;
-                RpgManager.ZoneDisplayName("Cheat \n Collisions " + (c.enabled ? "Activées" : "Désactivées"));
+                RpgManager.ZoneDisplayName("Cheat\nCollisions " + (c.enabled ? "Activées" : "Désactivées"));
             }
         }
 
@@ -217,7 +219,7 @@ namespace rpg
                 SetKey(key, GetKey(key) == 1 ? 0 : 1);
             else
                 SetKey(key, GetKey(key) == 0 ? 1 : 0);
-            RpgManager.ZoneDisplayName("Cheat \n " + key.ToString() + " set to " + GetKey(key));
+            RpgManager.ZoneDisplayName("Cheat\n" + key.ToString() + " set to " + GetKey(key));
             dataDebug.SetData(RpgManager.Data);
         }
 
