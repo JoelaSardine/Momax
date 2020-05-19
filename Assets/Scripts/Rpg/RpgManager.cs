@@ -127,7 +127,7 @@ namespace rpg
             // F11 : Force save
             // F12 : Toggle collisions
 
-            if (Input.GetKeyDown(KeyCode.Escape) && gameState != GameState.MainMenu)
+            if (Input.GetButtonDown("Back") && gameState != GameState.MainMenu)
             {
                 ToggleMenu();
             }

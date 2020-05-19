@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049690bb591f67a45a58fb802c562757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx_onHit: {fileID: 0}
-  sfx_onSleep: {fileID: 0}
+  sfx_onHit: {fileID: 8300000, guid: ca443b10d21538a40884b76b0fa00e69, type: 3}
+  sfx_onSleep: {fileID: 8300000, guid: 0a18aecf79807c548b177116ba4c2855, type: 3}
   lookingDirection: {x: 0, y: 0}
   movingDirection: {x: 0, y: 0}
   life: 2
