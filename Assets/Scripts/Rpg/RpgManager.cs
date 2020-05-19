@@ -324,9 +324,9 @@ namespace rpg
             return Data.GetKey(key);
         }
 
-        public static void PlaySFX(AudioClip clip)
+        public static void PlaySFX(AudioClip clip, float volume = 1.0f)
         {
-            Instance.audioSource.PlayOneShot(clip);
+            Instance.audioSource.PlayOneShot(clip, volume);
         }
         public int GetGameOverCommentId(bool first, int commentsBaseCount)
         {

@@ -33,7 +33,7 @@ namespace rpg
 
             int rdm = Random.Range(0, sprites.Count);
             renderer.sprite = sprites[rdm];
-            RpgManager.PlaySFX(clips[rdm]);
+            RpgManager.PlaySFX(clips[rdm], 0.5f);
 
             baseScale = transform.localScale.x;
         }

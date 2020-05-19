@@ -98,9 +98,9 @@ MonoBehaviour:
   - {fileID: 21300002, guid: f87315ee25dc8de419ad77ae43c9109e, type: 3}
   - {fileID: 21300004, guid: f87315ee25dc8de419ad77ae43c9109e, type: 3}
   clips:
-  - {fileID: 8300000, guid: 02c574fb1f6103a41b32ff871204e302, type: 3}
-  - {fileID: 8300000, guid: e73af29b218a92342ab9ecdfb1487d81, type: 3}
-  - {fileID: 8300000, guid: f9a41f1b8d2c2fd42aef7164bd50d67b, type: 3}
+  - {fileID: 8300000, guid: e49df635e05bce448878b40e43449e0b, type: 3}
+  - {fileID: 8300000, guid: 77247ec5e33c1a2498e32004570ff3c6, type: 3}
+  - {fileID: 8300000, guid: 69449b08c4461a6419f7cfd0400f31d5, type: 3}
   isPlayerProjectile: 1
   damage: 1
   lifeTime: 2
