@@ -1209,6 +1209,7 @@ GameObject:
   - component: {fileID: 5561176317933701581}
   - component: {fileID: 4858495601560978620}
   - component: {fileID: 8519574136627610937}
+  - component: {fileID: 6439575098178549938}
   m_Layer: 0
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -1431,6 +1432,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6439575098178549938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256392551077261598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f77f56bd884d943b4bdcbfa11dfe7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadZone: 0.5
+  buttonUp: 0
+  buttonLeft: 0
+  buttonRight: 0
+  buttonDown: 0
 --- !u!1 &3625953466316524650
 GameObject:
   m_ObjectHideFlags: 0

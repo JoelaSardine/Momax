@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    private CustomEventsInput inputs;
     private AudioSource audioSource;
     public AudioClip sfx_Move;
     public AudioClip sfx_Select;
@@ -16,6 +17,7 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
+        inputs = GetComponent<CustomEventsInput>();
         audioSource = GetComponent<AudioSource>();
         currentButtonId = defaultButtonId;
     }
@@ -37,7 +39,7 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Vertical"))
+        if (Input.GetButtonDown("Vertical") || inputs.buttonDown || inputs.buttonUp)
         {
             RpgManager.PlaySFX(sfx_Move);
             menuButtons[currentButtonId].SetSelected(false);
@@ -55,7 +57,7 @@ public class MenuController : MonoBehaviour
         else if (Input.GetButtonDown("Fire"))
         {
             SelectButton();
-        }    
+        }   
     }
 
     protected virtual void SelectButton()

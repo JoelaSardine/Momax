@@ -31,6 +31,7 @@ namespace facebook
         public Text textInputPlaceholder;
         public Textshadow textInput;
 
+        private CustomEventsInput inputs;
         private FacebookConv conv;
         private FacebookDialog currentDialog;
         private int currentPhraseId;
@@ -50,6 +51,7 @@ namespace facebook
             }
 
             audioSource = GetComponent<AudioSource>();
+            inputs = GetComponent<CustomEventsInput>();
             conv = GetComponent<FacebookConv>();
             CloseAnswerPanel();
         }
@@ -76,11 +78,11 @@ namespace facebook
                     Next();
                     //End();
                 }
-                else if (Input.GetButtonDown("Right"))
+                else if (Input.GetButtonDown("Vertical") || inputs.buttonDown || inputs.buttonUp)
                 {
-                    Move("right");
+                    Move(Input.GetAxis("Vertical") > 0 ? "up" : "down");
                 }
-                else if (Input.GetButtonDown("Left"))
+                /*else if (Input.GetButtonDown("Left"))
                 {
                     Move("left");
                 }
@@ -91,7 +93,7 @@ namespace facebook
                 else if (Input.GetButtonDown("Down"))
                 {
                     Move("down");
-                }
+                }*/
 
                 if (Input.GetButtonDown("Fire") && waitForInput)
                 {

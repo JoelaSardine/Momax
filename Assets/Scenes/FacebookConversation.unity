@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000010127257}
+  m_AnchoredPosition: {x: 0, y: -0.00002186531}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &343453348
@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 1203222305}
   - component: {fileID: 1203222306}
   - component: {fileID: 1203222304}
+  - component: {fileID: 1203222307}
   m_Layer: 0
   m_Name: FacebookManager
   m_TagString: Untagged
@@ -2316,6 +2317,23 @@ MonoBehaviour:
     choices:
     - choice: Recommencer
       dialogId: 0
+--- !u!114 &1203222307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203222302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f77f56bd884d943b4bdcbfa11dfe7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadZone: 0.5
+  buttonUp: 0
+  buttonLeft: 0
+  buttonRight: 0
+  buttonDown: 0
 --- !u!1 &1221539248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2490,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 200549796}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
