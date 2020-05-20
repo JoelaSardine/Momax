@@ -33,7 +33,8 @@ namespace rpg
 
             RpgManager.CurrentStory.SetMusic(audioClips[counter]);
 
-            player.Talk(audioNames[counter], () => player.EndTalk());
+            //player.Talk(audioNames[counter], () => player.EndTalk());
+            RpgManager.ZoneDisplayName(audioNames[counter]);
         }
     }
 }

@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &670558774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888181396370705096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c806f29736231448d40da1e7698572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  active: 1
+  talks:
+  - Nan, je le sens pas. Trop bleu.
+--- !u!1001 &4508396038885926735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6991475804042669447, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_Name
+      value: Maison (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 120.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804042669440, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475804174254051, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968180, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991475805331968181, guid: 11b2480a4ee36c04289bb4344ef20415,
+        type: 3}
+      propertyPath: m_Text
+      value: Tester la maison
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11b2480a4ee36c04289bb4344ef20415, type: 3}
+--- !u!1 &6888181396370705096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6991475804042669447, guid: 11b2480a4ee36c04289bb4344ef20415,
+    type: 3}
+  m_PrefabInstance: {fileID: 4508396038885926735}
+  m_PrefabAsset: {fileID: 0}

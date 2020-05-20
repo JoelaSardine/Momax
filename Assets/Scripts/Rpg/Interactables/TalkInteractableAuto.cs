@@ -16,6 +16,8 @@ namespace rpg
 
         public Sprite spriteOrion;
         public Sprite spriteAltea;
+        public Sprite spriteMax;
+        public Sprite spriteLucky;
 
         public float delay = 0;
 
@@ -53,6 +55,10 @@ namespace rpg
                         RpgManager.Instance.discussionInterface.SetImage(false, spriteAltea);
                     else if (talker == "Orion ")
                         RpgManager.Instance.discussionInterface.SetImage(false, spriteOrion);
+                    else if (talker == "Max ")
+                        RpgManager.Instance.discussionInterface.SetImage(false, spriteMax);
+                    else if (talker == "Lucky ")
+                        RpgManager.Instance.discussionInterface.SetImage(false, spriteLucky);
 
                     player.Dialog(talker == "Morgane ", t, DoTalk);
                 }
