@@ -33,6 +33,8 @@ namespace rpg
 
         private void LaunchFacebookConversation()
         {
+            RpgManager.Instance.gameState = RpgManager.Instance.gameState ^ RpgManager.GameState.Minigame;
+
             player.EndTalk();
 
             player.movementEnabled = false;

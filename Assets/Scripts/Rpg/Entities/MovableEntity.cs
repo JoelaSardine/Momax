@@ -69,5 +69,10 @@ namespace rpg
         {
             animator.SetTrigger("Hit");
         }
+
+        public void Sleep(bool state = true)
+        {
+            animator.SetBool("Sleeping", state);
+        }
     }
 }

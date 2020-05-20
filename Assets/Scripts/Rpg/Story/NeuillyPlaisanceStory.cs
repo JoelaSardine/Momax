@@ -73,6 +73,8 @@ namespace rpg
 
         public void OnEndFacebook()
         {
+            RpgManager.Instance.gameState = RpgManager.Instance.gameState ^ RpgManager.GameState.Minigame;
+
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.clip = musicAfterFb;
             audioSource.volume = 1.0f;

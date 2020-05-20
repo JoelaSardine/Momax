@@ -56,6 +56,13 @@ namespace rpg
             return audioSource.volume;
         }
 
+        public void SetMusic(AudioClip clip)
+        {
+            audioSource.clip = clip;
+            audioSource.time = 0;
+            audioSource.Play();
+        }
+
         public void SetMusicVolume(float v)
         {
             audioSource.volume = v;

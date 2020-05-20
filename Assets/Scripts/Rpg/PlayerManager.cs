@@ -170,7 +170,7 @@ namespace rpg
 
         private void Fire()
         {
-            if (isAttackInCooldown)
+            if (isAttackInCooldown || RpgManager.Instance.gameState != RpgManager.GameState.Rpg)
                 return;
 
             projectilesManager.PlayerFire(transform.position, lookingDirection);

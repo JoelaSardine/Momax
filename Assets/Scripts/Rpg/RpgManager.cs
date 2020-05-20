@@ -26,8 +26,7 @@ namespace rpg
             Undefined = 0,
             MainMenu = 1,
             Rpg = 2,
-            Facebook = 4,
-            Battle = 8,
+            Minigame = 4,
             Menu = 16
         }
 
@@ -203,7 +202,7 @@ namespace rpg
                 gameState ^= GameState.Menu;
                 PlaySFX(sfx_closeMenu);
             }
-            else
+            else if (gameState == GameState.Rpg)
             {
                 player.enabled = false;
                 player.Stop();
@@ -320,6 +319,7 @@ namespace rpg
         public static void SetKey(SaveKey key, int value)
         {
             Data.SetKey(key, value);
+            RpgManager.Instance.dataDebug.SetData(Data);
         }
         public static int GetKey(SaveKey key)
         {

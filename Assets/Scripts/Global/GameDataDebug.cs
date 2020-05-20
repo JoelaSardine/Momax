@@ -20,13 +20,16 @@ public class GameDataDebug : MonoBehaviour
 {
     public string scene = null;
     public string place = null;
+    [Range(-1, 1)]
     public int facebookDone = 0; // -1 before, 0 start, 1 done
     public bool seenBull = false;
+    [Range(-1, 1)]
     public int seenSnake = 0; // -1 before, 0 unseen, 1 after
     public bool metAltea = false;
     public bool metOrion = false;
     public bool seenMontgeron = false;
     public bool seenHouse = false;
+    [Range(-2, 1)]
     public int defeatedCerberus = 0;
 
     public GameData GetData()

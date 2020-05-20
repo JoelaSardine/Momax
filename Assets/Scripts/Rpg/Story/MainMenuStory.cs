@@ -36,6 +36,8 @@ namespace rpg
             player.movementEnabled = false;
             player.attackEnabled = false;
 
+            RpgManager.Instance.gameState = RpgManager.GameState.MainMenu;
+
             if (skipIntro)
             {
                 // Player go to menu from game
@@ -44,7 +46,6 @@ namespace rpg
             }
             else
             {
-                RpgManager.Instance.gameState = RpgManager.GameState.MainMenu;
                 mainmenuController.enabled = false;
 
                 // Game just launched
