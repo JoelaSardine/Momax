@@ -320,6 +320,11 @@ namespace rpg
             luckyMovable.MoveTo(luckyMovable.transform.position + Vector3.down);
             yield return new WaitWhile(() => luckyMovable.isMoving);
 
+            wait = true;
+            player.Dialog(false, "Lucky : Il me reste plus qu'à écrire la fin.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+            
+
             playerMovable.enabled = false;
             player.overrideMovement = false;
             RpgManager.SetKey(SaveKey.defeatedCerberus, 1);
