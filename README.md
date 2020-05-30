@@ -11,49 +11,53 @@ Momax is a top-down pixel-art adventure game inspired from Pokemon & Zelda.
 
 ### Inputs
 
+#### Keyboard 
+
 - Movement : ZQSD, arrows
 - Interaction / Attack : E, spacebar
 - Menu / back : Escape
 
+#### Xbox Gamepad
+
+- Movement : Left stick
+- Interaction / Attack : A
+- Menu / back : B
+
 ### Cheats
 
+- +1 Life : F1
 - Skip Facebook part : F2
 - Skip Pokemon battle : F9
 - Collisions ON/OFF : F12
+
+## Development
+
+Momax was created on Unity 2018.3.14f1.
+
+### Software & plugins used
+
+- Unity & Visual Studio
+- MS Paint
+- Adobe Photoshop, Audition
+- Guitar Pro
 
 ## Contributors
 
 - Idea / Request : Max
 - Scenario : Marion & Thibaut
-- Development : Thibaut (Joe la Sardine)
-- Thanks :
-	- Andruka
-	- Dukes
-	- Sam N.
-	- JR
+- Development : Thibaut / Joe la Sardine
+- Special Thanks :
+	- Andruka (Lucky's spritesheet)
+	- Dukes (Mo's voice)
+	- Sam N. (First apartment colors & layout)
+	- JR (Attack songs)
 
+## References / Sources (jeu vidéo)
 
-## References
-
+- Diablo
+- Mass Effect
+- Minecraft
 - Pokemon
 - Secret of Mana
 - Silent Hill
-- Mass Effect
-- Diablo
 - Street Fighter
-- Minecraft
-
-### Tutoriels Unity
-
-- **Unity 2D Game Kit**
-	- [Project](https://learn.unity.com/project/2d-game-kit)
-	- [Walkthrough](https://learn.unity.com/tutorial/2d-game-kit-walkthrough?courseId=5c5c1e08edbc2a5465c7ec01&projectId=5c51481eedbc2a00206944f0&tab=overview#5c7f8528edbc2a002053b762)
-	- [Reference Guide](https://learn.unity.com/tutorial/2d-game-kit-reference-guide#5c7f8528edbc2a002053b763)
-- **2D Ufo**
-	- [Project](https://learn.unity.com/project/2d-ufo-tutorial)	
-
-### Unity Blog / Forum
-
-- Need some advice about where to start on a 2D grid based game ([forum](https://forum.unity.com/threads/need-some-advice-about-where-to-start-on-a-2d-grid-based-game.506780/))
-- 2D Pixel Perfect: How to set up your Unity project for retro 8-bit games ([blog](https://blogs.unity3d.com/2019/03/13/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-8-bits-games/))
-		
