@@ -34,6 +34,16 @@ Momax is a top-down pixel-art adventure game inspired from Pokemon & Zelda.
 
 Momax was created on Unity 2018.3.14f1.
 
+### TO DO
+
+- Write and integrate Final scene.
+- Repro & fix crash when entering & leaving a place to quickly.
+- (Low) Mentioning the Big Bull in dialogue with Orion to guide the player.
+- (Low) Make all snakes asleep when beating Mother of Snakes. 
+- (Low) Redraw the sprite of the bull / cow.
+- (Low) Apply a direction to the player when changing scene.
+- (Low) Add an easter egg at the end of the secret passage. 
+
 ### Software & plugins used
 
 - Unity & Visual Studio
