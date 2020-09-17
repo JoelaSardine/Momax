@@ -310,21 +310,70 @@ namespace rpg
             wait = true;
             player.Dialog(true, "Morgane : Si tu n'est plus le démon, qui est-tu ? Je m'appelle Morgane.", () => wait = false);
             yield return new WaitWhile(() => wait);
-            
+
             wait = true;
             RpgManager.Instance.discussionInterface.SetImage(false, luckySprite);
             player.Dialog(false, "Lucky : Tu peux m'appeler Lucky. Cela symbolisera la chance que j'ai de vous avoir rencontrés, toi et Maxime.", () => wait = false);
             yield return new WaitWhile(() => wait);
 
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, luckySprite);
+            player.Dialog(false, "Lucky : Il t'aime beaucoup tu sais ? Je crois qu'il avait quelque chose à te montrer.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
             player.EndTalk();
             luckyMovable.MoveTo(luckyMovable.transform.position + Vector3.down);
+            maximeMovable.LookAt(player.transform.position);
+            yield return new WaitForSeconds(0.3f);
+            playerMovable.LookAt(maximeMovable.transform.position);
+            yield return new WaitForSeconds(0.2f);
             yield return new WaitWhile(() => luckyMovable.isMoving);
 
             wait = true;
-            player.Dialog(false, "Lucky : Il me reste plus qu'à écrire la fin.", () => wait = false);
+            RpgManager.Instance.discussionInterface.SetImage(false, maximeSprite);
+            player.Dialog(false, "Maxime : Merci de m'avoir libéré. Tu es exceptionnelle.", () => wait = false);
             yield return new WaitWhile(() => wait);
-            
 
+            wait = true;
+            player.Dialog(true, "Morgane : Oh, Chaton !", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, maximeSprite);
+            player.Dialog(false, "Maxime : Que dis-tu de t'installer ici ? On y est super bien, il y a de la place pour tout le monde.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, alteaSprite);
+            player.Dialog(false, "Altea : Ce serait un honneur de vivre ici avec vous. Il me faura juste un temps d'adaptation.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            luckyMovable.MoveTo(luckyMovable.transform.position + Vector3.up);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, orionSprite);
+            player.Dialog(false, "Orion : Ouais, ouais, c'est pas mal.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, luckySprite);
+            player.Dialog(false, "Lucky : Je vous innonderai d'amour !", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            player.Dialog(true, "Morgane : Arrêtez, je pleure déjà !", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            RpgManager.Instance.discussionInterface.SetImage(false, maximeSprite);
+            player.Dialog(false, "Maxime : Morgane. Tu devrais faire le tour de la maison. Quelque chose t'attend à l'étage.", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            wait = true;
+            player.Dialog(true, "Morgane : A l'étage ?", () => wait = false);
+            yield return new WaitWhile(() => wait);
+
+            player.EndTalk();
             playerMovable.enabled = false;
             player.overrideMovement = false;
             RpgManager.SetKey(SaveKey.defeatedCerberus, 1);

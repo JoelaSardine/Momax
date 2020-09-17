@@ -8,9 +8,15 @@ namespace pokemonBattle
     {
         public List<EnnemyAttack> attacks;
 
-        public EnnemyAttack GetRandomAttack()
+        public EnnemyAttack GetRandomAttack(bool hasRerolled = false)
         {
             int rdm = Random.Range(0, attacks.Count);
+
+            if (attacks[rdm].reroll && !hasRerolled)
+            {
+                return GetRandomAttack(true);
+            }
+
             return attacks[rdm];
         }
     }
@@ -21,6 +27,7 @@ namespace pokemonBattle
         public string label;
         public int damage;
         public int heal;
+        public bool reroll;
         public AudioClip sfx;
     }
 }

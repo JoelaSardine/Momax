@@ -185,8 +185,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 44abdd8b6b3d90a48b309e9ed8532a87, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -305,8 +303,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -379,8 +375,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4fdd20e76ba80fd4a93ed40360215ad2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -454,8 +448,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5f5521543b9dcb242aacc48c4ac41077, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -529,8 +521,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 17db698222c2b054eaa79f6278ec455f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -622,8 +612,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b19df3ecdc55d844089574809a54b238, type: 3}
     m_FontSize: 30
@@ -787,10 +775,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 819076716}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk4MistyMountains
+      propertyPath: m_Text
+      value: ZOMBIE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: MISTY MOUNTAINS
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -897,41 +890,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
-        type: 3}
-    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: ZOMBIE
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: ZOMBIE
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: MISTY MOUNTAINS
+      propertyPath: m_Name
+      value: Atk4MistyMountains
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -968,6 +930,32 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: 97046266bb1d01c49bcdfc47666b81f0, type: 3}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
+        type: 3}
+    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Text
+      value: ZOMBIE
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &266755602 stripped
@@ -1032,8 +1020,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 45
@@ -1130,8 +1116,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 17db698222c2b054eaa79f6278ec455f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1175,10 +1159,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 819076716}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk2MonsieurJean
+      propertyPath: m_Text
+      value: FUCK YOU
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: MONSIEUR JEAN
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1285,41 +1274,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
-        type: 3}
-    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: FUCK YOU
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: FUCK YOU
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: MONSIEUR JEAN
+      propertyPath: m_Name
+      value: Atk2MonsieurJean
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -1351,6 +1309,32 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: f1d15c9be974db748a192476be21d6e3, type: 3}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
+        type: 3}
+    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Text
+      value: FUCK YOU
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &383234206 stripped
@@ -1415,8 +1399,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 23c546591fd4aad468e084866a1c2133, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1489,8 +1471,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: da3e50b1dd2d1504cbcbd4ccdf75abf2, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1601,8 +1581,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1675,8 +1653,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -1735,8 +1711,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 45
@@ -1833,8 +1807,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: bb8e01b60df75064b9a6fa4ff53dfa50, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -2011,8 +1983,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b19df3ecdc55d844089574809a54b238, type: 3}
     m_FontSize: 30
@@ -2042,10 +2012,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107987}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk2CoupPied
+      propertyPath: m_Text
+      value: FUCK YOU
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: BOTTAGE DE CUL
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2152,41 +2127,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
-        type: 3}
-    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: FUCK YOU
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: FUCK YOU
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: BOTTAGE DE CUL
+      propertyPath: m_Name
+      value: Atk2CoupPied
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2218,6 +2162,32 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: 858c09065e2c85947bf2f8565b86b19f, type: 3}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
+        type: 3}
+    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Text
+      value: FUCK YOU
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &664726749 stripped
@@ -2262,8 +2232,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -2314,10 +2282,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 819076716}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk3KissMe
+      propertyPath: m_Text
+      value: UMBRELLA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: KISS ME
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -2424,6 +2397,46 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: Atk3KissMe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: message
+      value: Morgane chante KISS ME de ED LE ROUX.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: type
+      value: LOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: resultMessage
+      value: "C'est tr\xE8s efficace !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 02159d3d18cbebb4b8be406a71879a39, type: 3}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2450,51 +2463,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: UMBRELLA
       objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: UMBRELLA
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: KISS ME
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: message
-      value: Morgane chante KISS ME de ED LE ROUX.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: type
-      value: LOVE
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: damage
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: resultMessage
-      value: "C'est tr\xE8s efficace !"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: basePp
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: currentPp
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: sfx
-      value: 
-      objectReference: {fileID: 8300000, guid: 02159d3d18cbebb4b8be406a71879a39, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &691693427 stripped
@@ -2539,8 +2507,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 45
@@ -2642,8 +2608,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 44abdd8b6b3d90a48b309e9ed8532a87, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2782,8 +2746,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 44abdd8b6b3d90a48b309e9ed8532a87, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2870,8 +2832,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5f5521543b9dcb242aacc48c4ac41077, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
@@ -2896,10 +2856,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 764764934}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: flee
+      propertyPath: m_Text
+      value: FUITE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: FUITE
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3006,6 +2971,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: flee
+      objectReference: {fileID: 0}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Text
@@ -3014,16 +2984,6 @@ PrefabInstance:
     - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Text
-      value: FUITE
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: FUITE
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
       value: FUITE
       objectReference: {fileID: 0}
     - target: {fileID: 8634604640337400247, guid: e08a527d555d7a540af884334e0884b5,
@@ -3094,8 +3054,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: da3e50b1dd2d1504cbcbd4ccdf75abf2, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3120,10 +3078,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107987}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk4RegardNoir
+      propertyPath: m_Text
+      value: ZOMBIE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: REGARD NOIR
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3230,41 +3193,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
-        type: 3}
-    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: ZOMBIE
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: ZOMBIE
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: REGARD NOIR
+      propertyPath: m_Name
+      value: Atk4RegardNoir
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3301,6 +3233,32 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: 0c31fc238a0eae140b8f02200b54513f, type: 3}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
+        type: 3}
+    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Text
+      value: ZOMBIE
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &967028060 stripped
@@ -3365,8 +3323,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 45
@@ -3414,10 +3370,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636770839}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: PP
+      propertyPath: m_Text
+      value: PP 35/35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: PP 35/35
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -3524,6 +3485,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: PP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444734018639734423, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -3549,21 +3520,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: PP 35/35
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: PP 35/35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: PP 35/35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5444734018639734423, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -3628,8 +3584,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -3709,8 +3663,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b19df3ecdc55d844089574809a54b238, type: 3}
     m_FontSize: 30
@@ -3783,14 +3735,17 @@ MonoBehaviour:
   - label: ENSIL-ENSCI attaque TRIPLE-MORSURE.
     damage: 29
     heal: 0
+    reroll: 0
     sfx: {fileID: 8300000, guid: 1f465c9581c0e1c4bbcc3707eead908f, type: 3}
   - label: ENSIL-ENSCI attaque RUGISSEMENT.
     damage: 8
     heal: 0
+    reroll: 0
     sfx: {fileID: 8300000, guid: 8641ccf3e5cd90d43ae60794e7399c48, type: 3}
   - label: "ENSIL-ENSCI d\xE9vore un meuble."
     damage: 0
     heal: 40
+    reroll: 1
     sfx: {fileID: 8300000, guid: 698f5b978bcc53f44a7a356422de4696, type: 3}
 --- !u!82 &1203222305
 AudioSource:
@@ -3946,10 +3901,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107987}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk1Gronder
+      propertyPath: m_Text
+      value: BELLA CIAO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: GRONDAGE
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -4056,41 +4016,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
-        type: 3}
-    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: BELLA CIAO
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: BELLA CIAO
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: GRONDAGE
+      propertyPath: m_Name
+      value: Atk1Gronder
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -4127,6 +4056,32 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: 1170e97b7542e0d44a1ebd0c10a97dcf, type: 3}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
+        type: 3}
+    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Text
+      value: BELLA CIAO
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &1232604676 stripped
@@ -4324,8 +4279,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1273178255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4344,8 +4297,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -4423,8 +4374,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -4497,8 +4446,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 23c546591fd4aad468e084866a1c2133, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -4613,8 +4560,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1344087422
 GameObject:
   m_ObjectHideFlags: 0
@@ -4670,8 +4615,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 84b9fdda7ab35ab4cb82f8a3cafffad6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -4696,10 +4639,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 764764934}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: bag
+      propertyPath: m_Text
+      value: SAC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: TARTINE
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -4806,6 +4754,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: bag
+      objectReference: {fileID: 0}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Text
@@ -4815,16 +4768,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: SAC
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: SAC
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: TARTINE
       objectReference: {fileID: 0}
     - target: {fileID: 8634604640337400247, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -4911,8 +4854,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -4956,10 +4897,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1636770839}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Type
+      propertyPath: m_Text
+      value: NORMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: NORMAL
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5066,6 +5012,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: Type
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444734018639734423, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -5091,21 +5047,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: NORMAL
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: NORMAL
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: NORMAL
-      objectReference: {fileID: 0}
-    - target: {fileID: 5444734018639734423, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -5170,8 +5111,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b19df3ecdc55d844089574809a54b238, type: 3}
     m_FontSize: 30
@@ -5339,8 +5278,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5365,10 +5302,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 819076716}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk1LaSeine
+      propertyPath: m_Text
+      value: LA SEINE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: LA SEINE
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -5475,6 +5417,46 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: Atk1LaSeine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: message
+      value: Morgane chante LA SEINE de M et VANESSA PARADIS.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: resultMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: damage
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: basePp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: type
+      value: POP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: currentPp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 121e9ce6f0395d444a61a7928d301e06, type: 3}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -5501,51 +5483,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: LA SEINE
       objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: LA SEINE
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: LA SEINE
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: message
-      value: Morgane chante LA SEINE de M et VANESSA PARADIS.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: resultMessage
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: damage
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: basePp
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: type
-      value: POP
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: currentPp
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: sfx
-      value: 
-      objectReference: {fileID: 8300000, guid: 121e9ce6f0395d444a61a7928d301e06, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &1563739260 stripped
@@ -5647,8 +5584,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 44abdd8b6b3d90a48b309e9ed8532a87, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5723,8 +5658,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 8df762f1793a0514c992787f90f4dd24, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5814,8 +5747,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5907,8 +5838,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: ffedc64de8e38d04291222cb955d7157, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -5981,8 +5910,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -6007,10 +5934,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4107987}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: Atk3CoupBoule
+      propertyPath: m_Text
+      value: UMBRELLA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: COUP D'BOULE
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6117,41 +6049,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
-        type: 3}
-    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: UMBRELLA
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: UMBRELLA
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: COUP D'BOULE
+      propertyPath: m_Name
+      value: Atk3CoupBoule
       objectReference: {fileID: 0}
     - target: {fileID: 5724830388468545187, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6183,6 +6084,32 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: 8300000, guid: 5e0eb12a9f662744b948c010ca724b4d, type: 3}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4d03454632b01084783d5d550bcd024f,
+        type: 3}
+    - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Text
+      value: UMBRELLA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
 --- !u!224 &1792142711 stripped
@@ -6246,8 +6173,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 23c546591fd4aad468e084866a1c2133, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -6320,8 +6245,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: bb8e01b60df75064b9a6fa4ff53dfa50, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -6394,8 +6317,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b19df3ecdc55d844089574809a54b238, type: 3}
     m_FontSize: 30
@@ -6425,10 +6346,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 764764934}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: punch
+      propertyPath: m_Text
+      value: CAMERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: ATTAQUE
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6535,6 +6461,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: punch
+      objectReference: {fileID: 0}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -6560,16 +6491,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: CAMERA
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: CAMERA
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
-      value: ATTAQUE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08a527d555d7a540af884334e0884b5, type: 3}
@@ -6709,8 +6630,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 23c546591fd4aad468e084866a1c2133, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -6865,10 +6784,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 764764934}
     m_Modifications:
-    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
-      propertyPath: m_Name
-      value: song
+      propertyPath: m_Text
+      value: CHANSON
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: text
+      value: CHANSON
       objectReference: {fileID: 0}
     - target: {fileID: 4752481688505769795, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
@@ -6975,6 +6899,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5019008203854388771, guid: e08a527d555d7a540af884334e0884b5,
+        type: 3}
+      propertyPath: m_Name
+      value: song
+      objectReference: {fileID: 0}
     - target: {fileID: 5912929353511404475, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_FontData.m_MaxSize
@@ -6993,16 +6922,6 @@ PrefabInstance:
     - target: {fileID: 7620069909033892555, guid: e08a527d555d7a540af884334e0884b5,
         type: 3}
       propertyPath: m_Text
-      value: CHANSON
-      objectReference: {fileID: 0}
-    - target: {fileID: 178127292776163608, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: m_Text
-      value: CHANSON
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824152579966700404, guid: e08a527d555d7a540af884334e0884b5,
-        type: 3}
-      propertyPath: text
       value: CHANSON
       objectReference: {fileID: 0}
     - target: {fileID: 8634604640337400247, guid: e08a527d555d7a540af884334e0884b5,

@@ -271,7 +271,7 @@ MonoBehaviour:
   sfx_onSleep: {fileID: 8300000, guid: d9bddde3ccb57284caa0844001c7485a, type: 3}
   lookingDirection: {x: 0, y: 0}
   movingDirection: {x: 0, y: 0}
-  life: 3
+  life: 2
   damageOnAttack: 1
   hitDuration: 0.3
   isJustHit: 0
@@ -306,8 +306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx_seePlayer: {fileID: 8300000, guid: 3880aa8b8367b1948b7be73ba776dbd7, type: 3}
   speedRoam: 2
-  maxSpeedChase: 6
-  speedChaseIncrement: 0.05
+  maxSpeedChase: 5.5
+  speedChaseIncrement: 0.04
   stoppingDistance: 0.1
   stoppingDuration: 3
   roamZone:

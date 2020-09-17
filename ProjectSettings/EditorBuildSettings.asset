@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: edd72a7d1c1986a4b8a9f3b6e5eea2da
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 9cf504dc5291c4947a276460647049de
+  - enabled: 1
     path: Assets/Scenes/World.unity
     guid: 011f6b362990bcf438382dbd46f953ac
   - enabled: 1
@@ -21,15 +24,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Montgeron.unity
     guid: cbde37c356bfec14c8809d35c3694247
   - enabled: 1
-    path: Assets/Scenes/PokemonBattle.unity
-    guid: 6919964adc00d0444ac78aea4d3764a3
+    path: Assets/Scenes/Rooms.unity
+    guid: cb416e6e4160eec4683985b1374151a9
   - enabled: 1
     path: Assets/Scenes/FacebookConversation.unity
     guid: 1f3a8b155da331045be78b844d3a355f
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 9cf504dc5291c4947a276460647049de
-  - enabled: 1
+    path: Assets/Scenes/PokemonBattle.unity
+    guid: 6919964adc00d0444ac78aea4d3764a3
+  - enabled: 0
     path: Assets/Scenes/Debug/DebugScene.unity
     guid: 2677c813884930d49bb9fab85e2564a3
   m_configObjects: {}
