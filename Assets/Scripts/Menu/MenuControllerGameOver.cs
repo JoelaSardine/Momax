@@ -37,6 +37,7 @@ public class MenuControllerGameOver : MenuController
 
         int index = RpgManager.Instance.GetGameOverCommentId(false, story.lastComment.Count);
         AudioClip clip = story.lastComment[index];
+        RpgManager.PlaySFX(sfx_Select);
         RpgManager.PlaySFX(clip);
         yield return new WaitForSeconds(clip.length);
 
