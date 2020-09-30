@@ -24,7 +24,10 @@ namespace rpg
             }
 
             RpgManager.CurrentStory = this;
-            RpgManager.Instance.gameState = RpgManager.GameState.Rpg;
+            if (RpgManager.Instance.gameState != RpgManager.GameState.End)
+            {
+                RpgManager.Instance.gameState = RpgManager.GameState.Rpg;
+            }
             player = RpgManager.Player;
         }
 

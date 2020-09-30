@@ -17,6 +17,8 @@ public class MenuButtonHint : MenuButton
 
     public override void Validate()
     {
+        RpgManager.StopEndMusic();
+
         isShowingHints = !isShowingHints;
         mainMenuStoryAnimator.SetBool("Hints", isShowingHints);
 

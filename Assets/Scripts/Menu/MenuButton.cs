@@ -49,6 +49,8 @@ public class MenuButton : MonoBehaviour
 
     public virtual void Validate()
     {
+        RpgManager.StopEndMusic();
+
         switch (type)
         {
             case MenuButtonType.NewGame:

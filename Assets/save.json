@@ -1,6 +1,6 @@
 {
-    "scene": "Montgeron",
-    "place": "Entrance",
+    "scene": "World",
+    "place": "SPA",
     "savedata": [
         {
             "key": 0,
@@ -24,15 +24,15 @@
         },
         {
             "key": 5,
-            "value": 1
+            "value": 0
         },
         {
             "key": 6,
-            "value": 1
+            "value": 0
         },
         {
             "key": 7,
-            "value": 1
+            "value": 0
         }
     ]
 }

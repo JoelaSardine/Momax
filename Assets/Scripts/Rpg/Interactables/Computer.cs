@@ -37,9 +37,7 @@ namespace rpg
 
             player.EndTalk();
 
-            player.movementEnabled = false;
-            SceneManager.LoadScene("FacebookConversation", LoadSceneMode.Additive);
-            RpgManager.CameraManager.ChangeCameraOutputSize(0.5f);
+            RpgManager.LoadFacebookScene();
         }
 
         public void ResetInteraction()

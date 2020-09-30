@@ -2215,7 +2215,7 @@ MonoBehaviour:
   - 'Chat : "Un aventurier" ? Je suis THE Aventurier. On m''appelle Orion le Brave,
     et je serai ravi de t''aider, si ce n''est pas...'
   - '... trop dangereux.'
-  - "Morgane : Des m\xE9chants animaux bloquent le passage sur l'autoroute, et l'homme
+  - "Morgane : Des \xE9normes vaches bloquent le passage sur l'autoroute, et l'homme
     que j'aime est peut-\xEAtre en danger. "
   - 'Orion : Mon pouvoir de Protecteur est d''amplifier les talents. As-tu un talent
     particulier ?'

@@ -9,8 +9,10 @@ namespace rpg
     {
         PlayerManager player;
 
-        public string speech1 = "cool un pc";
-        public string speech2 = "ah fb ouvert";
+        public GameObject photoCanvas;
+
+        public string speech1 = "Ainsi donc voici ma récompense pour avoir terminé ce jeu !";
+        public string speech2 = "Alors, voyons voir. Tiens, une photo.";
 
         protected override void Interact()
         {
@@ -24,22 +26,24 @@ namespace rpg
 
         private void Interaction_1()
         {
+            RpgManager.CurrentStory.StopMusic();
+            RpgManager.PlayEndMusic();
+            RpgManager.Instance.gameState = RpgManager.GameState.End;
+
             player.Talk(speech1, Interaction_2);
         }
         private void Interaction_2()
         {
-            player.Talk(speech2, LaunchFacebookConversation);
+            player.Talk(speech2, ShowPhoto);
         }
 
-        private void LaunchFacebookConversation()
+        private void ShowPhoto()
         {
-            RpgManager.Instance.gameState = RpgManager.Instance.gameState ^ RpgManager.GameState.Minigame;
-
             player.EndTalk();
 
             player.movementEnabled = false;
-            SceneManager.LoadScene("FacebookConversation", LoadSceneMode.Additive);
-            RpgManager.CameraManager.ChangeCameraOutputSize(0.5f);
+
+            photoCanvas.gameObject.SetActive(true);
         }
 
         public void ResetInteraction()

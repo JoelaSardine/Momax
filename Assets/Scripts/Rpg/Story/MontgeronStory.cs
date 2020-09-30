@@ -208,15 +208,6 @@ namespace rpg
             trbattle.StartSpiralCoroutine();
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.F10))
-            {
-                audioSource.Stop();
-                Instantiate(explosionPrefab);
-            }
-        }
-
         private void OnDrawGizmos()
         {
             Gizmos.DrawSphere(startPos, 0.2f);
@@ -308,7 +299,7 @@ namespace rpg
             yield return new WaitWhile(() => wait);
 
             wait = true;
-            player.Dialog(true, "Morgane : Si tu n'est plus le démon, qui est-tu ? Je m'appelle Morgane.", () => wait = false);
+            player.Dialog(true, "Morgane : Si tu n'es plus le démon, qui es-tu ? Je m'appelle Morgane.", () => wait = false);
             yield return new WaitWhile(() => wait);
 
             wait = true;

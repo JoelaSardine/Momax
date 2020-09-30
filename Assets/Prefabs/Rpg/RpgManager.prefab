@@ -64,8 +64,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 17db698222c2b054eaa79f6278ec455f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -227,8 +225,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -338,8 +334,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300002, guid: 844aa7162d5de684f85c8e651a25c3a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -413,8 +407,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -499,8 +491,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 844aa7162d5de684f85c8e651a25c3a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -722,6 +712,8 @@ MonoBehaviour:
   sfx_openMenu: {fileID: 8300000, guid: dc426e67c42519548add81596af2b512, type: 3}
   sfx_closeMenu: {fileID: 8300000, guid: 6c0f6f2c08d2c4b419c63db2452c5968, type: 3}
   sfx_refillHP: {fileID: 8300000, guid: e3fc770a4dc059145813375bc11c1095, type: 3}
+  endMusic: {fileID: 8300000, guid: 0e895ee138abc924a93e5aca2ade834f, type: 3}
+  isEndMusicPlaying: 0
   gameState: 0
 --- !u!114 &7773929859628474450
 MonoBehaviour:
@@ -1063,8 +1055,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 40
@@ -1164,8 +1154,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: ea34b4ba8976f1b46bb9934c2ace147a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1512,8 +1500,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 152f62af927660645bf4f61b4ecbac93, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -1598,8 +1584,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: fb7cd153825f890409361a9a104a2898, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -1677,8 +1661,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 44abdd8b6b3d90a48b309e9ed8532a87, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1790,8 +1772,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 9eba225e4f2b6ea4b89eaa6cc306e3e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1877,8 +1857,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300010, guid: 06ea7156826703044bf78d5b8dc101c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1965,8 +1943,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 40
@@ -2036,7 +2012,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -60, y: -60}
+  m_SizeDelta: {x: -60, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8441033630454300190
 CanvasRenderer:
@@ -2064,8 +2040,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1ed93933855612e4a9c26d5a9241568a, type: 3}
     m_FontSize: 40
@@ -2144,8 +2118,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 17db698222c2b054eaa79f6278ec455f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -2243,8 +2215,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: ea34b4ba8976f1b46bb9934c2ace147a, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2345,8 +2315,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2363,15 +2331,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629136103348174225}
     m_Modifications:
-    - target: {fileID: 4229203929973326000, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+    - target: {fileID: 2487425081312934946, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
-      propertyPath: m_Name
-      value: Button_BackToGame
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300026, guid: d377d17250c5985419b936aa76494496,
+        type: 3}
+    - target: {fileID: 2487425081312934946, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4126873360500070431, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
       propertyPath: type
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229203929772795888, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: m_Text
+      value: Retour au jeu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229203929973326000, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Button_BackToGame
       objectReference: {fileID: 0}
     - target: {fileID: 4229203929973326003, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
@@ -2478,6 +2462,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4229203929973326005, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7208885758822658297, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
       propertyPath: m_Sprite
@@ -2488,27 +2477,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2487425081312934946, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300026, guid: d377d17250c5985419b936aa76494496,
-        type: 3}
-    - target: {fileID: 2487425081312934946, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229203929772795888, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Text
-      value: Retour au jeu
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229203929973326005, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb18b8a2e7882a4fa12d18f773134c6, type: 3}
@@ -2543,16 +2511,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2278423434972487456}
     m_Modifications:
-    - target: {fileID: 6949737138007806347, guid: dfc89ce0923f668469ea615bc0465300,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 6949737138007806347, guid: dfc89ce0923f668469ea615bc0465300,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6949737138007806346, guid: dfc89ce0923f668469ea615bc0465300,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2608,6 +2566,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6949737138007806347, guid: dfc89ce0923f668469ea615bc0465300,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949737138007806347, guid: dfc89ce0923f668469ea615bc0465300,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc89ce0923f668469ea615bc0465300, type: 3}
 --- !u!4 &9218018591555833935 stripped
@@ -2623,6 +2591,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629136103348174225}
     m_Modifications:
+    - target: {fileID: 4126873360500070431, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229203929772795888, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: m_Text
+      value: Quitter le jeu
+      objectReference: {fileID: 0}
     - target: {fileID: 4229203929973326000, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
       propertyPath: m_Name
@@ -2633,10 +2611,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4126873360500070431, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+    - target: {fileID: 4229203929973326002, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
-      propertyPath: type
-      value: 4
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229203929973326003, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
@@ -2743,16 +2721,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4229203929772795888, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Text
-      value: Quitter le jeu
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229203929973326002, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb18b8a2e7882a4fa12d18f773134c6, type: 3}
 --- !u!1 &8711264103049703226 stripped
@@ -2786,15 +2754,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629136103348174225}
     m_Modifications:
+    - target: {fileID: 4126873360500070431, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229203929772795888, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+        type: 3}
+      propertyPath: m_Text
+      value: Menu principal
+      objectReference: {fileID: 0}
     - target: {fileID: 4229203929973326000, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
       propertyPath: m_Name
       value: Button_BackToMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 4126873360500070431, guid: cdb18b8a2e7882a4fa12d18f773134c6,
+    - target: {fileID: 4229203929973326002, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
-      propertyPath: type
-      value: 5
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4229203929973326003, guid: cdb18b8a2e7882a4fa12d18f773134c6,
         type: 3}
@@ -2900,16 +2878,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229203929772795888, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Text
-      value: Menu principal
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229203929973326002, guid: cdb18b8a2e7882a4fa12d18f773134c6,
-        type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb18b8a2e7882a4fa12d18f773134c6, type: 3}

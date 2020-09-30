@@ -24,10 +24,11 @@ namespace rpg
         [System.Flags]
         public enum GameState {
             Undefined = 0,
-            MainMenu = 1,
-            Rpg = 2,
-            Minigame = 4,
-            Menu = 16
+            MainMenu =  1,
+            Rpg =       1 << 1 ,
+            Minigame =  1 << 2,
+            Menu =      1 << 3,
+            End =       1 << 4
         }
 
         public static CameraManager CameraManager;
@@ -42,7 +43,6 @@ namespace rpg
         public static GameData Data;
 
         public static string Spawn;
-        public static bool SceneJustLoaded = false;
 
 
         [Header("Setup")]
@@ -58,10 +58,12 @@ namespace rpg
         public Animator zoneBubbleAnimator;
         public DiscussionInterface discussionInterface;
 
-        [Header("Sound FX")]
+        [Header("Sound FX and Music")]
         public AudioClip sfx_openMenu;
         public AudioClip sfx_closeMenu;
         public AudioClip sfx_refillHP;
+        public AudioClip endMusic;
+        public bool isEndMusicPlaying = false;
 
         [Header("Debug")]
         public GameState gameState = GameState.Undefined;
@@ -147,7 +149,7 @@ namespace rpg
                 int value = (GetKey(SaveKey.seenBull) == 1 && GetKey(SaveKey.seenSnake) == 1) ? 0 : 1;
                 SetKey(SaveKey.seenBull, value);
                 SetKey(SaveKey.seenSnake, value);
-                RpgManager.ZoneDisplayName("Cheat\n" + "seenBull and seenSnake" + " set to " + value);
+                RpgManager.ZoneDisplayName("Cheat\n" + "seenBull and seenSnake\n" + " set to " + value);
                 dataDebug.SetData(RpgManager.Data);
             }
             else if (Input.GetKeyDown(KeyCode.F4))
@@ -252,7 +254,7 @@ namespace rpg
                 player.transform.position = target.position;
             }
 
-            yield return null; StartCoroutine(cameraManager.FadeOutCoroutine());
+            yield return StartCoroutine(cameraManager.FadeOutCoroutine());
             if (player && !(CurrentStory is GameOverStory))
             {
                 player.GetComponent<Collider2D>().enabled = true;
@@ -260,15 +262,44 @@ namespace rpg
             }
         }
 
+        #region Facebook
+
+        public static void LoadFacebookScene()
+        {
+            Instance.StartCoroutine(Instance.LoadUnloadFacebookSceneCoroutine(true));
+        }
+
+        private IEnumerator LoadUnloadFacebookSceneCoroutine(bool load)
+        {
+            if (load)
+            {
+                player.movementEnabled = false;
+            }
+
+            yield return StartCoroutine(cameraManager.FadeInCoroutine());
+
+            if (load)
+            {
+                SceneManager.LoadScene("FacebookConversation", LoadSceneMode.Additive);
+                RpgManager.CameraManager.ChangeCameraOutputSize(0.5f);
+                yield return StartCoroutine(cameraManager.FadeOutCoroutine());
+            }
+            else
+            {
+                AsyncOperation ao = Instance.unloadingFacebook = SceneManager.UnloadSceneAsync("FacebookConversation");
+                yield return new WaitUntil(() => ao.isDone);
+
+                CameraManager.ChangeCameraOutputSize(1.0f);
+                yield return StartCoroutine(cameraManager.FadeOutCoroutine());
+                RpgManager.OnEndUnloadingFacebook();
+            }
+        }
         public static void UnloadFacebook()
         {
-            AsyncOperation ao = Instance.unloadingFacebook = SceneManager.UnloadSceneAsync("FacebookConversation");
-            ao.completed += OnEndUnloadingFacebook;
+            Instance.StartCoroutine(Instance.LoadUnloadFacebookSceneCoroutine(false));
         }
-        public static void OnEndUnloadingFacebook(AsyncOperation obj)
+        public static void OnEndUnloadingFacebook()
         {
-            CameraManager.ChangeCameraOutputSize(1.0f);
-
             if (CurrentStory is NeuillyPlaisanceStory)
             {
                 NeuillyPlaisanceStory story = (NeuillyPlaisanceStory)CurrentStory;
@@ -276,7 +307,9 @@ namespace rpg
                 story.OnEndFacebook();
             }
         }
-        
+
+        #endregion Facebook
+
         public static void UnloadPokemon()
         {
             AsyncOperation ao = Instance.unloadingFacebook = SceneManager.UnloadSceneAsync("PokemonBattle");
@@ -330,6 +363,22 @@ namespace rpg
         {
             Instance.audioSource.PlayOneShot(clip, volume);
         }
+        
+        public static void PlayEndMusic()
+        {
+            Instance.audioSource.PlayOneShot(Instance.endMusic);
+            Instance.isEndMusicPlaying = true;
+        }
+
+        public static void StopEndMusic()
+        {
+            if (Instance.isEndMusicPlaying)
+            {
+                Instance.audioSource.Stop();
+                Instance.isEndMusicPlaying = false;
+            }            
+        }
+
         public int GetGameOverCommentId(bool first, int commentsBaseCount)
         {
             List<int> list = first ? availableGameOverComments1 : availableGameOverComments2;

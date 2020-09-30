@@ -14,18 +14,24 @@ namespace rpg
         public string triggerOnBack = "BackFromGame";
 
         public bool skipIntro = false;
+        public bool isEnd = false;
+
+        public GameObject cheatPanel;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
             mainmenuController = GetComponent<MenuController>();
+
+            cheatPanel.SetActive(false);
         }
 
         protected override IEnumerator Start()
         {
-            if (RpgManager.Instance != null && RpgManager.Instance.gameState != RpgManager.GameState.Undefined)
+            if (RpgManager.Instance != null)
             {
-                skipIntro = true;
+                skipIntro = RpgManager.Instance.gameState != RpgManager.GameState.Undefined;
+                isEnd = RpgManager.Instance.gameState == RpgManager.GameState.End;
             }
 
             yield return StartCoroutine(base.Start());
@@ -38,7 +44,11 @@ namespace rpg
 
             RpgManager.Instance.gameState = RpgManager.GameState.MainMenu;
 
-            if (skipIntro)
+            if (isEnd)
+            {
+                animator.SetTrigger(triggerOnBack);
+            }
+            else if (skipIntro)
             {
                 // Player go to menu from game
                 audioSource.Play();
@@ -60,6 +70,11 @@ namespace rpg
         public void OnIntroanimationEnded()
         {
             mainmenuController.enabled = true;
+
+            if (RpgManager.GetKey(SaveKey.defeatedCerberus) == 1)
+            {
+                cheatPanel.SetActive(true);
+            }
         }
     }
 }
