@@ -12,6 +12,9 @@ namespace rpg
         private Transform heartsContainer;
         private List<Image> heartsList;
         private Animator saveSymbol;
+        private Animator heartsAnimator;
+
+        private int currentHp;
 
         private void Awake()
         {
@@ -19,6 +22,8 @@ namespace rpg
 
             heartsContainer = transform.Find("Hearts").transform;
             heartTemplate = heartsContainer.Find("Full").gameObject;
+
+            heartsAnimator = heartsContainer.GetComponent<Animator>();
 
             Transform heartFullTransform = heartsContainer.Find("Full");
             heartFull = heartFullTransform.GetComponent<Image>().sprite;
@@ -31,7 +36,7 @@ namespace rpg
             heartsList = new List<Image>();
         }
 
-        public void UpdateHearts(int currentLife, int maxLife)
+        public void UpdateHearts(int currentLife, int maxLife, bool mute = false)
         {
             while (maxLife > heartsList.Count)
             {
@@ -52,6 +57,17 @@ namespace rpg
                 heart.sprite = i < currentLife ? heartFull : heartEmpty;
                 i++;
             }
+
+            if (!mute && currentHp > currentLife)
+            {
+                heartsAnimator.SetTrigger("Lose");
+            }
+            else if (!mute && currentHp < currentLife)
+            {
+                heartsAnimator.SetTrigger("Gain");
+            }
+
+            currentHp = currentLife;
         }
 
         public void TriggerSaveIcon()

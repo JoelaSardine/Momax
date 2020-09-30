@@ -91,7 +91,7 @@ namespace rpg
 
             projectilesManager = pm;
 
-            RpgManager.HUD.UpdateHearts(pv, 3);
+            RpgManager.HUD.UpdateHearts(pv, 3, true);
         }
 
         private void Update()
@@ -241,7 +241,7 @@ namespace rpg
         {
             enabled = true;
             pv = 3;
-            RpgManager.HUD.UpdateHearts(pv, 3);
+            RpgManager.HUD.UpdateHearts(pv, 3, true);
             animator.SetBool("GameOver", false);
             isHitInCooldown = false;
         }

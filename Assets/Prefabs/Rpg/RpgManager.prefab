@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 2278423433370655749}
   - component: {fileID: 2278423433370655750}
   - component: {fileID: 2278423433370655751}
+  - component: {fileID: 7654173911379956812}
   m_Layer: 0
   m_Name: Hearts
   m_TagString: Untagged
@@ -271,6 +272,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!95 &7654173911379956812
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278423433370655745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f287969c429c33449a8a144a3b79b7e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2278423433402157151
 GameObject:
   m_ObjectHideFlags: 0

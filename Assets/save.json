@@ -1,6 +1,6 @@
 {
     "scene": "World",
-    "place": "Montgeron",
+    "place": "StMaur",
     "savedata": [
         {
             "key": 0,
@@ -24,7 +24,7 @@
         },
         {
             "key": 5,
-            "value": 1
+            "value": 0
         },
         {
             "key": 6,
